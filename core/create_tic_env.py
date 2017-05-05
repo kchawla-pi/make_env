@@ -45,3 +45,12 @@ def shell_setup():
         file_obj.writelines(shell_hooks[shell_name][0])
     # with open(rc_file , 'r') as file_obj:
     #     f_lines = file_obj.readlines()
+
+
+def main():
+    abs_paths = paths_setup()
+    shell_setup()
+    os.chmod(abs_paths['direnv'], 0o111)
+
+
+main()
