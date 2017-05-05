@@ -23,4 +23,25 @@ def paths_setup(root_name = 'tic_env'):
     abs_paths = {'direnv': os.sep.join(temp_list)}
     return abs_paths
 
+def shell_setup():
+    shell_hooks = {'bash': ('eval "$(direnv hook bash)"\n', "~/.bashrc"),
+               'zsh': ('eval "$(direnv hook zsh)"\n', "~/.zshrc"),
+               'fish': ('eval (direnv hook fish)\n', "~/.config/fish/config.fish"),
+               'tcsh': ('eval `direnv hook tcsh`\n', "~/.cshrc")
+               }
+    shell_name = 'bash'
+    try:
+        shell_name = os.environ.get('SHELL').split(os.sep)[-1]
+    except:
+        print("$SHELL variable not found. Defaulting to bash.")
+    if shell_name not in shell_hooks.keys():
+        print("Unknown shell name:", shell_name)
+        print("Defaulting to bash.")
+        shell_name = 'bash'
 
+    rc_file = resolve_path(shell_hooks[shell_name][1])+'1'
+
+    with open(rc_file , 'a') as file_obj:
+        file_obj.writelines(shell_hooks[shell_name][0])
+    # with open(rc_file , 'r') as file_obj:
+    #     f_lines = file_obj.readlines()
