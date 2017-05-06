@@ -11,7 +11,7 @@ def resolve_path(some_path = '', *dirs):
     joined_dirs = os.sep.join(some_path_parts)
     return os.path.realpath(os.path.expanduser(joined_dirs))
 
-def paths_setup(root_name = 'tic_env'):
+def paths_setup(root_name = 'make_env'):
     script_path = resolve_path(__file__)
     path_dirs = script_path.split(os.sep)
     root_idx = max({idx for idx, elem in enumerate(path_dirs) if elem == root_name and path_dirs[idx+1] == 'core'}) + 1
