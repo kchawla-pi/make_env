@@ -72,7 +72,16 @@ def install_direnv(shell_info, abs_paths):
     os.chmod(abs_paths['direnv'], 0o111)  # sets the direnv binary's permission to executable, as instructed in direnv README.
 
 
-def check_direnv_inst(shell_info):
+def uninstall_direnv(shell_info, abs_paths):
+    abs_paths = setup_paths()
+    shell_info = identify_shell(abs_paths)
+    if check_direnv(shell_info) is True:
+        with open(shell_info['file'], 'r') as read_obj:
+            contents = read_obj.readlines()
+        remove_config_idx = [idx for idx, line_ in enumerate(contents) if shell_info['config'] in line_]
+
+
+def check_direnv(shell_info):
     with open(shell_info['file'], 'r') as read_obj:
         contents = read_obj.readlines()
     direnv_installed = [True for line_ in contents if shell_info['config'] in line_]
@@ -81,18 +90,21 @@ def check_direnv_inst(shell_info):
     else:
         return False
 
+
 def new_subshell(target_dir, subshell_name):
     direnv_config_init = "export subshellname=".join(subshell_name)
     target_path = os.sep.join(target_dir, ".envrc")
     with open(target_path, 'w') as write_obj:
         write_obj.writelines(direnv_config_init)
-        
 
-def main():
+
+def direnv_handler():
     abs_paths = setup_paths()
     shell_info = identify_shell(abs_paths)
-    if check_direnv_inst(shell_info) is False:
+    if check_direnv(shell_info) is False:
         install_direnv(shell_info, abs_paths)
 
 if __name__ == '__main__':
-    main()
+    direnv_handler()
+    cwd = os.getcwd()
+    new_subshell(target_dir, subshell_name)
