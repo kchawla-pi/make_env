@@ -57,27 +57,42 @@ def identify_shell(abs_path):
         shell_name = 'bash'
 
     shell_config_file = resolve_path(shell_hooks[shell_name][1])+'1'  # +1 to prevent overwriting/clutterring current .bashrc in posix.
-    shell_setup_info = {'shell':shell_name,
-                        'hook':shell_hooks[shell_name][0],
+    shell_info = {'shell':shell_name,
+                        'config':shell_hooks[shell_name][0],
                         'file': shell_config_file}
 
-    return shell_setup_info
+    return shell_info
 
 
-def new_subshell(shell_setup_info, abs_paths):
+def install_direnv(shell_info, abs_paths):
 
-    with open(shell_setup_info['file'] , 'a') as file_obj:
-        file_obj.writelines(shell_setup_info['hook'])
+    with open(shell_info['file'] , 'a') as write_obj:
+        write_obj.writelines(shell_info['config'])
 
     os.chmod(abs_paths['direnv'], 0o111)  # sets the direnv binary's permission to executable, as instructed in direnv README.
 
 
-def identify_subshell_installation():
+def check_direnv_inst(shell_info):
+    with open(shell_info['file'], 'r') as read_obj:
+        contents = read_obj.readlines()
+    direnv_installed = [True for line_ in contents if shell_info['config'] in line_]
+    if True in direnv_installed:
+        return True
+    else:
+        return False
 
+def new_subshell(target_dir, subshell_name):
+    direnv_config_init = "export subshellname=".join(subshell_name)
+    target_path = os.sep.join(target_dir, ".envrc")
+    with open(target_path, 'w') as write_obj:
+        write_obj.writelines(direnv_config_init)
+        
 
 def main():
     abs_paths = setup_paths()
-    identify_shell(abs_paths)
+    shell_info = identify_shell(abs_paths)
+    if check_direnv_inst(shell_info) is False:
+        install_direnv(shell_info, abs_paths)
 
 if __name__ == '__main__':
     main()
