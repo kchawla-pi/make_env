@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/create_tic_env.py" afterPath="$PROJECT_DIR$/core/make_env.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/create_tic_env.py" afterPath="$PROJECT_DIR$/core/create_tic_env.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="create_tic_env.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/create_tic_env.py">
+      <file leaf-file-name="make_env.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/make_env.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="119">
+              <caret line="20" column="62" lean-forward="true" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -79,8 +79,8 @@
         <option value="$PROJECT_DIR$/tests/test_resolve_path.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/docs/make_env_structure" />
-        <option value="$PROJECT_DIR$/core/make_env.py" />
         <option value="$PROJECT_DIR$/core/create_tic_env.py" />
+        <option value="$PROJECT_DIR$/core/make_env.py" />
       </list>
     </option>
   </component>
@@ -524,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494621278450</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added uninstall_direnv(), renamed main() to direnv_handler()&#10;&#10; - Renamed check_direnv_inst() to check_direnv()">
+      <created>1494621425671</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1494621425671</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -658,7 +665,8 @@
     <MESSAGE value="Renamed shell_setup() to subshell_installer()" />
     <MESSAGE value="Refactored subshell_installer() into identify_shell() &amp; new_subshell()&#10;&#10; - Renamed setup_paths() to paths_setup()" />
     <MESSAGE value="Added functions to install &amp; check direnv" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added functions to install &amp; check direnv" />
+    <MESSAGE value="Added uninstall_direnv(), renamed main() to direnv_handler()&#10;&#10; - Renamed check_direnv_inst() to check_direnv()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added uninstall_direnv(), renamed main() to direnv_handler()&#10;&#10; - Renamed check_direnv_inst() to check_direnv()" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -680,13 +688,13 @@
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/core/create_tic_env.py</url>
-          <line>28</line>
+          <url>file://$PROJECT_DIR$/core/make_env.py</url>
+          <line>29</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/core/create_tic_env.py</url>
-          <line>57</line>
+          <url>file://$PROJECT_DIR$/core/make_env.py</url>
+          <line>58</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
@@ -751,7 +759,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/create_tic_env.py">
+    <entry file="file://$PROJECT_DIR$/core/make_env.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="28" column="41" lean-forward="false" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
@@ -812,7 +820,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/create_tic_env.py">
+    <entry file="file://$PROJECT_DIR$/core/make_env.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -820,7 +828,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/create_tic_env.py">
+    <entry file="file://$PROJECT_DIR$/core/make_env.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -828,7 +836,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/create_tic_env.py">
+    <entry file="file://$PROJECT_DIR$/core/make_env.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -836,7 +844,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/create_tic_env.py">
+    <entry file="file://$PROJECT_DIR$/core/make_env.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -977,10 +985,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/create_tic_env.py">
+    <entry file="file://$PROJECT_DIR$/core/make_env.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="119">
+          <caret line="20" column="62" lean-forward="true" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
           <folding />
         </state>
       </provider>

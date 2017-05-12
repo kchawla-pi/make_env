@@ -1,5 +1,6 @@
-#!/python3
+#! /usr/bin/env python3
 import os
+import shutil
 import os.path as P
 
 
@@ -62,6 +63,12 @@ def identify_shell(abs_path):
                         'file': shell_config_file}
 
     return shell_info
+
+
+def backup_shell_config(shell_info):
+    dst = ''.join([shell_info['file'], '_pre_direnv_bkup'])
+    shutil.copy2(shell_info['file'], dst)
+
 
 
 def install_direnv(shell_info, abs_paths):
