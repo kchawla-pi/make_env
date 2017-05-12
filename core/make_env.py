@@ -39,7 +39,7 @@ def setup_paths(root_name ='make_env'):
     return abs_paths
 
 
-def identify_shell(abs_path):
+def identify_shell():
 
     # names & userconfig file locations of various shells. bash is default.
     shell_hooks = {'bash': ('eval "$(direnv hook bash)"\n', "~/.bashrc"),
@@ -72,16 +72,12 @@ def backup_shell_config(shell_info):
 
 
 def install_direnv(shell_info, abs_paths):
-
     with open(shell_info['file'] , 'a') as write_obj:
         write_obj.writelines(shell_info['config'])
-
     os.chmod(abs_paths['direnv'], 0o111)  # sets the direnv binary's permission to executable, as instructed in direnv README.
 
 
 def uninstall_direnv(shell_info, abs_paths):
-    abs_paths = setup_paths()
-    shell_info = identify_shell(abs_paths)
     if check_direnv(shell_info) is True:
         with open(shell_info['file'], 'r') as read_obj:
             contents = read_obj.readlines()
@@ -105,11 +101,20 @@ def new_subshell(target_dir, subshell_name):
         write_obj.writelines(direnv_config_init)
 
 
-def direnv_handler():
+def direnv_handler(task='check', msg=False):
     abs_paths = setup_paths()
     shell_info = identify_shell(abs_paths)
-    if check_direnv(shell_info) is False:
+    installed = check_direnv(shell_info)
+
+    if task == 'install' and installed is False:
+        backup_shell_config(shell_info)
         install_direnv(shell_info, abs_paths)
+    if task == 'reinstall' and installed is True:
+        install_direnv(shell_info, abs_paths)
+    if task == 'uninstall' and installed is True:
+        uninstall_direnv(shell_info, abs_paths)
+
+
 
 if __name__ == '__main__':
     direnv_handler()
