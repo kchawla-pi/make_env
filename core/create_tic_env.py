@@ -25,7 +25,7 @@ or     """
     return os.path.realpath(os.path.expanduser(joined_dirs))
 
 
-def paths_setup(root_name = 'make_env'):
+def setup_paths(root_name ='make_env'):
     script_path = os.path.realpath(__file__)
     path_dirs = script_path.split(os.sep)
     root_idx = max({idx for idx, elem in enumerate(path_dirs) if elem == root_name and path_dirs[idx+1] == 'core'}) + 1
@@ -38,7 +38,9 @@ def paths_setup(root_name = 'make_env'):
     return abs_paths
 
 
-def subshell_installer():
+def identify_shell(abs_path):
+
+    # names & userconfig file locations of various shells. bash is default.
     shell_hooks = {'bash': ('eval "$(direnv hook bash)"\n', "~/.bashrc"),
                'zsh': ('eval "$(direnv hook zsh)"\n', "~/.zshrc"),
                'fish': ('eval (direnv hook fish)\n', "~/.config/fish/config.fish"),
@@ -54,18 +56,28 @@ def subshell_installer():
         print("Defaulting to bash.")
         shell_name = 'bash'
 
-    rc_file = resolve_path(shell_hooks[shell_name][1])+'1'
+    shell_config_file = resolve_path(shell_hooks[shell_name][1])+'1'  # +1 to prevent overwriting/clutterring current .bashrc in posix.
+    shell_setup_info = {'shell':shell_name,
+                        'hook':shell_hooks[shell_name][0],
+                        'file': shell_config_file}
 
-    with open(rc_file , 'a') as file_obj:
-        file_obj.writelines(shell_hooks[shell_name][0])
-    # with open(rc_file , 'r') as file_obj:
-    #     f_lines = file_obj.readlines()
+    return shell_setup_info
+
+
+def new_subshell(shell_setup_info, abs_paths):
+
+    with open(shell_setup_info['file'] , 'a') as file_obj:
+        file_obj.writelines(shell_setup_info['hook'])
+
+    os.chmod(abs_paths['direnv'], 0o111)  # sets the direnv binary's permission to executable, as instructed in direnv README.
+
+
+def identify_subshell_installation():
 
 
 def main():
-    abs_paths = paths_setup()
-    subshell_installer()
-    os.chmod(abs_paths['direnv'], 0o111)
+    abs_paths = setup_paths()
+    identify_shell(abs_paths)
 
 if __name__ == '__main__':
     main()

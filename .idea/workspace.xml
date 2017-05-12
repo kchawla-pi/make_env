@@ -503,7 +503,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494620827533</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Renamed shell_setup() to subshell_installer()">
+      <created>1494620902329</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1494620902329</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -634,7 +641,8 @@
     <MESSAGE value="Renamed project &amp; root to make_env &amp; all references" />
     <MESSAGE value="Added docstring &amp; extra functionality to resolve_paths()" />
     <MESSAGE value="Added script path in paths_setup()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added script path in paths_setup()" />
+    <MESSAGE value="Renamed shell_setup() to subshell_installer()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed shell_setup() to subshell_installer()" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -657,12 +665,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/core/create_tic_env.py</url>
-          <line>29</line>
+          <line>28</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/core/create_tic_env.py</url>
-          <line>55</line>
+          <line>57</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
