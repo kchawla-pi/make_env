@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/bashsupport_project.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/kshit.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/data/test_resolve_path_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/create_tic_env.py" afterPath="$PROJECT_DIR$/core/create_tic_env.py" />
     </list>
@@ -27,7 +22,7 @@
         <entry file="file://$PROJECT_DIR$/core/create_tic_env.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -494,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494029259701</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added docstring &amp; extra functionality to resolve_paths()">
+      <created>1494620665632</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1494620665632</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -623,7 +625,8 @@
     <MESSAGE value="Added shell_setup() to write appropriate shell extension for direnv function&#10;&#10; - Shell extension written to dummy ~/.&lt;shell&gt;rc1 file for testing." />
     <MESSAGE value="Added main() to run paths_setup(), shell_setup(), mark bin/direnv as executable" />
     <MESSAGE value="Renamed project &amp; root to make_env &amp; all references" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed project &amp; root to make_env &amp; all references" />
+    <MESSAGE value="Added docstring &amp; extra functionality to resolve_paths()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added docstring &amp; extra functionality to resolve_paths()" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -646,12 +649,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/core/create_tic_env.py</url>
-          <line>28</line>
+          <line>29</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/core/create_tic_env.py</url>
-          <line>55</line>
+          <line>56</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
@@ -945,7 +948,7 @@
     <entry file="file://$PROJECT_DIR$/core/create_tic_env.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>
