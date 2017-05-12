@@ -87,3 +87,5 @@ ENV/
 
 # Rope project settings
 .ropeproject
+/tests/test_resolve_path.py
+/tests/setup_tests.py

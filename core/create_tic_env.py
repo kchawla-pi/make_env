@@ -2,7 +2,19 @@
 import os
 
 
-def resolve_path(some_path = '', *dirs):
+def resolve_path(some_path='', *dirs):
+    """
+    Creates absolute paths using given arguments.
+    
+    Single Arg:  some_path (default=''): return os.path.realpath(os.expanduser(some_path))
+    Multiple Args: *args : return [some_path].extend(args), then same as single arg.
+    
+    :param some_path: (str)-- accepts a str (dir or relpath) and converts it into a real path
+    :param dirs: (tuple)-- accepts variable number of string args
+    :return: (str) or (dict)
+or     """
+    some_path = ''.join(list(str(some_path)))
+    some_path.replace('\\', os.sep)
     if len(dirs) == 0:
         return os.path.realpath(os.path.expanduser(some_path))
     # if os.sep in some_path:
@@ -10,6 +22,7 @@ def resolve_path(some_path = '', *dirs):
     some_path_parts.extend(dirs)
     joined_dirs = os.sep.join(some_path_parts)
     return os.path.realpath(os.path.expanduser(joined_dirs))
+
 
 def paths_setup(root_name = 'make_env'):
     script_path = resolve_path(__file__)
@@ -22,6 +35,7 @@ def paths_setup(root_name = 'make_env'):
     temp_list.extend(rel_dirs['direnv'])
     abs_paths = {'direnv': os.sep.join(temp_list)}
     return abs_paths
+
 
 def shell_setup():
     shell_hooks = {'bash': ('eval "$(direnv hook bash)"\n', "~/.bashrc"),
@@ -52,5 +66,5 @@ def main():
     shell_setup()
     os.chmod(abs_paths['direnv'], 0o111)
 
-
-main()
+if __name__ == '__main__':
+    main()
