@@ -38,7 +38,7 @@ def paths_setup(root_name = 'make_env'):
     return abs_paths
 
 
-def shell_setup():
+def subshell_installer():
     shell_hooks = {'bash': ('eval "$(direnv hook bash)"\n', "~/.bashrc"),
                'zsh': ('eval "$(direnv hook zsh)"\n', "~/.zshrc"),
                'fish': ('eval (direnv hook fish)\n', "~/.config/fish/config.fish"),
@@ -64,7 +64,7 @@ def shell_setup():
 
 def main():
     abs_paths = paths_setup()
-    shell_setup()
+    subshell_installer()
     os.chmod(abs_paths['direnv'], 0o111)
 
 if __name__ == '__main__':

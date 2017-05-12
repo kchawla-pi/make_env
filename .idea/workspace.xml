@@ -21,7 +21,7 @@
       <file leaf-file-name="create_tic_env.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/create_tic_env.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="425">
               <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
@@ -496,7 +496,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494620665632</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added script path in paths_setup()">
+      <created>1494620827533</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1494620827533</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -626,7 +633,8 @@
     <MESSAGE value="Added main() to run paths_setup(), shell_setup(), mark bin/direnv as executable" />
     <MESSAGE value="Renamed project &amp; root to make_env &amp; all references" />
     <MESSAGE value="Added docstring &amp; extra functionality to resolve_paths()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added docstring &amp; extra functionality to resolve_paths()" />
+    <MESSAGE value="Added script path in paths_setup()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added script path in paths_setup()" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -654,7 +662,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/core/create_tic_env.py</url>
-          <line>56</line>
+          <line>55</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
@@ -947,7 +955,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/create_tic_env.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="425">
           <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
