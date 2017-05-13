@@ -50,26 +50,26 @@ def identify_shell():
         shell_name = 'bash'
 
     shell_config_file = resolve_path(shell_hooks[shell_name][1])+'1'  # +1 to prevent overwriting/clutterring current .bashrc in posix.
-    shell_info = {'shell':shell_name,
-                        'config':shell_hooks[shell_name][0],
+    shell = {'name':shell_name,
+                        'insert':shell_hooks[shell_name][0],
                         'file': shell_config_file}
 
-    return shell_info
+    return shell
 
 
-def backup_shell_config(shell_info):
-    dst = ''.join([shell_info['file'], '_pre_direnv_bkup'])
-    shutil.copy2(shell_info['file'], dst)
+def backup_shell_config(shell):
+    dst = ''.join([shell['file'], '_pre_direnv_bkup'])
+    shutil.copy2(shell['file'], dst)
 
 
 
-def install_direnv(shell_info, direnv_bin):
-    with open(shell_info['file'] , 'a') as write_obj:
-        write_obj.writelines(shell_info['config'])
+def install_direnv(shell, direnv_bin):
+    with open(shell['file'] , 'a') as write_obj:
+        write_obj.writelines(shell['insert'])
     try:
         os.chmod(direnv_bin, 0o111)  # sets the direnv binary's permission to executable, as instructed in direnv README.
     except FileNotFoundError:
-        print("The path to executable file for 'direnv' was computed to be {}.\n However the file can not be found at this location.", direnv_bin)
+        print("The path to executable file for 'direnv' was computed to be {}.\n However the file can not be found at this location.".format(direnv_bin))
         direnv_bin = input("Enter the full path to 'direnv.linux-amd64', or press ENTER to abort.\nEnter path>>")
         try:
             os.chmod(direnv_bin, 0o111)  # sets the direnv binary's permission to executable, as instructed in direnv README.
@@ -78,17 +78,17 @@ def install_direnv(shell_info, direnv_bin):
 
 
 
-def uninstall_direnv(shell_info, direnv_bin):
-    if check_direnv(shell_info) is True:
-        with open(shell_info['file'], 'r') as read_obj:
+def uninstall_direnv(shell, direnv_bin):
+    if check_direnv(shell) is True:
+        with open(shell['file'], 'r') as read_obj:
             contents = read_obj.readlines()
-        remove_config_idx = [idx for idx, line_ in enumerate(contents) if shell_info['config'] in line_]
+        remove_config_idx = [idx for idx, line_ in enumerate(contents) if shell['insert'] in line_]
 
 
-def check_direnv(shell_info):
-    with open(shell_info['file'], 'r') as read_obj:
+def check_direnv(shell):
+    with open(shell['file'], 'r') as read_obj:
         contents = read_obj.readlines()
-    direnv_installed = [True for line_ in contents if shell_info['config'] in line_]
+    direnv_installed = [True for line_ in contents if shell['insert'] in line_]
     if True in direnv_installed:
         return True
     else:
@@ -102,18 +102,23 @@ def new_subshell(target_dir, subshell_name):
         write_obj.writelines(direnv_config_init)
 
 
-def direnv_handler(task='check', msg=False):
+def direnv_handler(task='check'):
     direnv_bin = setup_paths()
-    shell_info = identify_shell()
-    installed = check_direnv(shell_info)
+    shell = identify_shell()
+    installed = check_direnv(shell)
 
     if task == 'install' and installed is False:
-        backup_shell_config(shell_info)
-        install_direnv(shell_info, direnv_bin)
-    if task == 'reinstall' and installed is True:
-        install_direnv(shell_info, direnv_bin)
-    if task == 'uninstall' and installed is True:
-        uninstall_direnv(shell_info, direnv_bin)
+        backup_shell_config(shell)
+        install_direnv(shell, direnv_bin)
+        print("'direnv' installed.") if installed else print("'direnv' not installed.")
+    elif task == 'reinstall':
+        if installed is True:
+            uninstall_direnv(shell, direnv_bin)
+        install_direnv(shell, direnv_bin)
+    elif task == 'uninstall' and installed is True:
+        uninstall_direnv(shell, direnv_bin)
+    else:
+        print("'direnv' is installed.") if installed else print("'direnv' is not installed.")
 
 
 
