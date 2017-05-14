@@ -12,7 +12,6 @@ def setup_paths():
     keys_list = ['setupfile', 'installedfile', 'installpath', 'backupspath']
     values_list = [setup_file_path, installed_file_path, installation_path, backups_path]
     direnv_paths = dict(zip(keys_list, values_list))
-
     return direnv_paths
 
 
@@ -39,19 +38,29 @@ def identify_shell():
     return shell
 
 
-def backup_shell_config(shell, direnv_paths):
-    backup_dst = os.path.join(direnv_paths['backupspath'], os.path.split(shell['file'])[1], '_pre_direnv_bkup')
-    shutil.copy2(shell['file'], backup_dst)
-    curr_path_info = os.environ.get('PATH')
-    backup_dst = os.path.join(direnv_paths['backupspath'], 'PATH_var', '_pre_direnv_bkup')
-    with open(backup_dst, 'w') as write_obj:
-        write_obj.write(curr_path_info)
+def backup_shell_config(shell, direnv_paths, msg=True):
+    errorcodes = [0, 0]
+    try:
+        backup_dst = os.path.join(direnv_paths['backupspath'], os.path.split(shell['file'])[1], '_pre_direnv_bkup')
+        shutil.copy2(shell['file'], backup_dst)
+    except:
+        if msg: print("{} backup unsuccessful. Consieder making a manual backup.".format(shell['file']))
+        errorcodes[0] = 1
+    try:
+        curr_path_info = os.environ.get('PATH')
+        backup_dst = os.path.join(direnv_paths['backupspath'], 'PATH_var', '_pre_direnv_bkup')
+        with open(backup_dst, 'w') as write_obj:
+            write_obj.write(curr_path_info)
+    except:
+        if msg: print("Current $PATH backup unsuccessful. Consider making a manual backup.")
+        errorcodes[1] = 1
+    return errorcodes
 
 
 def copy_direnv(shell, direnv_paths, max_attempts=3):
     max_attempts -= 1
     if max_attempts == 0:
-        print("Too many attempts with incorrect paths. Please establish the paths and run install again.")
+        print("Too many attempts with incorrect paths. Please ascertain the file paths and run install again.")
         quit()
     try:
         shutil.copy2(direnv_paths['setupfile'], direnv_paths['installpath'])
@@ -60,10 +69,11 @@ def copy_direnv(shell, direnv_paths, max_attempts=3):
         direnv_paths['setupfile'] = input("Enter the complete path including name of direnv setup binary:")
         copy_direnv(shell, direnv_paths, max_attempts)
 
+
 def make_exec(shell,direnv_paths, max_attempts = 3):
     max_attempts -= 1
     if max_attempts == 0:
-        print("Too many attempts withincorrect paths. Please establish the paths and run install again.")
+        print("Too many attempts with incorrect paths. Please ascertain the file paths and run install again.")
         quit()
     try:
         os.chmod(direnv_paths['installedfile'], 0o111)  # sets the direnv binary's permission to executable, as instructed in direnv README.

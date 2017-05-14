@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="Reformat: File was reformatted on suggestion of PyCharm inspector">
+    <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/make_env.py" afterPath="$PROJECT_DIR$/core/make_env.py" />
     </list>
@@ -22,8 +22,8 @@
       <file leaf-file-name="make_env.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/make_env.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="47" column="39" lean-forward="false" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+            <state relative-caret-position="228">
+              <caret line="56" column="16" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -603,7 +603,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494724360892</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Backup includes current PATH, direnv paths changed&#10;&#10; - A copy of direnv binary is made at ~/bin/direnv/&#10; - Backups now made at ~/bin/direnv/backups&#10; - backup_shell_config() now also backs up current PATH.&#10; - install_direnv() refactored into copy_direnv(), make_exec(), install_direnv().&#10; - FileNotFound exceptions abort installation after 3 attempts.&#10; - setup_paths() returns direnv_paths (dict).">
+      <created>1494799941515</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1494799941515</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -758,7 +765,8 @@
     <MESSAGE value="Completed uninstall_direnv() v1" />
     <MESSAGE value="Refactor: Replaced (redundant, complex) resolve_path() with std lib functions&#10;&#10; - Refactor: removed unused parameter 'root_name' from setup_paths().&#10; - Refactor: removed unused paramter 'direnv_bin' from uninstall_direnv()" />
     <MESSAGE value="Reformat: File was reformatted on suggestion of PyCharm inspector" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reformat: File was reformatted on suggestion of PyCharm inspector" />
+    <MESSAGE value="Backup includes current PATH, direnv paths changed&#10;&#10; - A copy of direnv binary is made at ~/bin/direnv/&#10; - Backups now made at ~/bin/direnv/backups&#10; - backup_shell_config() now also backs up current PATH.&#10; - install_direnv() refactored into copy_direnv(), make_exec(), install_direnv().&#10; - FileNotFound exceptions abort installation after 3 attempts.&#10; - setup_paths() returns direnv_paths (dict)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Backup includes current PATH, direnv paths changed&#10;&#10; - A copy of direnv binary is made at ~/bin/direnv/&#10; - Backups now made at ~/bin/direnv/backups&#10; - backup_shell_config() now also backs up current PATH.&#10; - install_direnv() refactored into copy_direnv(), make_exec(), install_direnv().&#10; - FileNotFound exceptions abort installation after 3 attempts.&#10; - setup_paths() returns direnv_paths (dict)." />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -781,12 +789,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/core/make_env.py</url>
-          <line>91</line>
+          <line>101</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/core/make_env.py</url>
-          <line>35</line>
+          <line>34</line>
           <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
@@ -1079,8 +1087,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/make_env.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="47" column="39" lean-forward="false" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+        <state relative-caret-position="228">
+          <caret line="56" column="16" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
           <folding />
         </state>
       </provider>
