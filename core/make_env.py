@@ -3,29 +3,7 @@ import os
 import shutil
 
 
-def resolve_path(some_path='', *dirs):
-    """
-    Creates absolute paths using given arguments.
-    
-    Single Arg:  some_path (default=''): return os.path.realpath(os.expanduser(some_path))
-    Multiple Args: *args : return [some_path].extend(args), then same as single arg.
-    
-    :param some_path: (str)-- accepts a str (dir or relpath) and converts it into a real path
-    :param dirs: (tuple)-- accepts variable number of string args
-    :return: (str) or (dict)
-or     """
-    some_path = ''.join(list(str(some_path)))
-    some_path.replace('\\', os.sep)
-    if len(dirs) == 0:
-        return os.path.realpath(os.path.expanduser(some_path))
-    # if os.sep in some_path:
-    some_path_parts = some_path.split(os.sep)
-    some_path_parts.extend(dirs)
-    joined_dirs = os.sep.join(some_path_parts)
-    return os.path.realpath(os.path.expanduser(joined_dirs))
-
-
-def setup_paths(root_name ='make_env'):
+def setup_paths():
     P = os.path
     direnv_bin = P.realpath(P.join(__file__, P.pardir, P.pardir, 'requirements', 'bin', 'direnv.linux-amd64'))
     return direnv_bin
@@ -48,12 +26,11 @@ def identify_shell():
         print("Unknown shell name:", shell_name)
         print("Defaulting to bash.")
         shell_name = 'bash'
-
-    shell_config_file = resolve_path(shell_hooks[shell_name][1])+'1'  # +1 to prevent overwriting/clutterring current .bashrc in posix.
+    P = os.path
+    shell_config_file = P.realpath(P.expanduser(shell_hooks[shell_name][1]))+'1'  # +1 to prevent overwriting/clutterring current .bashrc in posix.
     shell = {'name':shell_name,
-                        'insert':shell_hooks[shell_name][0],
-                        'file': shell_config_file}
-
+            'insert':shell_hooks[shell_name][0],
+            'file': shell_config_file}
     return shell
 
 
@@ -76,7 +53,7 @@ def install_direnv(shell, direnv_bin):
             print("ERROR: The binary executable for 'direnv.linux-amd64' not found.\n Installation Aborted.")
 
 
-def uninstall_direnv(shell, direnv_bin):
+def uninstall_direnv(shell):
 
         with open(shell['file'], 'r') as read_obj:
             contents = read_obj.readlines()
@@ -124,5 +101,4 @@ def direnv_handler(task='check'):
 
 if __name__ == '__main__':
     direnv_handler('uninstall')
-    # cwd = os.getcwd()
     # new_subshell(target_dir, subshell_name)
