@@ -62,7 +62,6 @@ def backup_shell_config(shell):
     shutil.copy2(shell['file'], dst)
 
 
-
 def install_direnv(shell, direnv_bin):
     with open(shell['file'] , 'a') as write_obj:
         write_obj.writelines(shell['insert'])
@@ -77,12 +76,14 @@ def install_direnv(shell, direnv_bin):
             print("ERROR: The binary executable for 'direnv.linux-amd64' not found.\n Installation Aborted.")
 
 
-
 def uninstall_direnv(shell, direnv_bin):
-    if check_direnv(shell) is True:
+
         with open(shell['file'], 'r') as read_obj:
             contents = read_obj.readlines()
-        remove_config_idx = [idx for idx, line_ in enumerate(contents) if shell['insert'] in line_]
+        remove_line_idx = {idx for idx, line_ in enumerate(contents) if shell['insert'] in line_}
+        new_contents = [line_ for idx, line_ in enumerate(contents) if idx not in remove_line_idx]
+        with open(shell['file'], 'w') as write_obj:
+            write_obj.write('\n'.join(new_contents))
 
 
 def check_direnv(shell):
@@ -121,8 +122,7 @@ def direnv_handler(task='check'):
         print("'direnv' is installed.") if installed else print("'direnv' is not installed.")
 
 
-
 if __name__ == '__main__':
-    direnv_handler()
-    cwd = os.getcwd()
+    direnv_handler('uninstall')
+    # cwd = os.getcwd()
     # new_subshell(target_dir, subshell_name)
