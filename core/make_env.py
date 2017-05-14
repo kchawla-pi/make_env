@@ -10,13 +10,12 @@ def setup_paths():
 
 
 def identify_shell():
-
     # names & userconfig file locations of various shells. bash is default.
     shell_hooks = {'bash': ('eval "$(direnv hook bash)"\n', "~/.bashrc"),
-               'zsh': ('eval "$(direnv hook zsh)"\n', "~/.zshrc"),
-               'fish': ('eval (direnv hook fish)\n', "~/.config/fish/config.fish"),
-               'tcsh': ('eval `direnv hook tcsh`\n', "~/.cshrc")
-               }
+                   'zsh': ('eval "$(direnv hook zsh)"\n', "~/.zshrc"),
+                   'fish': ('eval (direnv hook fish)\n', "~/.config/fish/config.fish"),
+                   'tcsh': ('eval `direnv hook tcsh`\n', "~/.cshrc")
+                   }
     shell_name = 'bash'
     try:
         shell_name = os.environ.get('SHELL').split(os.sep)[-1]
@@ -27,10 +26,11 @@ def identify_shell():
         print("Defaulting to bash.")
         shell_name = 'bash'
     P = os.path
-    shell_config_file = P.realpath(P.expanduser(shell_hooks[shell_name][1]))+'1'  # +1 to prevent overwriting/clutterring current .bashrc in posix.
-    shell = {'name':shell_name,
-            'insert':shell_hooks[shell_name][0],
-            'file': shell_config_file}
+    shell_config_file = P.realpath(P.expanduser(
+        shell_hooks[shell_name][1])) + '1'  # +1 to prevent overwriting/clutterring current .bashrc in posix.
+    shell = {'name': shell_name,
+             'insert': shell_hooks[shell_name][0],
+             'file': shell_config_file}
     return shell
 
 
@@ -40,27 +40,30 @@ def backup_shell_config(shell):
 
 
 def install_direnv(shell, direnv_bin):
-    with open(shell['file'] , 'a') as write_obj:
+    with open(shell['file'], 'a') as write_obj:
         write_obj.writelines(shell['insert'])
     try:
-        os.chmod(direnv_bin, 0o111)  # sets the direnv binary's permission to executable, as instructed in direnv README.
+        os.chmod(direnv_bin,
+                 0o111)  # sets the direnv binary's permission to executable, as instructed in direnv README.
     except FileNotFoundError:
-        print("The path to executable file for 'direnv' was computed to be {}.\n However the file can not be found at this location.".format(direnv_bin))
+        print(
+            "The path to executable file for 'direnv' was computed to be {}.\n However the file can not be found at this location.".format(
+                direnv_bin))
         direnv_bin = input("Enter the full path to 'direnv.linux-amd64', or press ENTER to abort.\nEnter path>>")
         try:
-            os.chmod(direnv_bin, 0o111)  # sets the direnv binary's permission to executable, as instructed in direnv README.
+            os.chmod(direnv_bin,
+                     0o111)  # sets the direnv binary's permission to executable, as instructed in direnv README.
         except FileNotFoundError:
             print("ERROR: The binary executable for 'direnv.linux-amd64' not found.\n Installation Aborted.")
 
 
 def uninstall_direnv(shell):
-
-        with open(shell['file'], 'r') as read_obj:
-            contents = read_obj.readlines()
-        remove_line_idx = {idx for idx, line_ in enumerate(contents) if shell['insert'] in line_}
-        new_contents = [line_ for idx, line_ in enumerate(contents) if idx not in remove_line_idx]
-        with open(shell['file'], 'w') as write_obj:
-            write_obj.write('\n'.join(new_contents))
+    with open(shell['file'], 'r') as read_obj:
+        contents = read_obj.readlines()
+    remove_line_idx = {idx for idx, line_ in enumerate(contents) if shell['insert'] in line_}
+    new_contents = [line_ for idx, line_ in enumerate(contents) if idx not in remove_line_idx]
+    with open(shell['file'], 'w') as write_obj:
+        write_obj.write('\n'.join(new_contents))
 
 
 def check_direnv(shell):
