@@ -5,18 +5,25 @@ import shutil
 
 def setup_paths():
     P = os.path
-    direnv_bin = P.realpath(P.join(__file__, P.pardir, P.pardir, 'requirements', 'bin', 'direnv.linux-amd64'))
-    return direnv_bin
+    setup_file_path = P.realpath(P.join(__file__, P.pardir, P.pardir, 'requirements', 'bin', 'direnv.linux-amd64'))
+    installation_path = os.path.expanduser(os.path.join('~','bin','direnv'))
+    installed_file_path = os.path.join(installation_path, 'direnv.linux-amd64')
+    backups_path = os.path.join(installation_path, 'pre_direnv_backups')
+    keys_list = ['setupfile', 'installedfile', 'installpath', 'backupspath']
+    values_list = [setup_file_path, installed_file_path, installation_path, backups_path]
+    direnv_paths = dict(zip(keys_list, values_list))
+
+    return direnv_paths
 
 
 def identify_shell():
-    # names & userconfig file locations of various shells. bash is default.
+    # userconfig file locations for various shells & the instructions to be inserted into them:
     shell_hooks = {'bash': ('eval "$(direnv hook bash)"\n', "~/.bashrc"),
                    'zsh': ('eval "$(direnv hook zsh)"\n', "~/.zshrc"),
                    'fish': ('eval (direnv hook fish)\n', "~/.config/fish/config.fish"),
                    'tcsh': ('eval `direnv hook tcsh`\n', "~/.cshrc")
                    }
-    shell_name = 'bash'
+    shell_name = 'bash'  # default shell is 'bash'.
     try:
         shell_name = os.environ.get('SHELL').split(os.sep)[-1]
     except:
@@ -25,36 +32,54 @@ def identify_shell():
         print("Unknown shell name:", shell_name)
         print("Defaulting to bash.")
         shell_name = 'bash'
-    P = os.path
-    shell_config_file = P.realpath(P.expanduser(
-        shell_hooks[shell_name][1])) + '1'  # +1 to prevent overwriting/clutterring current .bashrc in posix.
+    shell_config_file = os.path.realpath(os.path.expanduser(shell_hooks[shell_name][1])) + '1'  # +1 prevents overwriting shell config file during dev
     shell = {'name': shell_name,
              'insert': shell_hooks[shell_name][0],
              'file': shell_config_file}
     return shell
 
 
-def backup_shell_config(shell):
-    dst = ''.join([shell['file'], '_pre_direnv_bkup'])
-    shutil.copy2(shell['file'], dst)
+def backup_shell_config(shell, direnv_paths):
+    backup_dst = os.path.join(direnv_paths['backupspath'], os.path.split(shell['file'])[1], '_pre_direnv_bkup')
+    shutil.copy2(shell['file'], backup_dst)
+    curr_path_info = os.environ.get('PATH')
+    backup_dst = os.path.join(direnv_paths['backupspath'], 'PATH_var', '_pre_direnv_bkup')
+    with open(backup_dst, 'w') as write_obj:
+        write_obj.write(curr_path_info)
 
 
-def install_direnv(shell, direnv_bin):
+def copy_direnv(shell, direnv_paths, max_attempts=3):
+    max_attempts -= 1
+    if max_attempts == 0:
+        print("Too many attempts with incorrect paths. Please establish the paths and run install again.")
+        quit()
+    try:
+        shutil.copy2(direnv_paths['setupfile'], direnv_paths['installpath'])
+    except FileNotFoundError:
+        print("Not found: ", direnv_paths['setupfile'])
+        direnv_paths['setupfile'] = input("Enter the complete path including name of direnv setup binary:")
+        copy_direnv(shell, direnv_paths, max_attempts)
+
+def make_exec(shell,direnv_paths, max_attempts = 3):
+    max_attempts -= 1
+    if max_attempts == 0:
+        print("Too many attempts withincorrect paths. Please establish the paths and run install again.")
+        quit()
+    try:
+        os.chmod(direnv_paths['installedfile'], 0o111)  # sets the direnv binary's permission to executable, as instructed in direnv README.
+    except FileNotFoundError:
+        print("Not found:", direnv_paths['installedfile'])
+        print("Copy the direnv binary file to a location of your choice and enter the path here:")
+        direnv_paths['installedfile'] = input("Enter the complete path including name of direnv installed binary:")
+        make_exec(shell, direnv_paths, max_attempts)
+
+
+def install_direnv(shell, direnv_paths, max_attempts=3):
+    os.makedirs(direnv_paths['backupspath'])
+    copy_direnv(shell, direnv_paths, max_attempts)
+    make_exec(shell, direnv_paths)
     with open(shell['file'], 'a') as write_obj:
         write_obj.writelines(shell['insert'])
-    try:
-        os.chmod(direnv_bin,
-                 0o111)  # sets the direnv binary's permission to executable, as instructed in direnv README.
-    except FileNotFoundError:
-        print(
-            "The path to executable file for 'direnv' was computed to be {}.\n However the file can not be found at this location.".format(
-                direnv_bin))
-        direnv_bin = input("Enter the full path to 'direnv.linux-amd64', or press ENTER to abort.\nEnter path>>")
-        try:
-            os.chmod(direnv_bin,
-                     0o111)  # sets the direnv binary's permission to executable, as instructed in direnv README.
-        except FileNotFoundError:
-            print("ERROR: The binary executable for 'direnv.linux-amd64' not found.\n Installation Aborted.")
 
 
 def uninstall_direnv(shell):
@@ -84,22 +109,22 @@ def new_subshell(target_dir, subshell_name):
 
 
 def direnv_handler(task='check'):
-    direnv_bin = setup_paths()
+    direnv_setup_bin = setup_paths()
     shell = identify_shell()
     installed = check_direnv(shell)
 
-    if task == 'install' and installed is False:
+    if task == 'install':
+        if installed:  # uninstall existing installation first
+            uninstall_direnv(shell, direnv_setup_bin)
         backup_shell_config(shell)
-        install_direnv(shell, direnv_bin)
-        print("'direnv' installed.") if installed else print("'direnv' not installed.")
-    elif task == 'reinstall':
-        if installed is True:
-            uninstall_direnv(shell, direnv_bin)
-        install_direnv(shell, direnv_bin)
-    elif task == 'uninstall' and installed is True:
-        uninstall_direnv(shell, direnv_bin)
-    else:
-        print("'direnv' is installed.") if installed else print("'direnv' is not installed.")
+        install_direnv(shell, direnv_setup_bin)
+        installed = check_direnv(shell)
+    elif task == 'uninstall' and installed:
+        uninstall_direnv(shell, direnv_setup_bin)
+        installed = check_direnv(shell)
+
+    print("'direnv' is installed.") if installed else print("'direnv' is not installed.")
+    print("Executable binary location:", direnv_setup_bin)
 
 
 if __name__ == '__main__':
