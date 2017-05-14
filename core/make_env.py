@@ -7,7 +7,7 @@ def setup_paths():
     P = os.path
     setup_file_path = P.realpath(P.join(__file__, P.pardir, P.pardir, 'requirements', 'bin', 'direnv.linux-amd64'))
     installation_path = os.path.expanduser(os.path.join('~','bin','direnv'))
-    installed_file_path = os.path.join(installation_path, 'direnv.linux-amd64')
+    installed_file_path = os.path.join(installation_path, 'direnv')
     backups_path = os.path.join(installation_path, 'pre_direnv_backups')
     keys_list = ['setupfile', 'installedfile', 'installpath', 'backupspath']
     values_list = [setup_file_path, installed_file_path, installation_path, backups_path]
@@ -90,6 +90,7 @@ def install_direnv(shell, direnv_paths, max_attempts=3):
     make_exec(shell, direnv_paths)
     with open(shell['file'], 'a') as write_obj:
         write_obj.writelines(shell['insert'])
+    # os.environ["PATH"] += os.pathsep + direnv_paths['installpath']
 
 
 def uninstall_direnv(shell):
@@ -119,22 +120,20 @@ def new_subshell(target_dir, subshell_name):
 
 
 def direnv_handler(task='check'):
-    direnv_setup_bin = setup_paths()
+    direnv_paths = setup_paths()
     shell = identify_shell()
     installed = check_direnv(shell)
 
     if task == 'install':
         if installed:  # uninstall existing installation first
-            uninstall_direnv(shell, direnv_setup_bin)
+            uninstall_direnv(shell, direnv_paths)
         backup_shell_config(shell)
-        install_direnv(shell, direnv_setup_bin)
+        install_direnv(shell, direnv_paths)
         installed = check_direnv(shell)
     elif task == 'uninstall' and installed:
-        uninstall_direnv(shell, direnv_setup_bin)
+        uninstall_direnv(shell, direnv_paths)
         installed = check_direnv(shell)
-
-    print("'direnv' is installed.") if installed else print("'direnv' is not installed.")
-    print("Executable binary location:", direnv_setup_bin)
+    print("'direnv' is installed at", direnv_paths['installpath']) if installed else print("'direnv' is not installed.")
 
 
 if __name__ == '__main__':
