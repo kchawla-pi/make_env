@@ -1,10 +1,10 @@
 #! /usr/bin/env python3
 import os
 import shutil
-
+import collections as coll
 
 def setup_paths():
-    P = os.path
+    P = os.path  # for ease of viewong & typing. Used a lot in this function.
     setup_file_path = P.realpath(P.join(__file__, P.pardir, P.pardir, 'requirements', 'bin', 'direnv.linux-amd64'))
     installation_path = os.path.expanduser(os.path.join('~','bin','direnv'))
     installed_file_path = os.path.join(installation_path, 'direnv')
@@ -15,22 +15,33 @@ def setup_paths():
     return direnv_paths
 
 
-def identify_shell():
+def identify_shell(param_shell='bash', force='no'):  # default parameter added here for unittests
     # userconfig file locations for various shells & the instructions to be inserted into them:
     shell_hooks = {'bash': ('eval "$(direnv hook bash)"\n', "~/.bashrc"),
                    'zsh': ('eval "$(direnv hook zsh)"\n', "~/.zshrc"),
                    'fish': ('eval (direnv hook fish)\n', "~/.config/fish/config.fish"),
                    'tcsh': ('eval `direnv hook tcsh`\n', "~/.cshrc")
                    }
-    shell_name = 'bash'  # default shell is 'bash'.
+    if force == 'force':
+        shell_name = param_shell
+        shell_config_file = os.path.realpath(os.path.expanduser(
+            shell_hooks[shell_name][1])) + '1'  # +1 prevents overwriting shell config file during dev
+        shell = {'name': shell_name,
+                 'insert': shell_hooks[shell_name][0],
+                 'file': shell_config_file}
+        return shell
+
     try:
         shell_name = os.environ.get('SHELL').split(os.sep)[-1]
     except:
         print("$SHELL variable not found. Defaulting to bash.")
-    if shell_name not in shell_hooks.keys():
-        print("Unknown shell name:", shell_name)
-        print("Defaulting to bash.")
         shell_name = 'bash'
+    finally:
+        if shell_name not in shell_hooks.keys():
+            print("Unknown shell name:", shell_name)
+            print("Defaulting to bash.")
+            shell_name = 'bash'
+
     shell_config_file = os.path.realpath(os.path.expanduser(shell_hooks[shell_name][1])) + '1'  # +1 prevents overwriting shell config file during dev
     shell = {'name': shell_name,
              'insert': shell_hooks[shell_name][0],
@@ -39,22 +50,27 @@ def identify_shell():
 
 
 def backup_shell_config(shell, direnv_paths, msg=True):
-    errorcodes = [0, 0]
+    BackupError = coll.namedtuple('BackupError', 'shell_config')
+    backup_dst = os.path.join(direnv_paths['backupspath'], os.path.split(shell['file'])[1], '_pre_direnv_bkup')
     try:
-        backup_dst = os.path.join(direnv_paths['backupspath'], os.path.split(shell['file'])[1], '_pre_direnv_bkup')
         shutil.copy2(shell['file'], backup_dst)
+        return BackupError(shell_config=0)
     except:
         if msg: print("{} backup unsuccessful. Consieder making a manual backup.".format(shell['file']))
-        errorcodes[0] = 1
+        return BackupError(shell_config=1)
+
+
+def backup_path_var(direnv_paths, msg=True):
+    BackupError = coll.namedtuple('BackupError', 'path_var')
+    curr_path_info = os.environ.get('PATH')
+    backup_dst = os.path.join(direnv_paths['backupspath'], 'PATH_var', '_pre_direnv_bkup')
     try:
-        curr_path_info = os.environ.get('PATH')
-        backup_dst = os.path.join(direnv_paths['backupspath'], 'PATH_var', '_pre_direnv_bkup')
         with open(backup_dst, 'w') as write_obj:
             write_obj.write(curr_path_info)
+            return BackupError(path_var=0)
     except:
         if msg: print("Current $PATH backup unsuccessful. Consider making a manual backup.")
-        errorcodes[1] = 1
-    return errorcodes
+        return BackupError(path_var=1)
 
 
 def copy_direnv(shell, direnv_paths, max_attempts=3):
@@ -119,6 +135,11 @@ def new_subshell(target_dir, subshell_name):
         write_obj.writelines(direnv_config_init)
 
 
+def backup(shell, direnv_paths):
+    backup_shell_config(shell, direnv_paths, msg=True)
+    backup_path_var(direnv_paths, msg=True)
+
+
 def direnv_handler(task='check'):
     direnv_paths = setup_paths()
     shell = identify_shell()
@@ -127,7 +148,7 @@ def direnv_handler(task='check'):
     if task == 'install':
         if installed:  # uninstall existing installation first
             uninstall_direnv(shell, direnv_paths)
-        backup_shell_config(shell)
+        backup(shell, direnv_paths)
         install_direnv(shell, direnv_paths)
         installed = check_direnv(shell)
     elif task == 'uninstall' and installed:
@@ -137,5 +158,7 @@ def direnv_handler(task='check'):
 
 
 if __name__ == '__main__':
-    direnv_handler('uninstall')
+    direnv_handler()
     # new_subshell(target_dir, subshell_name)
+
+#:TODO: direnv is a good candidate for a Class. maybe backup+restore in one too. Shell?
