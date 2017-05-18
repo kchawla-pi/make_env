@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="Refactored backup fn, backup error code returns as namedtuple&#10; &#10; - backup_shell_config() refactored into backup_shell_config() &amp; &#10; backup_path_var() wrapped in backup()&#10; -">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/make_env.py" afterPath="$PROJECT_DIR$/core/make_env.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_make_env.py" afterPath="$PROJECT_DIR$/tests/test_make_env.py" />
     </list>
     <ignored path="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\.idea\shelf/" />
@@ -49,8 +48,8 @@
           <file leaf-file-name="test_make_env.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests/test_make_env.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="214">
-                  <caret line="47" column="24" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="47" selection-end-column="24" />
+                <state relative-caret-position="180">
+                  <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -141,8 +140,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/docs/make_env_structure" />
         <option value="$PROJECT_DIR$/core/create_tic_env.py" />
-        <option value="$PROJECT_DIR$/tests/test_make_env.py" />
         <option value="$PROJECT_DIR$/core/make_env.py" />
+        <option value="$PROJECT_DIR$/tests/test_make_env.py" />
       </list>
     </option>
   </component>
@@ -746,7 +745,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494940489462</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Replaced shell_hooks (dict) with shell_hooks (named tuple, self-documenting)&#10;&#10; - replaced the field 'insert' with 'command' in shell_info, shell_hooks">
+      <created>1495078806433</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1495078806434</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -798,7 +804,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993808" sideWeight="0.50216216" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32561985" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32561985" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28264463" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -871,7 +877,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/src/direnv" />
     </ignored-roots>
-    <MESSAGE value="Added resolve_path() to easily create paths from given args&#10;&#10; - Previous pilot code removed." />
     <MESSAGE value="Added paths_setup() to create abs_paths for initial setup" />
     <MESSAGE value="Added paths_setup() to create abs_paths for initial setup&#10;&#10; - returns a dict with path for direnv binary" />
     <MESSAGE value="Added shell_setup() to write appropriate shell extension for direnv function" />
@@ -896,7 +901,8 @@
     <MESSAGE value="Refactored direnv_bin_path (str) to direnv_paths (dict) with more info&#10;&#10; - Improved direnv_handler() instaled/not-installed msg." />
     <MESSAGE value="Added test for paths_setup()&#10;&#10; - test_make_env.py added to make_env/tests/&#10; - Test for make_env.setup_paths()" />
     <MESSAGE value="Refactored backup fn, backup error code returns as namedtuple &#10; &#10; - backup_shell_config() refactored into backup_shell_config() &amp; &#10; backup_path_var() wrapped in backup() &#10; - Modified individual backup functions to return error codes using &#10; namedtuples. &#10; - Added optional param to backup functions to display user-friendly &#10; error messages. &#10; - Added identify_shell(&lt;params&gt;) to force use of a specific shell &#10; during unittesting.&#10; - Added finally: block for identiyf_shell() exception handling instead &#10; of if: .&#10; -" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored backup fn, backup error code returns as namedtuple &#10; &#10; - backup_shell_config() refactored into backup_shell_config() &amp; &#10; backup_path_var() wrapped in backup() &#10; - Modified individual backup functions to return error codes using &#10; namedtuples. &#10; - Added optional param to backup functions to display user-friendly &#10; error messages. &#10; - Added identify_shell(&lt;params&gt;) to force use of a specific shell &#10; during unittesting.&#10; - Added finally: block for identiyf_shell() exception handling instead &#10; of if: .&#10; -" />
+    <MESSAGE value="Replaced shell_hooks (dict) with shell_hooks (named tuple, self-documenting)&#10;&#10; - replaced the field 'insert' with 'command' in shell_info, shell_hooks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Replaced shell_hooks (dict) with shell_hooks (named tuple, self-documenting)&#10;&#10; - replaced the field 'insert' with 'command' in shell_info, shell_hooks" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1195,18 +1201,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_make_env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="47" column="24" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="47" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/make_env.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="61">
           <caret line="18" column="95" lean-forward="false" selection-start-line="18" selection-start-column="95" selection-end-line="18" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_make_env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>

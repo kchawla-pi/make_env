@@ -1,5 +1,6 @@
-import unittest
+﻿import unittest
 import os
+import collections as coll
 
 core_path = os.path.realpath(os.path.join(__file__, os.pardir, os.pardir, 'core'))
 os.sys.path.append(core_path)
@@ -33,8 +34,25 @@ class MyTestCase(unittest.TestCase):
             try:
                 self.assertEqual(expected_val, actual_val)
             except:
-                print("expect -- ", expected_val)
-                print("actual -- ", actual_val)
+                print("ERROR: Assertion failure: Values not equal.")
+                print("expect -- {}: {}".format(key, expected_val))
+                print("actual -- {}: {}".format(key, actual_val))
+
+
+    def test_identify_shell(self):
+        ShellHook =   coll.namedtuple('ShellHook', 'name command file')
+        shell_hooks = (ShellHook(name='bash', command='eval "$(direnv hook bash)"\n', file="~/.bashrc"),
+                       ShellHook(name='zsh', command='eval "$(direnv hook zsh)"\n', file="~/.zshrc"), 
+                       ShellHook(name='fish', command='eval (direnv hook fish)\n', file="~/.config/fish/config.fish"), 
+                       ShellHook(name='tcsh', command='eval `direnv hook tcsh`\n', file="~/.cshrc")
+                       )
+        for shell_ in shell_hooks:
+            actual = me.identify_shell(shell_.name, 'force')
+            
+            self.assertEqual(actual['name'], shell_.name)
+            self.assertEqual(actual['command'], shell_.command)
+            shell_config_file = os.path.realpath(os.path.expanduser(shell_.file)) + '1'
+            self.assertEqual(actual['file'], shell_config_file)
 
 
 if __name__ == '__main__':
