@@ -121,8 +121,11 @@ def uninstall_direnv(shell):
 
 
 def check_direnv(shell):
-    with open(shell['file'], 'r') as read_obj:
-        contents = read_obj.readlines()
+    try:
+        with open(shell['file'], 'r') as read_obj:
+            contents = read_obj.readlines()
+    except FileNotFoundError:
+        return False
     direnv_installed = [True for line_ in contents if shell['command'] in line_]
     if True in direnv_installed:
         return True
@@ -163,4 +166,4 @@ if __name__ == '__main__':
     direnv_handler()
     # new_subshell(target_dir, subshell_name)
 
-#:TODO: direnv is a good candidate for a Class. maybe backup+restore in one too. Shell?
+#TODO: direnv is a good candidate for a Class. maybe backup+restore in one too. Shell?
