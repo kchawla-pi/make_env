@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="Converted make_env shell handling functions into Class SubShell in subshell_class module&#10;&#10; - Convenient sharing of common data via self &#10;  .. Gives organization.&#10;  .. Unpythonic, annoying to do module.class.function()&#10;  .. Class &amp; instance methods have overheads that functions don't&#10; &#10; - Considering converting into static methods&#10;  .. Gives organization benefit without overhead&#10;  .. Might do it as a learning exercise&#10;  &#10; - Considering converting make_env Shell handling functions into flat functions&#10;  .. Gives organizaton benefit&#10;  .. No class overheads&#10;  .. easy to type module.function()&#10;  .. Good idea it would seem.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archived_code/clean_tree_overcomplex.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/toolkit.py" />
+    <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="Created tests for subshell">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/test_SubShell_Class.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\.idea\shelf/" />
@@ -32,11 +31,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="test_Class_DirEnv.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/test_Class_DirEnv.py">
+          <file leaf-file-name="test_SubShell_Class.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tests/test_SubShell_Class.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-304">
-                  <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+                <state relative-caret-position="256">
+                  <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
                   <folding>
                     <marker date="1495556542940" expanded="true" signature="305:463" ph="..." />
                   </folding>
@@ -64,7 +63,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="toolkit.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="toolkit.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/core/toolkit.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="264">
@@ -381,8 +380,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test_Class_DirEnv.MyTestCase.setUp">
-    <configuration default="false" name="Unittests for test_Class_DirEnv.MyTestCase.tearDown" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase.setUp">
+    <configuration default="false" name="Unittests for tests.test_SubShell_Class.MyTestCase.tearDown" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -393,11 +392,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="make_env" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_Class_DirEnv.MyTestCase.tearDown&quot;" />
+      <option name="_new_target" value="&quot;tests.test_SubShell_Class.MyTestCase.tearDown&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittests for test_Class_DirEnv.MyTestCase" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittests for tests.test_SubShell_Class.MyTestCase" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -408,11 +407,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="make_env" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_Class_DirEnv.MyTestCase&quot;" />
+      <option name="_new_target" value="&quot;tests.test_SubShell_Class.MyTestCase&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittests for test_Class_DirEnv.MyTestCase.test_copy_binary" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittests for tests.test_SubShell_Class.MyTestCase.test_copy_binary" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -423,11 +422,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="make_env" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_Class_DirEnv.MyTestCase.test_copy_binary&quot;" />
+      <option name="_new_target" value="&quot;tests.test_SubShell_Class.MyTestCase.test_copy_binary&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittests for test_Class_DirEnv.MyTestCase.test_make_dirs" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittests for tests.test_SubShell_Class.MyTestCase.test_make_dirs" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -438,11 +437,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="make_env" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_Class_DirEnv.MyTestCase.test_make_dirs&quot;" />
+      <option name="_new_target" value="&quot;tests.test_SubShell_Class.MyTestCase.test_make_dirs&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittests for test_Class_DirEnv.MyTestCase.setUp" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittests for tests.test_SubShell_Class.MyTestCase.setUp" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -453,7 +452,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="make_env" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_Class_DirEnv.MyTestCase.setUp&quot;" />
+      <option name="_new_target" value="&quot;tests.test_SubShell_Class.MyTestCase.setUp&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method />
     </configuration>
@@ -574,19 +573,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python.test_resolve_path" />
       <item index="1" class="java.lang.String" itemvalue="Python.test_make_env" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_Class_DirEnv.MyTestCase.tearDown" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for test_Class_DirEnv.MyTestCase" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for test_Class_DirEnv.MyTestCase.test_copy_binary" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests for test_Class_DirEnv.MyTestCase.test_make_dirs" />
-      <item index="6" class="java.lang.String" itemvalue="Python tests.Unittests for test_Class_DirEnv.MyTestCase.setUp" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase.tearDown" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase.test_copy_binary" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase.test_make_dirs" />
+      <item index="6" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase.setUp" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests for test_Class_DirEnv.MyTestCase.setUp" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for test_Class_DirEnv.MyTestCase.test_make_dirs" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_Class_DirEnv.MyTestCase.tearDown" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for test_Class_DirEnv.MyTestCase.test_copy_binary" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for test_Class_DirEnv.MyTestCase" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase.setUp" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase.test_make_dirs" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase.tearDown" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase.test_copy_binary" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase" />
       </list>
     </recent_temporary>
   </component>
@@ -814,7 +813,14 @@
       <option name="project" value="LOCAL" />
       <updated>1495556978163</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Created module toolkit for some custom helpful functions&#10;&#10; - debug_print() print function to help with debugging&#10; - clean_tree() uses removes a tree, changes permissions if necessary">
+      <created>1495557188272</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1495557188272</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -939,7 +945,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/src/direnv" />
     </ignored-roots>
-    <MESSAGE value="Added shell_setup() to write appropriate shell extension for direnv function" />
     <MESSAGE value="Added shell_setup() to write appropriate shell extension for direnv function&#10;&#10; - Shell extension written to dummy ~/.&lt;shell&gt;rc1 file for testing." />
     <MESSAGE value="Added main() to run paths_setup(), shell_setup(), mark bin/direnv as executable" />
     <MESSAGE value="Renamed project &amp; root to make_env &amp; all references" />
@@ -964,7 +969,8 @@
     <MESSAGE value="Replaced shell_hooks (dict) with shell_hooks (named tuple, self-documenting)&#10;&#10; - replaced the field 'insert' with 'command' in shell_info, shell_hooks" />
     <MESSAGE value="Added test for identify_shell()" />
     <MESSAGE value="Converted make_env shell handling functions into Class SubShell in subshell_class module&#10;&#10; - Convenient sharing of common data via self &#10;  .. Gives organization.&#10;  .. Unpythonic, annoying to do module.class.function()&#10;  .. Class &amp; instance methods have overheads that functions don't&#10; &#10; - Considering converting into static methods&#10;  .. Gives organization benefit without overhead&#10;  .. Might do it as a learning exercise&#10;  &#10; - Considering converting make_env Shell handling functions into flat functions&#10;  .. Gives organizaton benefit&#10;  .. No class overheads&#10;  .. easy to type module.function()&#10;  .. Good idea it would seem." />
-    <option name="LAST_COMMIT_MESSAGE" value="Converted make_env shell handling functions into Class SubShell in subshell_class module&#10;&#10; - Convenient sharing of common data via self &#10;  .. Gives organization.&#10;  .. Unpythonic, annoying to do module.class.function()&#10;  .. Class &amp; instance methods have overheads that functions don't&#10; &#10; - Considering converting into static methods&#10;  .. Gives organization benefit without overhead&#10;  .. Might do it as a learning exercise&#10;  &#10; - Considering converting make_env Shell handling functions into flat functions&#10;  .. Gives organizaton benefit&#10;  .. No class overheads&#10;  .. easy to type module.function()&#10;  .. Good idea it would seem." />
+    <MESSAGE value="Created module toolkit for some custom helpful functions&#10;&#10; - debug_print() print function to help with debugging&#10; - clean_tree() uses removes a tree, changes permissions if necessary" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created module toolkit for some custom helpful functions&#10;&#10; - debug_print() print function to help with debugging&#10; - clean_tree() uses removes a tree, changes permissions if necessary" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1228,16 +1234,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_Class_DirEnv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-304">
-          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          <folding>
-            <marker date="1495556542940" expanded="true" signature="305:463" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/subshell_class.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1251,6 +1247,16 @@
         <state relative-caret-position="264">
           <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_SubShell_Class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding>
+            <marker date="1495556542940" expanded="true" signature="305:463" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
