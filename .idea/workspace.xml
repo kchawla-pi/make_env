@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="Created tests for subshell">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/test_SubShell_Class.py" />
+    <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/make_env.py" afterPath="$PROJECT_DIR$/src/make_env.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/subshell_class.py" afterPath="$PROJECT_DIR$/src/subshell_class.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/core/toolkit.py" afterPath="$PROJECT_DIR$/src/toolkit.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_make_env.py" afterPath="$PROJECT_DIR$/tests/test_make_env.py" />
     </list>
     <ignored path="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,7 +25,7 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="make_env.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/core/make_env.py">
+            <entry file="file://$PROJECT_DIR$/src/make_env.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="112">
                   <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
@@ -34,8 +37,8 @@
           <file leaf-file-name="test_SubShell_Class.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests/test_SubShell_Class.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="256">
-                  <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+                <state relative-caret-position="384">
+                  <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
                   <folding>
                     <marker date="1495556542940" expanded="true" signature="305:463" ph="..." />
                   </folding>
@@ -64,7 +67,7 @@
             </entry>
           </file>
           <file leaf-file-name="toolkit.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/core/toolkit.py">
+            <entry file="file://$PROJECT_DIR$/src/toolkit.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="264">
                   <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
@@ -74,7 +77,7 @@
             </entry>
           </file>
           <file leaf-file-name="establish_root_path.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/core/establish_root_path.py">
+            <entry file="file://$PROJECT_DIR$/src/establish_root_path.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="0">
                   <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -88,7 +91,7 @@
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="subshell_class.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/core/subshell_class.py">
+            <entry file="file://$PROJECT_DIR$/src/subshell_class.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="240">
                   <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
@@ -304,7 +307,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -318,7 +321,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
+              <option name="myItemId" value="docs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -820,7 +823,14 @@
       <option name="project" value="LOCAL" />
       <updated>1495557188272</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Created tests for subshell_class.py&#10;&#10; - tests subshell_class.identify_shell()&#10; - tests subshell_class.make_dirs()">
+      <created>1495557351879</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1495557351879</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -871,6 +881,7 @@
       <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26914817" sideWeight="0.49583828" order="4" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993808" sideWeight="0.50216216" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22707424" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33674964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -886,7 +897,6 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="92" y="92" width="1096" height="536" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -945,7 +955,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/src/direnv" />
     </ignored-roots>
-    <MESSAGE value="Added shell_setup() to write appropriate shell extension for direnv function&#10;&#10; - Shell extension written to dummy ~/.&lt;shell&gt;rc1 file for testing." />
     <MESSAGE value="Added main() to run paths_setup(), shell_setup(), mark bin/direnv as executable" />
     <MESSAGE value="Renamed project &amp; root to make_env &amp; all references" />
     <MESSAGE value="Added docstring &amp; extra functionality to resolve_paths()" />
@@ -970,7 +979,8 @@
     <MESSAGE value="Added test for identify_shell()" />
     <MESSAGE value="Converted make_env shell handling functions into Class SubShell in subshell_class module&#10;&#10; - Convenient sharing of common data via self &#10;  .. Gives organization.&#10;  .. Unpythonic, annoying to do module.class.function()&#10;  .. Class &amp; instance methods have overheads that functions don't&#10; &#10; - Considering converting into static methods&#10;  .. Gives organization benefit without overhead&#10;  .. Might do it as a learning exercise&#10;  &#10; - Considering converting make_env Shell handling functions into flat functions&#10;  .. Gives organizaton benefit&#10;  .. No class overheads&#10;  .. easy to type module.function()&#10;  .. Good idea it would seem." />
     <MESSAGE value="Created module toolkit for some custom helpful functions&#10;&#10; - debug_print() print function to help with debugging&#10; - clean_tree() uses removes a tree, changes permissions if necessary" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created module toolkit for some custom helpful functions&#10;&#10; - debug_print() print function to help with debugging&#10; - clean_tree() uses removes a tree, changes permissions if necessary" />
+    <MESSAGE value="Created tests for subshell_class.py&#10;&#10; - tests subshell_class.identify_shell()&#10; - tests subshell_class.make_dirs()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created tests for subshell_class.py&#10;&#10; - tests subshell_class.identify_shell()&#10; - tests subshell_class.make_dirs()" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1044,7 +1054,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/make_env.py">
+    <entry file="file://$PROJECT_DIR$/src/make_env.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1052,7 +1062,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/make_env.py">
+    <entry file="file://$PROJECT_DIR$/src/make_env.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1060,7 +1070,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/make_env.py">
+    <entry file="file://$PROJECT_DIR$/src/make_env.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1068,7 +1078,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/make_env.py">
+    <entry file="file://$PROJECT_DIR$/src/make_env.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1202,7 +1212,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/exception_handling_scratchpad.py" />
-    <entry file="file://$PROJECT_DIR$/core/establish_root_path.py">
+    <entry file="file://$PROJECT_DIR$/src/establish_root_path.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1210,7 +1220,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/make_env.py">
+    <entry file="file://$PROJECT_DIR$/src/make_env.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
@@ -1234,7 +1244,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/subshell_class.py">
+    <entry file="file://$PROJECT_DIR$/src/subshell_class.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
@@ -1242,7 +1252,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/toolkit.py">
+    <entry file="file://$PROJECT_DIR$/src/toolkit.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
@@ -1252,8 +1262,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_SubShell_Class.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        <state relative-caret-position="384">
+          <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
           <folding>
             <marker date="1495556542940" expanded="true" signature="305:463" ph="..." />
           </folding>

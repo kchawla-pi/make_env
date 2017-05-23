@@ -2,7 +2,7 @@
 import os
 import collections as coll
 
-core_path = os.path.realpath(os.path.join(__file__, os.pardir, os.pardir, 'core'))
+core_path = os.path.realpath(os.path.join(__file__, os.pardir, os.pardir, 'src'))
 os.sys.path.append(core_path)
 
 import make_env as me
