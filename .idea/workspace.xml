@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/make_env.py" afterPath="$PROJECT_DIR$/src/make_env.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/subshell_class.py" afterPath="$PROJECT_DIR$/src/subshell_class.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/core/toolkit.py" afterPath="$PROJECT_DIR$/src/toolkit.py" />
+    <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="Archived test_toolkit.py to &lt;project_root&gt;/archived_code (overcomplicated)">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/subshell_class.py" afterPath="$PROJECT_DIR$/src/subshell_instance.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/test_SubShell_Class.py" afterPath="$PROJECT_DIR$/tests/test_SubShell_Instance.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_make_env.py" afterPath="$PROJECT_DIR$/tests/test_make_env.py" />
     </list>
     <ignored path="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,26 +19,26 @@
     <favorites_list name="make_env" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.49248388">
+    <splitter split-orientation="horizontal" split-proportion="0.32426628">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="make_env.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="make_env.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/make_env.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="112">
-                  <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+                <state relative-caret-position="1312">
+                  <caret line="82" column="8" lean-forward="true" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="test_SubShell_Class.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tests/test_SubShell_Class.py">
+          <file leaf-file-name="test_SubShell_Instance.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/test_SubShell_Instance.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="384">
-                  <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+                <state relative-caret-position="320">
+                  <caret line="24" column="42" lean-forward="false" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
                   <folding>
-                    <marker date="1495556542940" expanded="true" signature="305:463" ph="..." />
+                    <marker date="1495559070679" expanded="true" signature="308:466" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -57,10 +55,10 @@
             </entry>
           </file>
           <file leaf-file-name="test_toolkit.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/test_toolkit.py">
+            <entry file="file://$PROJECT_DIR$/archived_code/test_toolkit.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="544">
-                  <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+                <state relative-caret-position="240">
+                  <caret line="15" column="48" lean-forward="false" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
                   <folding />
                 </state>
               </provider>
@@ -90,11 +88,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="subshell_class.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/subshell_class.py">
+          <file leaf-file-name="subshell_instance.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/subshell_instance.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="240">
-                  <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+                  <caret line="26" column="68" lean-forward="true" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
                   <folding />
                 </state>
               </provider>
@@ -183,6 +181,7 @@
         <option value="$PROJECT_DIR$/archived_code/clean_tree_overcomplex.py" />
         <option value="$PROJECT_DIR$/core/toolkit.py" />
         <option value="$PROJECT_DIR$/tests/test_Class_DirEnv.py" />
+        <option value="$PROJECT_DIR$/src/subshell_class.py" />
       </list>
     </option>
   </component>
@@ -347,7 +346,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/core/scrath_pad.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/archived_code" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="Python" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/tests/setup_tests.py&#10;true" />
   </component>
@@ -361,14 +360,15 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\~archieved_code" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\archived_code" />
       <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\tests\data" />
       <recent name="C:\Users\kshit\Dropbox\workspace\tic\kchawla-pi" />
       <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\setup" />
       <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\~archieved_code" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -383,8 +383,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase.setUp">
-    <configuration default="false" name="Unittests for tests.test_SubShell_Class.MyTestCase.tearDown" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.subshell_class">
+    <configuration default="false" name="Unittests for tests.test_SubShell_Instance.MyTestCase.tearDown" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -395,11 +395,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="make_env" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_SubShell_Class.MyTestCase.tearDown&quot;" />
+      <option name="_new_target" value="&quot;tests.test_SubShell_Instance.MyTestCase.tearDown&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittests for tests.test_SubShell_Class.MyTestCase" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittests for tests.test_SubShell_Instance.MyTestCase.test_copy_binary" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -410,11 +410,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="make_env" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_SubShell_Class.MyTestCase&quot;" />
+      <option name="_new_target" value="&quot;tests.test_SubShell_Instance.MyTestCase.test_copy_binary&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittests for tests.test_SubShell_Class.MyTestCase.test_copy_binary" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittests for tests.test_SubShell_Instance.MyTestCase.test_make_dirs" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -425,11 +425,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="make_env" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_SubShell_Class.MyTestCase.test_copy_binary&quot;" />
+      <option name="_new_target" value="&quot;tests.test_SubShell_Instance.MyTestCase.test_make_dirs&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittests for tests.test_SubShell_Class.MyTestCase.test_make_dirs" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittests for tests.test_SubShell_Instance.MyTestCase.setUp" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -440,23 +440,26 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="make_env" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_SubShell_Class.MyTestCase.test_make_dirs&quot;" />
+      <option name="_new_target" value="&quot;tests.test_SubShell_Instance.MyTestCase.setUp&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittests for tests.test_SubShell_Class.MyTestCase.setUp" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="subshell_class" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="make_env" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_SubShell_Class.MyTestCase.setUp&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\src\subshell_instance.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="BashConfigurationType" factoryName="Bash">
@@ -576,19 +579,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Python.test_resolve_path" />
       <item index="1" class="java.lang.String" itemvalue="Python.test_make_env" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase.tearDown" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase.test_copy_binary" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase.test_make_dirs" />
-      <item index="6" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase.setUp" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Instance.MyTestCase.tearDown" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Instance.MyTestCase.test_copy_binary" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Instance.MyTestCase.test_make_dirs" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Instance.MyTestCase.setUp" />
+      <item index="6" class="java.lang.String" itemvalue="Python.subshell_class" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase.setUp" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase.test_make_dirs" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase.tearDown" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase.test_copy_binary" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Class.MyTestCase" />
+        <item index="0" class="java.lang.String" itemvalue="Python.subshell_class" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Instance.MyTestCase.setUp" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Instance.MyTestCase.test_make_dirs" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Instance.MyTestCase.tearDown" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Instance.MyTestCase.test_copy_binary" />
       </list>
     </recent_temporary>
   </component>
@@ -830,7 +833,21 @@
       <option name="project" value="LOCAL" />
       <updated>1495557351879</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Renamed &lt;project_root&gt;/core/ to &lt;project_root&gt;/src/">
+      <created>1495557476737</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1495557476737</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Archived test_toolkit.py to &lt;project_root&gt;/archived_code (overcomplicated)">
+      <created>1495557610123</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1495557610123</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -880,11 +897,11 @@
     <layout>
       <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26914817" sideWeight="0.49583828" order="4" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993808" sideWeight="0.50216216" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33674964" sideWeight="0.503937" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22707424" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33674964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22693998" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33674964" sideWeight="0.496063" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24781573" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25684932" sideWeight="0.5041617" order="6" side_tool="false" content_ui="tabs" />
@@ -908,18 +925,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993808" sideWeight="0.50216216" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="92" y="92" width="1096" height="536" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2835821" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2710356" sideWeight="0.49583828" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22707424" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33674964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26914817" sideWeight="0.49583828" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24781573" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39635158" sideWeight="0.49783784" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2583784" sideWeight="0.5041617" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25684932" sideWeight="0.5041617" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39338842" sideWeight="0.49783784" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962668" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -955,8 +972,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/src/direnv" />
     </ignored-roots>
-    <MESSAGE value="Added main() to run paths_setup(), shell_setup(), mark bin/direnv as executable" />
-    <MESSAGE value="Renamed project &amp; root to make_env &amp; all references" />
     <MESSAGE value="Added docstring &amp; extra functionality to resolve_paths()" />
     <MESSAGE value="Added script path in paths_setup()" />
     <MESSAGE value="Renamed shell_setup() to subshell_installer()" />
@@ -980,7 +995,9 @@
     <MESSAGE value="Converted make_env shell handling functions into Class SubShell in subshell_class module&#10;&#10; - Convenient sharing of common data via self &#10;  .. Gives organization.&#10;  .. Unpythonic, annoying to do module.class.function()&#10;  .. Class &amp; instance methods have overheads that functions don't&#10; &#10; - Considering converting into static methods&#10;  .. Gives organization benefit without overhead&#10;  .. Might do it as a learning exercise&#10;  &#10; - Considering converting make_env Shell handling functions into flat functions&#10;  .. Gives organizaton benefit&#10;  .. No class overheads&#10;  .. easy to type module.function()&#10;  .. Good idea it would seem." />
     <MESSAGE value="Created module toolkit for some custom helpful functions&#10;&#10; - debug_print() print function to help with debugging&#10; - clean_tree() uses removes a tree, changes permissions if necessary" />
     <MESSAGE value="Created tests for subshell_class.py&#10;&#10; - tests subshell_class.identify_shell()&#10; - tests subshell_class.make_dirs()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created tests for subshell_class.py&#10;&#10; - tests subshell_class.identify_shell()&#10; - tests subshell_class.make_dirs()" />
+    <MESSAGE value="Renamed &lt;project_root&gt;/core/ to &lt;project_root&gt;/src/" />
+    <MESSAGE value="Archived test_toolkit.py to &lt;project_root&gt;/archived_code (overcomplicated)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Archived test_toolkit.py to &lt;project_root&gt;/archived_code (overcomplicated)" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1220,34 +1237,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/make_env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_toolkit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/archived_code/clean_tree_overcomplex.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1392">
           <caret line="87" column="12" lean-forward="false" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/subshell_class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -1260,13 +1253,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_SubShell_Class.py">
+    <entry file="file://$PROJECT_DIR$/tests/test_SubShell_Instance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+        <state relative-caret-position="320">
+          <caret line="24" column="42" lean-forward="false" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
           <folding>
-            <marker date="1495556542940" expanded="true" signature="305:463" ph="..." />
+            <marker date="1495559070679" expanded="true" signature="308:466" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/archived_code/test_toolkit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" column="48" lean-forward="false" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/make_env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1312">
+          <caret line="82" column="8" lean-forward="true" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/subshell_instance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="26" column="68" lean-forward="true" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
+          <folding />
         </state>
       </provider>
     </entry>

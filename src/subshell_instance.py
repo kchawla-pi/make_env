@@ -9,15 +9,6 @@ class SubShell(object):
         self.root_dir_name = root_dir_name
 
     def setup_paths(self, is_test=False):
-        # P = os.path  # for ease of viewong & typing. Used a lot in this function.
-        # setup_file_path = P.realpath(P.join(__file__, P.pardir, P.pardir, 'requirements', 'bin', 'direnv.linux-amd64'))
-        # installation_path = os.path.expanduser(os.path.join('~', 'bin', 'direnv'))
-        # installed_file_path = os.path.join(installation_path, 'direnv_executable')
-        # backups_path = os.path.join(installation_path, 'pre_direnv_backups')
-        # keys_list = ['setupfile', 'installedfile', 'installpath', 'backupspath']
-        # values_list = [setup_file_path, installed_file_path, installation_path, backups_path]
-        # self.paths = dict(zip(keys_list, values_list))
-
         self.root_dir_path = os.path.split(os.path.split(__file__)[0])[0]
         if is_test:
             suffix = '_test'

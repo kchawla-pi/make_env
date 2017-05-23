@@ -3,7 +3,7 @@ import os
 import shutil
 from toolkit import debug_print
 import toolkit
-import subshell_class as src
+import subshell_instance as src
 import make_env as me
 import collections as coll
 # from scratch_pad import SubShell
