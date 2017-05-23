@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="">
+    <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="Converted make_env shell handling functions into Class SubShell in subshell_class module&#10;&#10; - Convenient sharing of common data via self &#10;  .. Gives organization.&#10;  .. Unpythonic, annoying to do module.class.function()&#10;  .. Class &amp; instance methods have overheads that functions don't&#10; &#10; - Considering converting into static methods&#10;  .. Gives organization benefit without overhead&#10;  .. Might do it as a learning exercise&#10;  &#10; - Considering converting make_env Shell handling functions into flat functions&#10;  .. Gives organizaton benefit&#10;  .. No class overheads&#10;  .. easy to type module.function()&#10;  .. Good idea it would seem.">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archived_code/clean_tree_overcomplex.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/subshell_class.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/core/toolkit.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\.idea\shelf/" />
@@ -32,7 +32,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="test_Class_DirEnv.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="test_Class_DirEnv.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/test_Class_DirEnv.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-304">
@@ -64,11 +64,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="toolkit.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="toolkit.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/core/toolkit.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="544">
-                  <caret line="34" column="27" lean-forward="true" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+                <state relative-caret-position="264">
+                  <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
                   <folding />
                 </state>
               </provider>
@@ -807,7 +807,14 @@
       <option name="project" value="LOCAL" />
       <updated>1495078876184</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Converted make_env shell handling functions into Class SubShell in subshell_class module&#10;&#10; - Convenient sharing of common data via self &#10;  .. Gives organization.&#10;  .. Unpythonic, annoying to do module.class.function()&#10;  .. Class &amp; instance methods have overheads that functions don't&#10; &#10; - Considering converting into static methods&#10;  .. Gives organization benefit without overhead&#10;  .. Might do it as a learning exercise&#10;  &#10; - Considering converting make_env Shell handling functions into flat functions&#10;  .. Gives organizaton benefit&#10;  .. No class overheads&#10;  .. easy to type module.function()&#10;  .. Good idea it would seem.">
+      <created>1495556978163</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1495556978163</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -932,7 +939,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/src/direnv" />
     </ignored-roots>
-    <MESSAGE value="Added paths_setup() to create abs_paths for initial setup&#10;&#10; - returns a dict with path for direnv binary" />
     <MESSAGE value="Added shell_setup() to write appropriate shell extension for direnv function" />
     <MESSAGE value="Added shell_setup() to write appropriate shell extension for direnv function&#10;&#10; - Shell extension written to dummy ~/.&lt;shell&gt;rc1 file for testing." />
     <MESSAGE value="Added main() to run paths_setup(), shell_setup(), mark bin/direnv as executable" />
@@ -957,7 +963,8 @@
     <MESSAGE value="Refactored backup fn, backup error code returns as namedtuple &#10; &#10; - backup_shell_config() refactored into backup_shell_config() &amp; &#10; backup_path_var() wrapped in backup() &#10; - Modified individual backup functions to return error codes using &#10; namedtuples. &#10; - Added optional param to backup functions to display user-friendly &#10; error messages. &#10; - Added identify_shell(&lt;params&gt;) to force use of a specific shell &#10; during unittesting.&#10; - Added finally: block for identiyf_shell() exception handling instead &#10; of if: .&#10; -" />
     <MESSAGE value="Replaced shell_hooks (dict) with shell_hooks (named tuple, self-documenting)&#10;&#10; - replaced the field 'insert' with 'command' in shell_info, shell_hooks" />
     <MESSAGE value="Added test for identify_shell()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test for identify_shell()" />
+    <MESSAGE value="Converted make_env shell handling functions into Class SubShell in subshell_class module&#10;&#10; - Convenient sharing of common data via self &#10;  .. Gives organization.&#10;  .. Unpythonic, annoying to do module.class.function()&#10;  .. Class &amp; instance methods have overheads that functions don't&#10; &#10; - Considering converting into static methods&#10;  .. Gives organization benefit without overhead&#10;  .. Might do it as a learning exercise&#10;  &#10; - Considering converting make_env Shell handling functions into flat functions&#10;  .. Gives organizaton benefit&#10;  .. No class overheads&#10;  .. easy to type module.function()&#10;  .. Good idea it would seem." />
+    <option name="LAST_COMMIT_MESSAGE" value="Converted make_env shell handling functions into Class SubShell in subshell_class module&#10;&#10; - Convenient sharing of common data via self &#10;  .. Gives organization.&#10;  .. Unpythonic, annoying to do module.class.function()&#10;  .. Class &amp; instance methods have overheads that functions don't&#10; &#10; - Considering converting into static methods&#10;  .. Gives organization benefit without overhead&#10;  .. Might do it as a learning exercise&#10;  &#10; - Considering converting make_env Shell handling functions into flat functions&#10;  .. Gives organizaton benefit&#10;  .. No class overheads&#10;  .. easy to type module.function()&#10;  .. Good idea it would seem." />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1205,14 +1212,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/toolkit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="34" column="27" lean-forward="true" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_toolkit.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -1243,6 +1242,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/toolkit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
           <folding />
         </state>
       </provider>
