@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="Archived test_toolkit.py to &lt;project_root&gt;/archived_code (overcomplicated)">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/subshell_class.py" afterPath="$PROJECT_DIR$/src/subshell_instance.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/test_SubShell_Class.py" afterPath="$PROJECT_DIR$/tests/test_SubShell_Instance.py" />
+    <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logs/Errors-- Test_copy_dir.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/test_subshell_2.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/subshell_instance.py" afterPath="$PROJECT_DIR$/src/subshell.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/test_SubShell_Instance.py" afterPath="$PROJECT_DIR$/tests/test_SubShell.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/make_env.py" afterPath="$PROJECT_DIR$/src/make_env.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/toolkit.py" afterPath="$PROJECT_DIR$/src/toolkit.py" />
     </list>
     <ignored path="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,27 +23,67 @@
     <favorites_list name="make_env" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.32426628">
+    <splitter split-orientation="horizontal" split-proportion="0.7809592">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="make_env.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="make_env.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/make_env.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1312">
-                  <caret line="82" column="8" lean-forward="true" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
+                <state relative-caret-position="144">
+                  <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="test_SubShell_Instance.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/test_SubShell_Instance.py">
+          <file leaf-file-name="Errors-- Test_copy_dir.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/logs/Errors-- Test_copy_dir.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="320">
-                  <caret line="24" column="42" lean-forward="false" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test_SubShell.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tests/test_SubShell.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="576">
+                  <caret line="36" column="66" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
                   <folding>
-                    <marker date="1495559070679" expanded="true" signature="308:466" ph="..." />
+                    <marker date="1495737473594" expanded="true" signature="536:839" ph="..." />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test_subshell_2.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/test_subshell_2.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="560">
+                  <caret line="43" column="39" lean-forward="true" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="toolkit.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/toolkit.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1232">
+                  <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="scratch_pad.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/scratch_pad.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="293">
+                  <caret line="41" column="9" lean-forward="false" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -64,16 +108,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="toolkit.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/toolkit.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="264">
-                  <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="establish_root_path.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/establish_root_path.py">
               <provider selected="true" editor-type-id="text-editor">
@@ -88,11 +122,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="subshell_instance.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/subshell_instance.py">
+          <file leaf-file-name="subshell.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/subshell.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="26" column="68" lean-forward="true" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
+                <state relative-caret-position="497">
+                  <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -112,15 +146,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>os.path.realpath(os.path.expanduser(</find>
-      <find>C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env</find>
-      <find>test_data_posix</find>
-      <find>test_data_filepath</find>
-      <find>paths</find>
-      <find>files</find>
-      <find>absbin</find>
-      <find>abs_paths</find>
-      <find>bin_path</find>
       <find>bin</find>
       <find>path</find>
       <find>'config'</find>
@@ -132,7 +157,25 @@
       <find>zip</find>
       <find>izip</find>
       <find>backup_shell_config</find>
+      <find>self.root</find>
+      <find>coll</find>
+      <find>direnv_paths</find>
+      <find>if</find>
+      <find>subshell</find>
+      <find>src</find>
+      <find>suffix</find>
+      <find>root_dir_name</find>
+      <find>permission</find>
+      <find>debug</find>
+      <find>print(</find>
+      <find>yep</find>
+      <find>except</find>
+      <find>PermissionError</find>
+      <find>handle_excep</find>
+      <find>shell</find>
       <find>cleanup</find>
+      <find>coll.</find>
+      <find>self.</find>
     </findStrings>
     <replaceStrings>
       <replace>resolve_path(</replace>
@@ -154,10 +197,20 @@
       <replace>izip</replace>
       <replace>it.izip</replace>
       <replace>file</replace>
+      <replace>collections</replace>
+      <replace>subshell_in</replace>
+      <replace>subshell</replace>
+      <replace>self.shell</replace>
+      <replace>self.suffix</replace>
+      <replace>rootname</replace>
+      <replace>collections.</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -173,7 +226,6 @@
         <option value="$PROJECT_DIR$/tests/setup_tests.py" />
         <option value="$PROJECT_DIR$/tests/test_resolve_path.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/docs/make_env_structure" />
         <option value="$PROJECT_DIR$/core/create_tic_env.py" />
         <option value="$PROJECT_DIR$/tests/test_make_env.py" />
         <option value="$PROJECT_DIR$/core/make_env.py" />
@@ -182,6 +234,17 @@
         <option value="$PROJECT_DIR$/core/toolkit.py" />
         <option value="$PROJECT_DIR$/tests/test_Class_DirEnv.py" />
         <option value="$PROJECT_DIR$/src/subshell_class.py" />
+        <option value="$PROJECT_DIR$/src/subshell_static.py" />
+        <option value="$PROJECT_DIR$/docs/make_env_structure" />
+        <option value="$PROJECT_DIR$/src/subshell_instance.py" />
+        <option value="$PROJECT_DIR$/tests/test_SubShell_Instance.py" />
+        <option value="$PROJECT_DIR$/src/make_env.py" />
+        <option value="$PROJECT_DIR$/src/subshell.py" />
+        <option value="$PROJECT_DIR$/logs/Errors-- Test_copy_dir.txt" />
+        <option value="$PROJECT_DIR$/src/scratch_pad.py" />
+        <option value="$PROJECT_DIR$/src/toolkit.py" />
+        <option value="$PROJECT_DIR$/tests/test_SubShell.py" />
+        <option value="$PROJECT_DIR$/tests/test_subshell_2.py" />
       </list>
     </option>
   </component>
@@ -320,6 +383,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="logs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="docs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -345,7 +422,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/archived_code" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="Python" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/tests/setup_tests.py&#10;true" />
@@ -368,6 +445,8 @@
       <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\docs" />
+      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\src" />
       <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\~archieved_code" />
     </key>
   </component>
@@ -383,68 +462,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.subshell_class">
-    <configuration default="false" name="Unittests for tests.test_SubShell_Instance.MyTestCase.tearDown" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="make_env" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_SubShell_Instance.MyTestCase.tearDown&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests for tests.test_SubShell_Instance.MyTestCase.test_copy_binary" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="make_env" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_SubShell_Instance.MyTestCase.test_copy_binary&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests for tests.test_SubShell_Instance.MyTestCase.test_make_dirs" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="make_env" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_SubShell_Instance.MyTestCase.test_make_dirs&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests for tests.test_SubShell_Instance.MyTestCase.setUp" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="make_env" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_SubShell_Instance.MyTestCase.setUp&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method />
-    </configuration>
-    <configuration default="false" name="subshell_class" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.test_subshell_2">
+    <configuration default="false" name="scratch_pad" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -456,10 +475,74 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="make_env" />
-      <option name="SCRIPT_NAME" value="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\src\subshell_instance.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/scratch_pad.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests for test_SubShell.TestSetupPaths.test_setup_paths" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="C:\Program Files\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="make_env" />
+      <option name="_new_pattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_SubShell.TestSetupPaths.test_setup_paths&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests for test_SubShell.TestCopyBinary" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="C:\Program Files\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="make_env" />
+      <option name="_new_pattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_SubShell.TestCopyBinary&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests for test_SubShell.TestCopyBinary.test_copy_binary" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="C:\Program Files\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="make_env" />
+      <option name="_new_pattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_SubShell.TestCopyBinary.test_copy_binary&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in test_subshell_2.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="C:\Program Files\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="make_env" />
+      <option name="_new_pattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_subshell_2.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
     <configuration default="true" type="BashConfigurationType" factoryName="Bash">
@@ -529,12 +612,13 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Program Files\Python36\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="make_env" />
+      <option name="_new_pattern" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;.&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
@@ -576,22 +660,78 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <list size="7">
+    <configuration default="false" name="Unittests in test_SubShell.py" type="tests" factoryName="Unittests" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="make_env" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_SubShell.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test_SubShell" type="PythonConfigurationType" factoryName="Python">
+      <output_file path="$PROJECT_DIR$/logs/Errors-- Test_copy_dir.txt" is_save="true" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Program Files\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="make_env" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_SubShell.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test_subshell_2" type="PythonConfigurationType" factoryName="Python">
+      <output_file path="$PROJECT_DIR$/logs/Errors-- Test_copy_dir.txt" is_save="true" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Program Files\Python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="make_env" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_subshell_2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <list size="10">
       <item index="0" class="java.lang.String" itemvalue="Python.test_resolve_path" />
       <item index="1" class="java.lang.String" itemvalue="Python.test_make_env" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Instance.MyTestCase.tearDown" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Instance.MyTestCase.test_copy_binary" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Instance.MyTestCase.test_make_dirs" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Instance.MyTestCase.setUp" />
-      <item index="6" class="java.lang.String" itemvalue="Python.subshell_class" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test_SubShell.py" />
+      <item index="3" class="java.lang.String" itemvalue="Python.test_SubShell" />
+      <item index="4" class="java.lang.String" itemvalue="Python.test_subshell_2" />
+      <item index="5" class="java.lang.String" itemvalue="Python.scratch_pad" />
+      <item index="6" class="java.lang.String" itemvalue="Python tests.Unittests for test_SubShell.TestSetupPaths.test_setup_paths" />
+      <item index="7" class="java.lang.String" itemvalue="Python tests.Unittests for test_SubShell.TestCopyBinary" />
+      <item index="8" class="java.lang.String" itemvalue="Python tests.Unittests for test_SubShell.TestCopyBinary.test_copy_binary" />
+      <item index="9" class="java.lang.String" itemvalue="Python tests.Unittests in test_subshell_2.py" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.subshell_class" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Instance.MyTestCase.setUp" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Instance.MyTestCase.test_make_dirs" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Instance.MyTestCase.tearDown" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests for tests.test_SubShell_Instance.MyTestCase.test_copy_binary" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_subshell_2.py" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests for test_SubShell.TestCopyBinary.test_copy_binary" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_SubShell.TestCopyBinary" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for test_SubShell.TestSetupPaths.test_setup_paths" />
+        <item index="4" class="java.lang.String" itemvalue="Python.scratch_pad" />
       </list>
     </recent_temporary>
   </component>
@@ -847,39 +987,46 @@
       <option name="project" value="LOCAL" />
       <updated>1495557610123</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Renamed subshell_class.py, test_SubShell_Class to subshell_instance.py, test_subshell_instance.py">
+      <created>1495559210598</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1495559210598</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_Class_DirEnv_MyTestCase_setUp - 2017.05.23 at 11h 42m 23s.xml">
-      <configuration name="Unittests for test_Class_DirEnv.MyTestCase.setUp" configurationId="tests" />
+    <history-entry file="Unittests_for_test_SubShell_TestCopyBinary - 2017.05.25 at 14h 00m 57s.xml">
+      <configuration name="Unittests for test_SubShell.TestCopyBinary" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_Class_DirEnv_MyTestCase_tearDown - 2017.05.23 at 08h 35m 55s.xml">
-      <configuration name="Unittests for test_Class_DirEnv.MyTestCase.tearDown" configurationId="tests" />
+    <history-entry file="Unittests_for_test_SubShell_TestCopyBinary_test_copy_binary - 2017.05.25 at 14h 02m 29s.xml">
+      <configuration name="Unittests for test_SubShell.TestCopyBinary.test_copy_binary" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_Class_DirEnv_MyTestCase_tearDown - 2017.05.23 at 08h 36m 26s.xml">
-      <configuration name="Unittests for test_Class_DirEnv.MyTestCase.tearDown" configurationId="tests" />
+    <history-entry file="Unittests_for_test_SubShell_TestCopyBinary_test_copy_binary - 2017.05.25 at 14h 02m 57s.xml">
+      <configuration name="Unittests for test_SubShell.TestCopyBinary.test_copy_binary" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_Class_DirEnv_MyTestCase_tearDown - 2017.05.23 at 08h 37m 50s.xml">
-      <configuration name="Unittests for test_Class_DirEnv.MyTestCase.tearDown" configurationId="tests" />
+    <history-entry file="Unittests_for_test_SubShell_TestCopyBinary_test_copy_binary - 2017.05.25 at 14h 05m 32s.xml">
+      <configuration name="Unittests for test_SubShell.TestCopyBinary.test_copy_binary" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_Class_DirEnv_MyTestCase_test_copy_binary - 2017.05.23 at 08h 34m 54s.xml">
-      <configuration name="Unittests for test_Class_DirEnv.MyTestCase.test_copy_binary" configurationId="tests" />
+    <history-entry file="Unittests_for_test_SubShell_TestCopyBinary_test_copy_binary - 2017.05.25 at 14h 07m 31s.xml">
+      <configuration name="Unittests for test_SubShell.TestCopyBinary.test_copy_binary" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_Class_DirEnv_MyTestCase_test_copy_binary - 2017.05.23 at 08h 36m 38s.xml">
-      <configuration name="Unittests for test_Class_DirEnv.MyTestCase.test_copy_binary" configurationId="tests" />
+    <history-entry file="Unittests_for_test_SubShell_TestCopyBinary_test_copy_binary - 2017.05.25 at 14h 08m 52s.xml">
+      <configuration name="Unittests for test_SubShell.TestCopyBinary.test_copy_binary" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_Class_DirEnv_MyTestCase_test_copy_binary - 2017.05.23 at 08h 37m 40s.xml">
-      <configuration name="Unittests for test_Class_DirEnv.MyTestCase.test_copy_binary" configurationId="tests" />
+    <history-entry file="Unittests_for_test_SubShell_TestCopyBinary_test_copy_binary - 2017.05.25 at 14h 09m 42s.xml">
+      <configuration name="Unittests for test_SubShell.TestCopyBinary.test_copy_binary" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_Class_DirEnv_MyTestCase_test_make_dirs - 2017.05.23 at 08h 39m 19s.xml">
-      <configuration name="Unittests for test_Class_DirEnv.MyTestCase.test_make_dirs" configurationId="tests" />
+    <history-entry file="Unittests_in_test_subshell_2_py - 2017.05.25 at 14h 44m 48s.xml">
+      <configuration name="Unittests in test_subshell_2.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_Class_DirEnv_MyTestCase_test_make_dirs - 2017.05.23 at 09h 12m 23s.xml">
-      <configuration name="Unittests for test_Class_DirEnv.MyTestCase.test_make_dirs" configurationId="tests" />
+    <history-entry file="Unittests_in_test_subshell_2_py - 2017.05.25 at 14h 44m 58s.xml">
+      <configuration name="Unittests in test_subshell_2.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_Class_DirEnv_MyTestCase_test_make_dirs - 2017.05.23 at 09h 12m 42s.xml">
-      <configuration name="Unittests for test_Class_DirEnv.MyTestCase.test_make_dirs" configurationId="tests" />
+    <history-entry file="Unittests_in_test_subshell_2_py - 2017.05.25 at 14h 45m 01s.xml">
+      <configuration name="Unittests in test_subshell_2.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -895,17 +1042,17 @@
     <frame x="-8" y="-8" width="1434" height="814" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26914817" sideWeight="0.49583828" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26914817" sideWeight="0.49583828" order="4" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33674964" sideWeight="0.503937" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.50536865" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22693998" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.49463135" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22693998" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33674964" sideWeight="0.496063" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24781573" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24767359" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25684932" sideWeight="0.5041617" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39338842" sideWeight="0.49783784" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39238653" sideWeight="0.49783784" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962668" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -922,20 +1069,20 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993808" sideWeight="0.50216216" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.50536865" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="92" y="92" width="1096" height="536" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22707424" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33674964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.49463135" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22693998" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33674964" sideWeight="0.496063" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26914817" sideWeight="0.49583828" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26914817" sideWeight="0.49583828" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24781573" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24767359" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25684932" sideWeight="0.5041617" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39338842" sideWeight="0.49783784" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39238653" sideWeight="0.49783784" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962668" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -972,7 +1119,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/src/direnv" />
     </ignored-roots>
-    <MESSAGE value="Added docstring &amp; extra functionality to resolve_paths()" />
     <MESSAGE value="Added script path in paths_setup()" />
     <MESSAGE value="Renamed shell_setup() to subshell_installer()" />
     <MESSAGE value="Refactored subshell_installer() into identify_shell() &amp; new_subshell()&#10;&#10; - Renamed setup_paths() to paths_setup()" />
@@ -997,7 +1143,8 @@
     <MESSAGE value="Created tests for subshell_class.py&#10;&#10; - tests subshell_class.identify_shell()&#10; - tests subshell_class.make_dirs()" />
     <MESSAGE value="Renamed &lt;project_root&gt;/core/ to &lt;project_root&gt;/src/" />
     <MESSAGE value="Archived test_toolkit.py to &lt;project_root&gt;/archived_code (overcomplicated)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Archived test_toolkit.py to &lt;project_root&gt;/archived_code (overcomplicated)" />
+    <MESSAGE value="Renamed subshell_class.py, test_SubShell_Class to subshell_instance.py, test_subshell_instance.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed subshell_class.py, test_SubShell_Class to subshell_instance.py, test_subshell_instance.py" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1023,6 +1170,21 @@
           <line>48</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/scratch_pad.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/subshell.py</url>
+          <line>140</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_SubShell.py</url>
+          <line>131</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -1035,42 +1197,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="61" />
+      <option name="time" value="78" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/data/data_to_test_resolve_path_in_nt.txt" />
-    <entry file="file://$PROJECT_DIR$/tests/data/data_to_test_resolve_path_in_posix.txt" />
-    <entry file="file://$PROJECT_DIR$/tests/data/test_resolve_path_data.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_resolve_path.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1944">
-          <caret line="81" column="27" lean-forward="false" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Python36/Lib/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14304">
-          <caret line="596" column="0" lean-forward="false" selection-start-line="596" selection-start-column="0" selection-end-line="596" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/setup_tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/make_env.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1177,13 +1308,6 @@
     <entry file="file://$PROJECT_DIR$/tests/data/data_to_test_resolve_path_in_posix.txt" />
     <entry file="file://$PROJECT_DIR$/tests/data/data_to_test_resolve_path_in_nt.txt" />
     <entry file="file://$PROJECT_DIR$/core/scrath_pad.py" />
-    <entry file="file://$PROJECT_DIR$/docs/make_env_structure">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files/Python36/Lib/ntpath.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
@@ -1245,21 +1369,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolkit.py">
+    <entry file="file://$PROJECT_DIR$/src/subshell_static.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+        <state relative-caret-position="263">
+          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_SubShell_Instance.py">
+    <entry file="file://$PROJECT_DIR$/docs/make_env_structure.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="24" column="42" lean-forward="false" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-          <folding>
-            <marker date="1495559070679" expanded="true" signature="308:466" ph="..." />
-          </folding>
+        <state relative-caret-position="534">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="56" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/project_structure_query.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/make_env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/subshell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1271,19 +1417,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/make_env.py">
+    <entry file="file://$PROJECT_DIR$/src/scratch_pad.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1312">
-          <caret line="82" column="8" lean-forward="true" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
+        <state relative-caret-position="293">
+          <caret line="41" column="9" lean-forward="false" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/subshell_instance.py">
+    <entry file="file://$PROJECT_DIR$/logs/Errors-- Test_copy_dir.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="26" column="68" lean-forward="true" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolkit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1232">
+          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/unittest/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-169">
+          <caret line="47" column="6" lean-forward="false" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_subshell_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="43" column="39" lean-forward="true" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_SubShell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="36" column="66" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <marker date="1495737473594" expanded="true" signature="536:839" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
