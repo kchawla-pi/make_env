@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logs/Errors-- Test_copy_dir.txt" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/test_subshell_2.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/make_env.py" afterPath="$PROJECT_DIR$/src/make_env.py" />
@@ -47,8 +46,8 @@
           <file leaf-file-name="test_SubShell.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests/test_SubShell.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="224">
-                  <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+                <state relative-caret-position="256">
+                  <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
                   <folding>
                     <marker date="1495737473594" expanded="true" signature="536:839" ph="..." />
                   </folding>
@@ -1013,7 +1012,14 @@
       <option name="project" value="LOCAL" />
       <updated>1495742881707</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Added log file in /logs/ to gather console output from test_copy_dir()">
+      <created>1495742952143</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1495742952143</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1138,7 +1144,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/src/direnv" />
     </ignored-roots>
-    <MESSAGE value="Added functions to install &amp; check direnv" />
     <MESSAGE value="Added uninstall_direnv(), renamed main() to direnv_handler()&#10;&#10; - Renamed check_direnv_inst() to check_direnv()" />
     <MESSAGE value="Added function to backup  shell config file before adding direnv extensions" />
     <MESSAGE value="Ddirenv() now handles all direnv tasks, renamed module to make_env.py" />
@@ -1163,7 +1168,8 @@
     <MESSAGE value="Added __init__ to SubShell and some exception handling to the methods" />
     <MESSAGE value="Added: test_copy_binary, exception handling. Refactored: MyTestCase =&gt; 3 classes&#10; &#10;  - MyTestCase class was refactored into 3 classes to ascertain if that \&#10;  would add predictability to order of testing. (It didn't)&#10;  - Removed teardown() as it added to more confusion than help&#10;  - Changed some utilities to enable optional params for debug messages \&#10;  &amp; error handling" />
     <MESSAGE value="Added change_permissions(), fn_init(), fn_outcome() improved cleanup_tree()&#10;&#10; - change_permissions() function&#10; - Somewhat improved and more reliable cleanup_tree()&#10; - Optional parameters to enable error-handling &amp; messages&#10; - fn_init(), fn_outcome() to indicate function calls &amp; outcomes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added change_permissions(), fn_init(), fn_outcome() improved cleanup_tree()&#10;&#10; - change_permissions() function&#10; - Somewhat improved and more reliable cleanup_tree()&#10; - Optional parameters to enable error-handling &amp; messages&#10; - fn_init(), fn_outcome() to indicate function calls &amp; outcomes" />
+    <MESSAGE value="Added log file in /logs/ to gather console output from test_copy_dir()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added log file in /logs/ to gather console output from test_copy_dir()" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1478,8 +1484,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_SubShell.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        <state relative-caret-position="256">
+          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
           <folding>
             <marker date="1495737473594" expanded="true" signature="536:839" ph="..." />
           </folding>
