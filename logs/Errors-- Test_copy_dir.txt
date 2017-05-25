@@ -1,0 +1,8 @@
+{'paths': Paths(setupfile='C:\\Users\\kshit\\Dropbox\\workspace\\make_env\\kchawla-pi\\make_env\\requirements\\bin\\direnv.linux-amd64', installedfile='C:\\Users\\kshit\\bin_test\\direnv\\direnv.linux-amd64', installationpath='C:\\Users\\kshit\\bin_test\\direnv', backupspath='C:\\Users\\kshit\\bin_test\\direnv\\pre_direnv_backups'),
+ 'purpose': 'test',
+ 'root_dir_path': 'C:\\Users\\kshit\\Dropbox\\workspace\\make_env\\kchawla-pi\\make_env',
+ 'rootname': 'make_env',
+ 'shell': {'command': 'eval "$(direnv hook bash)"\n',
+           'file': 'C:\\Users\\kshit\\.bashrc1',
+           'name': 'bash'},
+ 'suffix': '_test'}
