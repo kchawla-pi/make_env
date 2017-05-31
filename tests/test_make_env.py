@@ -2,6 +2,9 @@
 import os
 import collections as coll
 
+import archived_code.moved_frm_make_env
+
+
 core_path = os.path.realpath(os.path.join(__file__, os.pardir, os.pardir, 'src'))
 os.sys.path.append(core_path)
 
@@ -25,7 +28,7 @@ class MyTestCase(unittest.TestCase):
         values_list = [setupfile, installedfile, installpath, backupspath]
 
         return_expected = dict(zip(keys_list, values_list))
-        return_actual = me.setup_paths()
+        return_actual = archived_code.moved_frm_make_env.setup_paths()
         self.assertEqual(len(return_actual), len(return_expected))
         for i in range(0, len(return_actual)):
             key = keys_list[i]
