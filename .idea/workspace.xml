@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="Added functionality to toolkit.py, tests to test_subshell_2.py&#10;&#10; toolkit.py&#10; -">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archived_code/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archived_code/moved_frm_make_env.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logs/Errors-- Test_copy_dir_actual.txt" />
+    <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="Added tests for subshell.SubShell methods, unittest framework scrapped&#10; &#10; - Imported and used toolkit.py functions &#10; - setup_tests()&#10; - test_setup_tests()&#10; - test_make_dirs()&#10; - test_copy_binary()&#10; - test_make_exec()">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/Errors-- Test_copy_dir.txt" afterPath="$PROJECT_DIR$/logs/Errors-- Test_copy_dir.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/make_env.py" afterPath="$PROJECT_DIR$/src/make_env.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/subshell.py" afterPath="$PROJECT_DIR$/src/subshell.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/toolkit.py" afterPath="$PROJECT_DIR$/src/toolkit.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_make_env.py" afterPath="$PROJECT_DIR$/tests/test_make_env.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_subshell_2.py" afterPath="$PROJECT_DIR$/tests/test_subshell_2.py" />
     </list>
     <ignored path="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\.idea\shelf/" />
@@ -33,7 +25,7 @@
             <entry file="file://$PROJECT_DIR$/src/make_env.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="176">
-                  <caret line="78" column="28" lean-forward="true" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
+                  <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -42,8 +34,8 @@
           <file leaf-file-name="test_SubShell.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/test_SubShell.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="130">
-                  <caret line="133" column="30" lean-forward="true" selection-start-line="133" selection-start-column="30" selection-end-line="133" selection-end-column="30" />
+                <state relative-caret-position="210">
+                  <caret line="138" column="37" lean-forward="true" selection-start-line="138" selection-start-column="37" selection-end-line="138" selection-end-column="37" />
                   <folding>
                     <marker date="1496259305323" expanded="true" signature="536:839" ph="..." />
                   </folding>
@@ -74,8 +66,8 @@
           <file leaf-file-name="subshell.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/subshell.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="327">
-                  <caret line="156" column="0" lean-forward="true" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+                <state relative-caret-position="123">
+                  <caret line="142" column="23" lean-forward="true" selection-start-line="142" selection-start-column="23" selection-end-line="142" selection-end-column="23" />
                   <folding />
                 </state>
               </provider>
@@ -84,8 +76,8 @@
           <file leaf-file-name="toolkit.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/toolkit.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="118">
-                  <caret line="21" column="68" lean-forward="true" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
+                <state relative-caret-position="3072">
+                  <caret line="192" column="67" lean-forward="true" selection-start-line="192" selection-start-column="67" selection-end-line="192" selection-end-column="67" />
                   <folding />
                 </state>
               </provider>
@@ -94,8 +86,8 @@
           <file leaf-file-name="Errors-- Test_copy_dir.txt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/logs/Errors-- Test_copy_dir.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state relative-caret-position="128">
+                  <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -108,8 +100,8 @@
           <file leaf-file-name="test_subshell_2.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests/test_subshell_2.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-80">
-                  <caret line="69" column="14" lean-forward="true" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
+                <state relative-caret-position="251">
+                  <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -191,6 +183,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="45c4be58686a0d27bc664811326c593c777bd984" />
+      </map>
+    </option>
     <option name="PUSH_TAGS">
       <GitPushTagMode />
     </option>
@@ -223,11 +220,11 @@
         <option value="$PROJECT_DIR$/tests/test_SubShell_Instance.py" />
         <option value="$PROJECT_DIR$/logs/Errors-- Test_copy_dir.txt" />
         <option value="$PROJECT_DIR$/src/scratch_pad.py" />
-        <option value="$PROJECT_DIR$/tests/test_subshell_2.py" />
         <option value="$PROJECT_DIR$/tests/test_SubShell.py" />
         <option value="$PROJECT_DIR$/src/subshell.py" />
         <option value="$PROJECT_DIR$/src/make_env.py" />
         <option value="$PROJECT_DIR$/src/toolkit.py" />
+        <option value="$PROJECT_DIR$/tests/test_subshell_2.py" />
       </list>
     </option>
   </component>
@@ -1041,7 +1038,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/src/direnv" />
     </ignored-roots>
-    <MESSAGE value="Simplified setup_paths(), handled FileNotFound exception in install_direnv()&#10;&#10; - setup_paths() returns direnv_bin (str) not abs_paths (dict)" />
     <MESSAGE value="Renamed 'shell_info' to 'shell', added messages to direnv_handler()" />
     <MESSAGE value="Completed uninstall_direnv() v1" />
     <MESSAGE value="Refactor: Replaced (redundant, complex) resolve_path() with std lib functions&#10;&#10; - Refactor: removed unused parameter 'root_name' from setup_paths().&#10; - Refactor: removed unused paramter 'direnv_bin' from uninstall_direnv()" />
@@ -1066,7 +1062,8 @@
     <MESSAGE value="New unit tests for subshell.py without the unittests framework&#10;&#10; - It was adding to the confusion" />
     <MESSAGE value="Amended: Added toolkit.py, mistakenly left out in the original commit&#10;&#10; - Original Commit msg:&#10;    Added change_permissions(), fn_init(), fn_outcome(), improved cleanup_tree()&#10;&#10;    - change_permissions() function&#10;    - Somewhat improved and more reliable cleanup_tree()&#10;    - Optional parameters to enable error-handling &amp; messages&#10;    - fn_init(), fn_outcome() to indicate function calls &amp; outcomes" />
     <MESSAGE value="Amended: Added toolkit.py, mistakenly left out in the original commit&#10;&#10; - Minor changes to make_env.py&#10; - Original Commit msg:&#10;    Added change_permissions(), fn_init(), fn_outcome(), improved cleanup_tree()&#10;&#10;    - change_permissions() function&#10;    - Somewhat improved and more reliable cleanup_tree()&#10;    - Optional parameters to enable error-handling &amp; messages&#10;    - fn_init(), fn_outcome() to indicate function calls &amp; outcomes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Amended: Added toolkit.py, mistakenly left out in the original commit&#10;&#10; - Minor changes to make_env.py&#10; - Original Commit msg:&#10;    Added change_permissions(), fn_init(), fn_outcome(), improved cleanup_tree()&#10;&#10;    - change_permissions() function&#10;    - Somewhat improved and more reliable cleanup_tree()&#10;    - Optional parameters to enable error-handling &amp; messages&#10;    - fn_init(), fn_outcome() to indicate function calls &amp; outcomes" />
+    <MESSAGE value="Added tests for subshell.SubShell methods, unittest framework scrapped&#10; &#10; - Imported and used toolkit.py functions &#10; - setup_tests()&#10; - test_setup_tests()&#10; - test_make_dirs()&#10; - test_copy_binary()&#10; - test_make_exec()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added tests for subshell.SubShell methods, unittest framework scrapped&#10; &#10; - Imported and used toolkit.py functions &#10; - setup_tests()&#10; - test_setup_tests()&#10; - test_make_dirs()&#10; - test_copy_binary()&#10; - test_make_exec()" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1305,14 +1302,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logs/Errors-- Test_copy_dir.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logs/Errors-- Test_copy_dir_actual.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1328,6 +1317,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ls_call_op.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/subshell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="142" column="23" lean-forward="true" selection-start-line="142" selection-start-column="23" selection-end-line="142" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/make_env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_SubShell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="138" column="37" lean-forward="true" selection-start-line="138" selection-start-column="37" selection-end-line="138" selection-end-column="37" />
+          <folding>
+            <marker date="1496259305323" expanded="true" signature="536:839" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/scratch_pad.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -1336,51 +1358,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ls_call_op.txt">
+    <entry file="file://$PROJECT_DIR$/logs/Errors-- Test_copy_dir.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_subshell_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
-          <caret line="69" column="14" lean-forward="true" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_SubShell.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="133" column="30" lean-forward="true" selection-start-line="133" selection-start-column="30" selection-end-line="133" selection-end-column="30" />
-          <folding>
-            <marker date="1496259305323" expanded="true" signature="536:839" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/subshell.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="156" column="0" lean-forward="true" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/make_env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="78" column="28" lean-forward="true" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
+        <state relative-caret-position="128">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/toolkit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="21" column="68" lean-forward="true" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
+        <state relative-caret-position="3072">
+          <caret line="192" column="67" lean-forward="true" selection-start-line="192" selection-start-column="67" selection-end-line="192" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_subshell_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
           <folding />
         </state>
       </provider>
