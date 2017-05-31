@@ -22,13 +22,6 @@ class SubShell(object):
         else:
             self.suffix = ''
         self.paths = self.setup_paths()
-        # self.purposes = {
-        #     'install': self.install,
-        #     'uninstall': self.uninstall,
-        #     'check': self.check,
-        #     'test': self.shellfile_for_tests
-        #     }
-        # quit()
         
     def shellfile_for_tests(self):
         self.suffix = '_test'
@@ -73,27 +66,43 @@ class SubShell(object):
         else:
             return 1
         
-    def copy_binary(self, max_attempts=3):
-        exceptions_list = []
+    def copy_binary(self, max_attempts:(1|2|3)=3):
+        """
+
+        :type max_attempts: int (1|2|3)
+        """
         if max_attempts == 0:
             print("Too many attempts with incorrect paths. Please ascertain the file paths and run install again.")
+        if max_attempts not in (1, 2, 3):
+            print("max_attempt can be 1, 2 or 3.")
+            print("Using default.")
+            max_attempts = 1
+        exceptions_list = []
         max_attempts -= 1
         try:
             shutil.copy2(self.paths.setupfile, self.paths.installationpath)
         except FileNotFoundError as excep:
             exceptions_list.append(excep)
             print("Not found: ", self.paths.setupfile)
-            # self.paths.setupfile = input("Enter the complete path including name of direnv setup binary:")
-            # self.copy_binary(self, max_attempts)
+            self.paths.setupfile = input("Enter the complete path including name of direnv setup binary:")
+            reattempt = True
         except PermissionError as excep:
             exceptions_list.append(excep)
             toolkit.change_permissions(self.paths.installationpath)
+            reattempt = True
         except Exception as excep:
             exceptions_list.append(excep)
+            reattempt = True
+        else:
+            reattempt = False
         finally:
+            if reattempt:
+                self.copy_binary(self, max_attempts)
             return exceptions_list
 
     def make_exec(self, max_attempts = 3):
+        current_perm = toolkit.get_file_permission_via_shell(self.paths.installedfile, in_form='code')
+        add_perm = toolkit.recalculate_final_permission(current_perm=current_perm, new_perm='0o111', action='add')
         max_attempts -= 1
         if max_attempts == 0:
             print("Too many attempts with incorrect paths. Please ascertain the file paths and run install again.")
@@ -105,7 +114,7 @@ class SubShell(object):
             print("Copy the direnv binary file to a location of your choice and enter the path here:")
             self.paths.installedfile = input("Enter the complete path including name of direnv installed binary:")
             self.make_exec(max_attempts)
-
+            
     def install(self, max_attempts=3):
         # self.setup_paths()
         self.make_dirs()
@@ -140,16 +149,3 @@ if __name__ == '__main__':
     print(__file__)
     sub_shell = SubShell(purpose='test')
     print(sub_shell.copy_binary())
-    # paths = sub_shell.setup_paths()
-    # print('paths', paths)
-    # mk_dirs = sub_shell.make_dirs()
-    # print('mk_dirs', mk_dirs)
-    # copybin_exceptions = sub_shell.copy_binary()
-    # print('copybin_exceptions', copybin_exceptions)
-    
-    
-    # sub_shell.setup_paths()
-    # print(sub_shell.paths)
-    # print(sub_shell.__dict__)
-    # print(sub_shell.__dir__())
-    # direnv.copy_binary()
