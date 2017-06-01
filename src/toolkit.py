@@ -190,6 +190,8 @@ def get_file_permission_via_shell(filepath, in_form='namedtuple'):
 
 
 def recalculate_final_permission(current_perm, new_perm, action='add'):
+    perm_num_sets = {'x': {1, 3, 5, 7}, 'w': {2, 3, 6, 7}, 'r': {4, 5, 6, 7}}
+    
     final_perm = {'add': int(str(current_perm)[-3:]) + int(str(new_perm)[-3:])}
         # ,'remove': int(str(current_perm)[-3:]) - int(str(new_perm)[-3:])}
     
