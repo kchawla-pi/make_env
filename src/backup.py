@@ -7,7 +7,7 @@ import make_env
 
 sub_shell = SubShell('test')
 shell = make_env.identify_shell()
-print(shell)  # debug
+# print(shell)  # debug
 
 
 def backup_shell_config(shell, sub_shell, handle_excep=True):
@@ -16,9 +16,9 @@ def backup_shell_config(shell, sub_shell, handle_excep=True):
     # else:
     #     msg = ''
     BackupError = collections.namedtuple('BackupError', 'shell_config')
-    print(sub_shell.paths.backupspath)  # debug
-    print(os.path.split(shell['file'])[1])  # debug
-    print(shell['file'])  # debug
+    # print(sub_shell.paths.backupspath)  # debug
+    # print(os.path.split(shell['file'])[1])  # debug
+    # print(shell['file'])  # debug
     shutil.copy2(shell['file'], sub_shell.paths.backupspath)
     return BackupError(shell_config=0)
     
