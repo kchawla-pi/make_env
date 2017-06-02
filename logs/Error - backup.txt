@@ -1,0 +1,196 @@
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ python3 ./src/backup.py
+Traceback (most recent call last):
+  File "./src/backup.py", line 4, in <module>
+    from subshell import SubShell
+  File "/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env/src/subshell.py", line 5, in <module>
+    import make_env
+  File "/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env/src/make_env.py", line 6, in <module>
+    from archived_code.moved_frm_make_env import setup_paths, copy_direnv, make_exec, check_direnv
+ImportError: No module named 'archived_code'
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ python3 ./src/backup.py
+Traceback (most recent call last):
+  File "./src/backup.py", line 4, in <module>
+    from subshell import SubShell
+  File "/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env/src/subshell.py", line 5, in <module>
+    import make_env
+  File "/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env/src/make_env.py", line 6, in <module>
+    from archived_code.moved_frm_make_env import setup_paths, copy_direnv, make_exec, check_direnv
+ImportError: No module named 'archived_code'
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ python3 ./src/backup.py
+Traceback (most recent call last):
+  File "./src/backup.py", line 4, in <module>
+    from subshell import SubShell
+  File "/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env/src/subshell.py", line 5, in <module>
+    import make_env
+  File "/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env/src/make_env.py", line 6, in <module>
+    from archived_code.moved_frm_make_env import setup_paths, copy_direnv, make_exec, check_direnv
+ImportError: No module named 'archived_code'
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ python3 ./src/backup.py
+/home/kc/.bashrc1 backup unsuccessful. Consieder making a manual backup.
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ python3 ./src/backup.py
+{'name': 'bash', 'file': '/home/kc/.bashrc1', 'command': 'eval "$(direnv hook bash)"\n'}
+/home/kc/.bashrc1 backup unsuccessful. Consider making a manual backup.
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ ls -a /home/kc/
+.              .bash_logout  .bashrc_backup  .lesshst  .python_history            tic_modules
+..             .bashrc       bin_test        .nano     .selected_editor           .viminfo
+.bash_history  .bashrc?1     .gitconfig      .profile  .sudo_as_admin_successful  .vimrc
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ python3 ./src/backup.py
+{'name': 'bash', 'file': '/home/kc/.bashrc1', 'command': 'eval "$(direnv hook bash)"\n'}
+/home/kc/.bashrc1 backup unsuccessful. Consider making a manual backup.
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ ls -a /home/kc/
+.              .bash_logout  .bashrc_backup  .lesshst  .python_history            tic_modules
+..             .bashrc       bin_test        .nano     .selected_editor           .viminfo
+.bash_history  .bashrc?1     .gitconfig      .profile  .sudo_as_admin_successful  .vimrc
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ ls -a /home/kc/
+.              .bash_logout  .bashrc_backup  .lesshst  .python_history            tic_modules
+..             .bashrc       bin_test        .nano     .selected_editor           .viminfo
+.bash_history  .bashrc?1     .gitconfig      .profile  .sudo_as_admin_successful  .vimrc
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ python3 ./src/backup.py
+{'command': 'eval "$(direnv hook bash)"\n', 'name': 'bash', 'file': '/home/kc/.bashrc1'}
+/home/kc/.bashrc1 backup unsuccessful. Consider making a manual backup.
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ python3 ./src/backup.py
+Traceback (most recent call last):
+  File "./src/backup.py", line 8, in <module>
+    sub_shell = SubShell('test')
+  File "/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env/src/subshell.py", line 17, in __init__
+    self.shell = make_env.identify_shell()
+  File "/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env/src/make_env.py", line 39, in identify_shell
+    shell_config_file = os.path.realpath(os.path.expanduser(shell_hooks[shell_name].file)) + '1'  # +1 prevents overwriting shell config file during dev
+UnboundLocalError: local variable 'shell_name' referenced before assignment
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ python3 ./src/backup.py
+None
+Traceback (most recent call last):
+  File "./src/backup.py", line 35, in <module>
+    backup_shell_config(shell, sub_shell, msg=True)
+  File "./src/backup.py", line 14, in backup_shell_config
+    backup_dst = os.path.join(sub_shell.paths.backupspath, os.path.split(shell['file'])[1])
+TypeError: 'NoneType' object is not subscriptable
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ ls -a /home/kc/
+.              .bash_logout  .bashrc_backup  .lesshst  .python_history            tic_modules
+..             .bashrc       bin_test        .nano     .selected_editor           .viminfo
+.bash_history  .bashrc?1     .gitconfig      .profile  .sudo_as_admin_successful  .vimrc
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ python3 ./src/backup.py
+None
+/home/kc/bin_test/direnv/pre_direnv_backups
+Traceback (most recent call last):
+  File "./src/backup.py", line 37, in <module>
+    backup_shell_config(shell, sub_shell, msg=True)
+  File "./src/backup.py", line 15, in backup_shell_config
+    print(os.path.split(shell['file'])[1])  # debug
+TypeError: 'NoneType' object is not subscriptable
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ python3 ./src/backup.py
+None
+/home/kc/bin_test/direnv/pre_direnv_backups
+Traceback (most recent call last):
+  File "./src/backup.py", line 37, in <module>
+    backup_shell_config(shell, sub_shell, msg=True)
+  File "./src/backup.py", line 15, in backup_shell_config
+    print(os.path.split(shell['file']))  # debug
+TypeError: 'NoneType' object is not subscriptable
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ python3 ./src/backup.py
+{'name': 'bash', 'command': 'eval "$(direnv hook bash)"\n', 'file': '/home/kc/.bashrc1'}
+/home/kc/bin_test/direnv/pre_direnv_backups
+.bashrc1
+/home/kc/.bashrc1 backup unsuccessful. Consider making a manual backup.
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ python3 ./src/backup.py
+{'name': 'bash', 'file': '/home/kc/.bashrc1', 'command': 'eval "$(direnv hook bash)"\n'}
+/home/kc/bin_test/direnv/pre_direnv_backups
+.bashrc1
+/home/kc/.bashrc1 backup unsuccessful. Consider making a manual backup.
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ python3 ./src/backup.py
+{'command': 'eval "$(direnv hook bash)"\n', 'name': 'bash', 'file': '/home/kc/.bashrc1'}
+Traceback (most recent call last):
+  File "./src/backup.py", line 38, in <module>
+    backup_shell_config(shell, sub_shell, msg=True)
+  File "./src/backup.py", line 17, in backup_shell_config
+    shutil.copy2(shell['file'], backup_dst)
+  File "/usr/lib/python3.5/shutil.py", line 251, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/lib/python3.5/shutil.py", line 114, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/kc/.bashrc1'
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ python3 ./src/backup.py
+{'name': 'bash', 'file': '/home/kc/.bashrc1', 'command': 'eval "$(direnv hook bash)"\n'}
+/home/kc/bin_test/direnv/pre_direnv_backups
+Traceback (most recent call last):
+  File "./src/backup.py", line 38, in <module>
+    backup_shell_config(shell, sub_shell, msg=True)
+  File "./src/backup.py", line 17, in backup_shell_config
+    shutil.copy2(shell['file'], backup_dst)
+  File "/usr/lib/python3.5/shutil.py", line 251, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/lib/python3.5/shutil.py", line 114, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/kc/.bashrc1'
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ python3 ./src/backup.py
+{'command': 'eval "$(direnv hook bash)"\n', 'file': '/home/kc/.bashrc1', 'name': 'bash'}
+/home/kc/bin_test/direnv/pre_direnv_backups
+.bashrc1
+Traceback (most recent call last):
+  File "./src/backup.py", line 38, in <module>
+    backup_shell_config(shell, sub_shell, msg=True)
+  File "./src/backup.py", line 17, in backup_shell_config
+    shutil.copy2(shell['file'], backup_dst)
+  File "/usr/lib/python3.5/shutil.py", line 251, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/lib/python3.5/shutil.py", line 114, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/kc/.bashrc1'
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ python3 ./src/backup.py
+{'name': 'bash', 'command': 'eval "$(direnv hook bash)"\n', 'file': '/home/kc/.bashrc1'}
+/home/kc/bin_test/direnv/pre_direnv_backups
+.bashrc1
+/home/kc/.bashrc1
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ python3 ./src/backup.py
+{'command': 'eval "$(direnv hook bash)"\n', 'file': '/home/kc/.bashrc1', 'name': 'bash'}
+/home/kc/bin_test/direnv/pre_direnv_backups
+.bashrc1
+/home/kc/.bashrc1
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ python3 ./src/backup.py
+{'name': 'bash', 'file': '/home/kc/.bashrc1', 'command': 'eval "$(direnv hook bash)"\n'}
+/home/kc/bin_test/direnv/pre_direnv_backups
+.bashrc1
+/home/kc/.bashrc1
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ ls -a /home/kc/
+.              .bash_logout  .bashrc_backup  .lesshst  .python_history            tic_modules
+..             .bashrc       bin_test        .nano     .selected_editor           .viminfo
+.bash_history  .bashrc?1     .gitconfig      .profile  .sudo_as_admin_successful  .vimrc
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ ~
+bash: /home/kc: Is a directory
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ less ~/.ba
+1               .bash_history   .bash_logout    .bashrc         .bashrc_backup
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ less ~/.ba
+1               .bash_history   .bash_logout    .bashrc         .bashrc_backup
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ less ~/.bashrc?1
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ move ~/.bashrc?1 ~/.bashrc1
+No command 'move' found, did you mean:
+ Command 'mova' from package 'mova' (universe)
+ Command 'jove' from package 'jove' (universe)
+ Command 'lmove' from package 'suck' (universe)
+ Command 'mmove' from package 'mtools' (main)
+ Command 'fmove' from package 'embassy-phylip' (multiverse)
+ Command 'love' from package 'love' (universe)
+ Command 'more' from package 'util-linux' (main)
+ Command 'qmove' from package 'torque-client' (universe)
+ Command 'qmove' from package 'torque-client-x11' (universe)
+move: command not found
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ mv ~/.bashrc?1 ~/.bashrc1
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ ls -a /home/kc/
+.              .bash_logout  .bashrc_backup  .lesshst  .python_history            tic_modules
+..             .bashrc       bin_test        .nano     .selected_editor           .viminfo
+.bash_history  .bashrc1      .gitconfig      .profile  .sudo_as_admin_successful  .vimrc
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ ls -a /home/kc/
+.              .bash_logout  .bashrc_backup  .lesshst  .python_history            tic_modules
+..             .bashrc       bin_test        .nano     .selected_editor           .viminfo
+.bash_history  .bashrc1      .gitconfig      .profile  .sudo_as_admin_successful  .vimrc
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ python3 ./src/backup.py
+{'name': 'bash', 'command': 'eval "$(direnv hook bash)"\n', 'file': '/home/kc/.bashrc1'}
+/home/kc/bin_test/direnv/pre_direnv_backups
+.bashrc1
+/home/kc/.bashrc1
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$ python3 ./src/backup.py
+{'name': 'bash', 'file': '/home/kc/.bashrc1', 'command': 'eval "$(direnv hook bash)"\n'}
+/home/kc/bin_test/direnv/pre_direnv_backups
+.bashrc1
+/home/kc/.bashrc1
+kc@KCwinHP:/mnt/c/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env$

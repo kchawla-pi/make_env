@@ -195,6 +195,15 @@ def recalculate_final_permission(current_perm, new_perm, action='add'):
     final_perm = {'add': int(str(current_perm)[-3:]) + int(str(new_perm)[-3:])}
         # ,'remove': int(str(current_perm)[-3:]) - int(str(new_perm)[-3:])}
     
+    
+def excep_handle_frontend(handle=False, excep=None, erring_entity=None, user_corrects=False,
+    raise_error=True, friendly_msg=False):
+    if not handle:
+        raise excep
+    print(excep, erring_entity, sep='/n')
+    
+
+    
 
 if __name__ == '__main__':
     path_arg = "/mnt/c/Users/kshit/bin_test/direnv/direnv.linux-amd64"
