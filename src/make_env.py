@@ -24,18 +24,7 @@ def identify_shell(param_shell='bash', force='no'):  # default parameter added h
                  'file': shell_config_file}
         return shell
 
-    try:
-        shell_name = os.environ.get('SHELL').split(os.sep)[-1]
-    except:
-        if os.name != 'nt':
-            print("$SHELL variable not found. Defaulting to bash.")
-        shell_name = 'bash'
-    finally:
-        if shell_name not in shell_hooks.keys():
-            print("Unknown shell name:", shell_name)
-            print("Defaulting to bash.")
-            shell_name = 'bash'
-
+    shell_name = os.environ.get('SHELL', 'bash').split(os.sep)[-1]
     shell_config_file = os.path.realpath(os.path.expanduser(shell_hooks[shell_name].file)) + '1'  # +1 prevents overwriting shell config file during dev
     shell = {'name': shell_name,
              'command': shell_hooks[shell_name].command,
