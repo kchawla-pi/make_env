@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="Modified backup.py to work with SubShell">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main.py" />
+    <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/backup.py" afterPath="$PROJECT_DIR$/src/backup.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.py" afterPath="$PROJECT_DIR$/src/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/toolkit.py" afterPath="$PROJECT_DIR$/src/toolkit.py" />
     </list>
     <ignored path="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +20,7 @@
     <favorites_list name="make_env" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4957687">
+    <splitter split-orientation="horizontal" split-proportion="0.5338505">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="make_env.py" pinned="false" current-in-tab="false">
@@ -35,8 +36,8 @@
           <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="112">
-                  <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+                <state relative-caret-position="224">
+                  <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
                   <folding />
                 </state>
               </provider>
@@ -45,8 +46,8 @@
           <file leaf-file-name="backup.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/backup.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="261">
-                  <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+                <state relative-caret-position="145">
+                  <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
                   <folding />
                 </state>
               </provider>
@@ -107,8 +108,8 @@
           <file leaf-file-name="toolkit.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/toolkit.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="129">
-                  <caret line="38" column="48" lean-forward="false" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="48" />
+                <state relative-caret-position="33">
+                  <caret line="100" column="37" lean-forward="false" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
                   <folding />
                 </state>
               </provider>
@@ -118,21 +119,21 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="test_subshell_2.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="test_subshell_2.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests/test_subshell_2.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="80">
-                  <caret line="5" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+                <state relative-caret-position="71">
+                  <caret line="72" column="50" lean-forward="false" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="subshell.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="subshell.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/subshell.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="243">
-                  <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+                  <caret line="91" column="8" lean-forward="false" selection-start-line="88" selection-start-column="8" selection-end-line="91" selection-end-column="8" />
                   <folding />
                 </state>
               </provider>
@@ -152,8 +153,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>shell_info</find>
-      <find>resolve_path</find>
       <find>P.</find>
       <find>direnv_setup_bin</find>
       <find>zip</find>
@@ -182,6 +181,8 @@
       <find>return</find>
       <find>coll</find>
       <find>debug</find>
+      <find>change_permissions</find>
+      <find>change</find>
     </findStrings>
     <replaceStrings>
       <replace>resolve_path(</replace>
@@ -258,10 +259,10 @@
         <option value="$PROJECT_DIR$/archived_code/__init__.py" />
         <option value="$PROJECT_DIR$/archived_code/make_env_old.py" />
         <option value="$PROJECT_DIR$/src/make_env.py" />
-        <option value="$PROJECT_DIR$/src/toolkit.py" />
         <option value="$PROJECT_DIR$/logs/Error - backup.txt" />
-        <option value="$PROJECT_DIR$/src/main.py" />
+        <option value="$PROJECT_DIR$/src/toolkit.py" />
         <option value="$PROJECT_DIR$/src/backup.py" />
+        <option value="$PROJECT_DIR$/src/main.py" />
       </list>
     </option>
   </component>
@@ -318,6 +319,140 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="make_env" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test_subshell_2.py" />
+              <option name="myItemType" value="com.jetbrains.python.projectView.PyFileNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test_SubShell.py" />
+              <option name="myItemType" value="com.jetbrains.python.projectView.PyFileNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestSetupPaths" />
+              <option name="myItemType" value="com.jetbrains.python.projectView.PyElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test_SubShell.py" />
+              <option name="myItemType" value="com.jetbrains.python.projectView.PyFileNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestMakeDirs" />
+              <option name="myItemType" value="com.jetbrains.python.projectView.PyElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test_SubShell.py" />
+              <option name="myItemType" value="com.jetbrains.python.projectView.PyFileNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestCopyBinary" />
+              <option name="myItemType" value="com.jetbrains.python.projectView.PyElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test_SubShell.py" />
+              <option name="myItemType" value="com.jetbrains.python.projectView.PyFileNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toolkit.py" />
+              <option name="myItemType" value="com.jetbrains.python.projectView.PyFileNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -754,13 +889,6 @@
       <option name="presentableId" value="Default" />
       <updated>1493909282621</updated>
     </task>
-    <task id="LOCAL-00004" summary="Added paths_setup() to create abs_paths for initial setup">
-      <created>1494027567152</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1494027567152</updated>
-    </task>
     <task id="LOCAL-00005" summary="Added paths_setup() to create abs_paths for initial setup&#10;&#10; - returns a dict with path for direnv binary">
       <created>1494027709420</created>
       <option name="number" value="00005" />
@@ -1097,7 +1225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496429364348</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Added /src/main.py to call &amp; run functions for installation">
+      <created>1496429742860</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1496429742860</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1200,7 +1335,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/src/direnv" />
     </ignored-roots>
-    <MESSAGE value="Refactored backup fn, backup error code returns as namedtuple &#10; &#10; - backup_shell_config() refactored into backup_shell_config() &amp; &#10; backup_path_var() wrapped in backup() &#10; - Modified individual backup functions to return error codes using &#10; namedtuples. &#10; - Added optional param to backup functions to display user-friendly &#10; error messages. &#10; - Added identify_shell(&lt;params&gt;) to force use of a specific shell &#10; during unittesting.&#10; - Added finally: block for identiyf_shell() exception handling instead &#10; of if: .&#10; -" />
     <MESSAGE value="Replaced shell_hooks (dict) with shell_hooks (named tuple, self-documenting)&#10;&#10; - replaced the field 'insert' with 'command' in shell_info, shell_hooks" />
     <MESSAGE value="Added test for identify_shell()" />
     <MESSAGE value="Converted make_env shell handling functions into Class SubShell in subshell_class module&#10;&#10; - Convenient sharing of common data via self &#10;  .. Gives organization.&#10;  .. Unpythonic, annoying to do module.class.function()&#10;  .. Class &amp; instance methods have overheads that functions don't&#10; &#10; - Considering converting into static methods&#10;  .. Gives organization benefit without overhead&#10;  .. Might do it as a learning exercise&#10;  &#10; - Considering converting make_env Shell handling functions into flat functions&#10;  .. Gives organizaton benefit&#10;  .. No class overheads&#10;  .. easy to type module.function()&#10;  .. Good idea it would seem." />
@@ -1225,7 +1359,8 @@
     <MESSAGE value="Added /logs/Error - backup.txt to save exceptions from backup.py&#10; &#10; - Initiated the outlines of a toolkit.excep_handle_frontend() for \&#10; user facing reusable error handling function in" />
     <MESSAGE value="Created backups of bashrc and $PATH in /backups/" />
     <MESSAGE value="Removed error handling for better error clarity&#10;&#10; - made backup() as interface wrapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed error handling for better error clarity&#10;&#10; - made backup() as interface wrapper" />
+    <MESSAGE value="Added /src/main.py to call &amp; run functions for installation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added /src/main.py to call &amp; run functions for installation" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1531,18 +1666,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_subshell_2.py">
+    <entry file="file://$PROJECT_DIR$/src/subshell.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="243">
+          <caret line="91" column="8" lean-forward="false" selection-start-line="88" selection-start-column="8" selection-end-line="91" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -1555,26 +1682,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolkit.py">
+    <entry file="file://$PROJECT_DIR$/tests/test_subshell_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="38" column="48" lean-forward="false" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="48" />
+        <state relative-caret-position="71">
+          <caret line="72" column="50" lean-forward="false" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/subshell.py">
+    <entry file="file://$PROJECT_DIR$/src/toolkit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        <state relative-caret-position="33">
+          <caret line="100" column="37" lean-forward="false" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/backup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        <state relative-caret-position="145">
+          <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
           <folding />
         </state>
       </provider>

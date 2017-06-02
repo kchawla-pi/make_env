@@ -3,7 +3,7 @@ import collections
 import shutil
 from subshell import SubShell
 import make_env
-
+import toolkit
 
 sub_shell = SubShell('test')
 shell = make_env.identify_shell()
@@ -19,8 +19,16 @@ def backup_shell_config(shell, sub_shell, handle_excep=True):
     # print(sub_shell.paths.backupspath)  # debug
     # print(os.path.split(shell['file'])[1])  # debug
     # print(shell['file'])  # debug
-    shutil.copy2(shell['file'], sub_shell.paths.backupspath)
-    return BackupError(shell_config=0)
+    
+    try:
+        shutil.copy2(shell['file'], sub_shell.paths.backupspath)
+    except PermissionError as excep:
+        exceptions_list = []
+        exceptions_list.append(excep)
+        toolkit.change_permissions(sub_shell.paths.installationpath, '0o666')
+        shutil.copy2(shell['file'], sub_shell.paths.backupspath)
+    else:
+        return BackupError(shell_config=0)
     
     ## possible exceptions: See /logs/Errors - backup.txt
     
@@ -45,11 +53,19 @@ def backup_shell_config(shell, sub_shell, handle_excep=True):
 def backup_path_var(sub_shell, msg=True):
     BackupError = collections.namedtuple('BackupError', 'path_var')
     curr_path_info = os.environ.get('PATH')
-    backup_dst = os.path.join(sub_shell.paths.backupspath, 'PATH_var')
-    with open(backup_dst, 'w') as write_obj:
-        write_obj.write(curr_path_info)
+    backup_dst = os.path.join(sub_shell.paths.backupspath, 'PATH_var.txt')
+    try:
+        with open(backup_dst, 'w') as write_obj:
+            write_obj.write(curr_path_info)
+    except PermissionError as excep:
+        exceptions_list = []
+        exceptions_list.append(excep)
+        toolkit.check_make(sub_shell.paths.backupspath)
+        toolkit.change_permissions(sub_shell.paths.backupspath, nix_perm='0o666')
+        shutil.copy2(shell['file'], sub_shell.paths.backupspath)
+    else:
         return BackupError(path_var=0)
-    # try:
+        # try:
     #     with open(backup_dst, 'w') as write_obj:
     #         write_obj.write(curr_path_info)
     #         return BackupError(path_var=0)

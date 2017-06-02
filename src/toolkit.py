@@ -98,7 +98,7 @@ def cleanup_tree(tree_root, handle_exceptions=True, notify_init=False, notify_ou
     fn_worked(fn='cleanup_tree', worked=not os.path.exists(tree_root), notify=notify_outcome)
     
     
-def change_permissions(path,tree=False, nix_perm=0o600, topdown=True, initial_exception='', handle_exceptions=True, notify_init=False):
+def change_permissions(path, nix_perm, tree=False, topdown=True, initial_exception='', handle_exceptions=True, notify_init=False):
     print(fn_called('change_permissions', notify_init))
     perm = stat.S_IWRITE if os.name == 'nt' else nix_perm
     if initial_exception:

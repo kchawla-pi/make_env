@@ -9,10 +9,11 @@ def add_path():
 import make_env
 import subshell
 import backup
+import toolkit
 
 shell = make_env.identify_shell(param_shell='bash', force=False)
 sub_shell = subshell.SubShell('test')
-backup.backup(shell, sub_shell)
 sub_shell.make_dirs()
+backup.backup(shell, sub_shell)
 sub_shell.copy_binary()
 sub_shell.make_exec()
