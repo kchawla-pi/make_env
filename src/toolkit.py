@@ -6,7 +6,7 @@ from shutil import rmtree
 FunctionOutcome = collections.namedtuple('FunctionOutcome', 'fn worked')
 FunctionCalled = collections.namedtuple('FunctionCalled', 'fn')
 no_print = '\b'
-
+debug_mode = True
 
 def fn_worked(fn, worked, notify=False):
     """
@@ -130,8 +130,14 @@ def check_remove(path, notify=False):
     try:
         assert(os.path.exists(path) is False)
     except:
-        cleanup_tree(path)
-        assert (os.path.exists(path) is False)
+        try:
+            assert(os.path.isfile(path))
+        except:
+            cleanup_tree(path)
+            assert (os.path.exists(path) is False)
+        else:
+            os.remove(path)
+            assert (os.path.exists(path) is False)
 
 
 def check_make(path, notify=False):
@@ -160,37 +166,70 @@ def path_nt2nix(abspath):
 
 
 def get_file_permission_via_shell(filepath, in_form='namedtuple'):
-    from subprocess import check_output
-    if os.path.isfile(filepath):
-        path, file = os.path.split(filepath)
-    else:
-        path = filepath
-    ls_call = str(check_output(['ls', '-l', path]))
-    ls_call = ls_call.lstrip('b')
-    ls_call = ls_call.split('\\n')
-    file_entry = [entry for entry in ls_call if file in entry][0]
-    permissions_string = file_entry[0:file_entry.find(' ')]
-    ## derived_filename = file_entry[file_entry.rfind(' '):]
-    permissions_key_alpha2num = {'r': 4, 'w': 2, 'x': 1, '-': 0, 'd':0}
-    ## permissions_string = '-rw--w--wx'
-    permission_nums = ([permissions_key_alpha2num[p] for p in permissions_string])
-    user_categs = ('user', 'group', 'other')
-    permits_dict = {gp: (str(sum(permission_nums[start:stop])), *(permissions_string[start:stop].replace('-', '')))
-               for (gp, start, stop) in zip(user_categs, range(1, 10, 3), range(4, 13, 3))}
-    perm_code = ''.join(['0o', permits_dict['user'][0], permits_dict['group'][0], permits_dict['other'][0]])
+    global debug_mode
     
-    return_options = {'dict': permits_dict, 'groups': permits_dict, 'code': perm_code, 'str': permissions_string}
-    is_dict = True if permissions_string[0] == 'd' else False
+    from subprocess import check_output
     try:
-        return return_options[in_form]
-    except KeyError:
-        Permissions = collections.namedtuple('Permissions', 'code user group other string is_dict')
-        return Permissions(code=perm_code, user=permits_dict['user'], group=permits_dict['group'],
-                           other=permits_dict['other'], string=permissions_string, is_dict=is_dict)
+        assert(os.path.isfile(filepath))
+    except AssertionError:
+        path = filepath
+    else:
+        path, file = os.path.split(filepath)
+    try:
+        ls_call = str(check_output(['ls', '-l', path]))
+    except FileNotFoundError as excep:
+        debug_mode = False
+        if debug_mode:
+            raise excep
+        elif os.name != 'posix':
+            print("Not a Unix based OS. NT methods not implemented yet.")
+        else:
+            print("The file  \n{}\n was not found. \nCan't show permissions for a file "
+                  "that can't be found. \nMoving on...".format(path))
+        debug_mode = True
+    else:
+        ls_call = ls_call.lstrip('b')
+        ls_call = ls_call.split('\\n')
+        file_entry = [entry for entry in ls_call if file in entry][0]
+        permissions_string = file_entry[0:file_entry.find(' ')]
+        ## derived_filename = file_entry[file_entry.rfind(' '):]
+        permissions_key_alpha2num = {'r': 4, 'w': 2, 'x': 1, '-': 0, 'd':0}
+        ## permissions_string = '-rw--w--wx'
+        permission_nums = ([permissions_key_alpha2num[p] for p in permissions_string])
+        user_categs = ('user', 'group', 'other')
+        permits_dict = {gp: (str(sum(permission_nums[start:stop])), *(permissions_string[start:stop].replace('-', '')))
+                   for (gp, start, stop) in zip(user_categs, range(1, 10, 3), range(4, 13, 3))}
+        perm_code = ''.join(['0o', permits_dict['user'][0], permits_dict['group'][0], permits_dict['other'][0]])
+        
+        return_options = {'dict': permits_dict, 'groups': permits_dict, 'code': perm_code, 'str': permissions_string}
+        is_dict = True if permissions_string[0] == 'd' else False
+        try:
+            return return_options[in_form]
+        except KeyError:
+            Permissions = collections.namedtuple('Permissions', 'code user group other string is_dict')
+            return Permissions(code=perm_code, user=permits_dict['user'], group=permits_dict['group'],
+                               other=permits_dict['other'], string=permissions_string, is_dict=is_dict)
+
+
+def reattempt(max_attempts:(1|2|3),quit_at_last=False):
+    if max_attempts == 0:
+        print("Too many attempts with incorrect paths."
+              "Please ascertain the file paths and run install again.")
+        if quit_at_last:
+            quit()
+    if max_attempts not in (1, 2, 3):
+        print("max_attempt can be 1, 2 or 3.")
+        print("Using default.")
+        max_attempts = 1
+    max_attempts -= 1
+    return max_attempts
 
 
 def recalculate_final_permission(current_perm, new_perm, action='add'):
     perm_num_sets = {'x': {1, 3, 5, 7}, 'w': {2, 3, 6, 7}, 'r': {4, 5, 6, 7}}
+    current_perm = str(current_perm)
+    for perm in current_perm[-3:]:
+        pass
     
     final_perm = {'add': int(str(current_perm)[-3:]) + int(str(new_perm)[-3:])}
         # ,'remove': int(str(current_perm)[-3:]) - int(str(new_perm)[-3:])}
