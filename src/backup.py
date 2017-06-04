@@ -79,6 +79,15 @@ def backup(shell, sub_shell):
     backup_path_var(sub_shell, msg=True)
 
     
-    
-    
+def restore_shell_config(shell, sub_shell):
+    pass
+
+
+def restore_path_var(shell, sub_shell):
+    pass
+
+
+def restore(shell, sub_shell):
+    restore_path_var(shell, sub_shell)
+    restore_shell_config(shell, sub_shell)
     
