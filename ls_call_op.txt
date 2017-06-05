@@ -1,0 +1,1 @@
+b'total 3328\n-rwxrwxrwx 1 kc kc 3255774 May  4 10:36 direnv.linux-amd64\ndrwxrwxrwx 0 kc kc     512 May 28 02:20 pre_direnv_backups\n'

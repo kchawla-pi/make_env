@@ -1,0 +1,57 @@
+Hi, I have written a script with a bunch of functions, but the number of functions is making it confusing for me to quickly look at the file and get the sense of what's happening.
+The ultimate functionality of the .py file will be reused across different projects, and some of the individual functions might be reused elsewhere, I don't know yet.
+What would be a good way to structure the file, so the functions are organized in a way that makes comprehension easy?
+I was thinking one way would be to define nested functions, with the outer function acting as the interface. That would make the nested functions
+
+Originally it looked like a flat list of functions.
+
+I can group organize them as
+ - nested functions
+ - modules with flat functions
+ - instance classes, each class representing a concept
+ - static method classes, each class representing a concept
+
+I like the idea of using classes here (which I generally avoid) since it clubs related functions together, and makes \
+it easy to pass data between them, instead of using multiple args & returns per function, I can use self and 1 more arg,
+returns are simpler too.
+
+I am also thinking that for installation, it doesn't make sense to instatntiate just one object, so I should use \
+static methods to just organize them. I'm not sure what purpose class methods serve.
+
+Here is the approximate organization and flow of the program.
+
+PROJECT--
+
+setup.py
+    setup.setup_paths
+    setup.check_paths
+    setup.identify_shell
+
+backup.py
+    backup.backup_shell_config
+    backup.backup_python_config
+    backup.restore_shell_config()
+    backup.restore_python_config()
+
+subshell.py
+    subshell.install
+        subshell.install.make_dirs(setup.setup_paths) --> custom_verification_function
+        subshell.install.copy_binary(setup.setup_paths)
+        subshell.install.set_permissions(setup.setup_paths) --> custom_verification_function
+        subshell.install.change_config_files() --> custom_verification_function
+
+subshell.uninstall_binary
+    subshell.uninstall_binary.remove_config_changes() --> custom_verification_function
+    subshell.uninstall_binary.remove_binary() --> custom_verification_function
+    subshell.uninstall_binary.remove_tree() --> custom_verification_function
+
+main('install')
+        setup()
+        backup()
+        install_subshell()
+        check_subshell()
+
+main('uninstall')
+        setup()
+        uninstall_subshell()
+        check_subshell()

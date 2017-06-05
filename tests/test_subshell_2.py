@@ -34,14 +34,15 @@ def setup_tests():
     # setting up path for benchmarks .
     suffix = '_test'
     installationpath = os.path.expanduser(os.path.join('~', 'bin' + suffix, 'direnv'))
-    Paths = collections.namedtuple('Paths', 'setupfile installedfile installationpath backupspath')
+    Paths = collections.namedtuple('Paths', 'setupfile copiedfile installedfile installationpath backupspath')
     benchmark_paths = Paths(
                 setupfile=os.path.join(project_root, 'requirements', 'bin', 'direnv.linux-amd64'),
+                copiedfile=os.path.join(project_root, 'requirements', 'bin', 'direnv'),
                 installationpath=installationpath,
-                installedfile=os.path.join(installationpath, 'direnv.linux-amd64'),
+                installedfile=os.path.join(installationpath, 'direnv'),
                 backupspath=os.path.join(installationpath, 'pre_direnv_backups')
                 )
-    assert([False, True, True, True] == ['test' in path for path in benchmark_paths])
+    assert([False, False, True, True, True] == ['test' in path for path in benchmark_paths])
     return benchmark_paths
 
     
@@ -61,13 +62,20 @@ def test_copy_binary(testee):
     toolkit.check_remove(testee.paths.installedfile)
     toolkit.check_make(testee.paths.installationpath)
     testee.copy_binary(max_attempts=3)
+    assert(os.path.isfile(testee.paths.copiedfile) is True)
+    return 'Passed.'
+
+
+def test_move_binary(testee):
+    toolkit.check_remove(testee.paths.installedfile)
+    testee.move_binary(max_attempts=3)
     assert(os.path.isfile(testee.paths.installedfile) is True)
     return 'Passed.'
     
     
 def test_make_exec(testee):
     if os.name == 'nt':
-        return
+        return 'NotImplemented in nt'
     testee.copy_binary()
     os.chmod(testee.paths.installedfile, 0o666)
     pre_fn_permit = toolkit.get_file_permission_via_shell(testee.paths.installedfile, in_form='code')
@@ -86,4 +94,6 @@ if __name__ == '__main__':
     print(next(incr), test_make_dirs(testee))
     print(next(incr), test_copy_binary(testee))
     print(next(incr), test_make_exec(testee))
+    print(next(incr), test_move_binary(testee))
+
     

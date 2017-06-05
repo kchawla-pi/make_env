@@ -1,0 +1,71 @@
+test_copy_binary
+FF.
+test_make_dirs
+======================================================================
+Skipped: C:\Users\kshit\bin_test\direnv because:
+FAIL: test_copy_binary (__main__.TestCopyBinary)
+ [WinError 145] The directory is not empty: 'C:\\Users\\kshit\\bin_test\\direnv'
+----------------------------------------------------------------------
+test_setup_paths
+Traceback (most recent call last):
+  File "C:/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env/tests/test_SubShell.py", line 113, in test_copy_binary
+    raise excep
+  File "C:/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env/tests/test_SubShell.py", line 111, in test_copy_binary
+    self.assertFalse(os.path.isfile(self.subshell.paths.installedfile))
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_make_dirs (__main__.TestMakeDirs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env/tests/test_SubShell.py", line 81, in test_make_dirs
+    self.assertFalse(os.path.exists(self.subshell.paths.installationpath))
+AssertionError: True is not false
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python36\lib\shutil.py", line 385, in _rmtree_unsafe
+    os.rmdir(path)
+OSError: [WinError 145] The directory is not empty: 'C:\\Users\\kshit\\bin_test\\direnv'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\src\toolkit.py", line 44, in remove_readonly
+    core_logic()
+OSError: [WinError 145] The directory is not empty: 'C:\\Users\\kshit\\bin_test\\direnv'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env/tests/test_SubShell.py", line 83, in test_make_dirs
+    toolkit.cleanup_tree(os.path.split(self.subshell.paths.installationpath)[0])
+Exception
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Users/kshit/Dropbox/workspace/make_env/kchawla-pi/make_env/tests/test_SubShell.py", line 85, in test_make_dirs
+    self.assertFalse(os.path.exists(self.subshell.paths.installationpath))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.024s
+
+FAILED (failures=2)
+______________________________________________________________________________________________________________
+==============================================================================================================
+
+test_copy_binary
+.test_make_dirs
+[WinError 5] Access is denied: 'C:\\Users\\kshit\\bin_test'
+.test_setup_paths
+.
+----------------------------------------------------------------------
+Ran 3 tests in 0.027s
+
+OK
+
+______________________________________________________________________________________________________________
+==============================================================================================================
