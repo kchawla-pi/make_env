@@ -21,22 +21,24 @@ def identify_shell(param_shell='bash', force='no'):  # default parameter added h
 
     if force == 'force':
         shell_name = param_shell
-        shell_config_file = os.path.realpath(os.path.expanduser(
-            shell_hooks[shell_name].files)) + '1'  # +1 prevents overwriting shell config file during dev
+        shell_config_file = os.path.realpath(os.path.expanduser(shell_hooks[shell_name].files)) + '1'  # +1 prevents overwriting shell config file during dev
         shell = {'name': shell_name,
                  'command': shell_hooks[shell_name].command,
                  'file': shell_config_file}
         return shell
 
     shell_name = os.environ.get('SHELL', 'bash').split(os.sep)[-1]
-    shell_config_files = tuple(os.path.realpath(os.path.expanduser(file_))
-                               for file_ in shell_hooks[shell_name].files if os.path.exists(file_))
+    possible_shell_files = tuple(os.path.realpath(os.path.expanduser(file_))
+                               for file_ in shell_hooks[shell_name].files)
+    found_shell_files = tuple(file_ for file_ in possible_shell_files if os.path.exists(file_))
+    
     # shell_config_files = os.path.realpath(os.path.expanduser(shell_hooks[shell_name].files)) + '1'  # +1 prevents overwriting shell config file during dev
     shell = {'name': shell_name,
              'command': shell_hooks[shell_name].command,
-             'files': shell_config_files
+             'files': found_shell_files
              }
     return shell
 
-identify_shell()
+if __name__ == '__main__':
+    print(identify_shell())
 #TODO: direnv is a good candidate for a Class. maybe backup+restore in one too. Shell?

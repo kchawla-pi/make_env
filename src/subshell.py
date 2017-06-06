@@ -169,7 +169,6 @@ class SubShell(object):
             os.environ["PATH"] += os.pathsep + self.paths.installedfile
             print(os.environ["PATH"])
             
-
     
 if __name__ == '__main__':
     print(__file__)
