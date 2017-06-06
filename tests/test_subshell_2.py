@@ -61,7 +61,7 @@ def test_make_dirs(testee):
 def test_copy_binary(testee):
     toolkit.check_remove(testee.paths.installedfile)
     toolkit.check_make(testee.paths.installationpath)
-    testee.copy_binary(max_attempts=3)
+    testee.copy_move_binary(task='both')
     assert(os.path.isfile(testee.paths.copiedfile) is True)
     return 'Passed.'
 
@@ -76,7 +76,7 @@ def test_move_binary(testee):
 def test_make_exec(testee):
     if os.name == 'nt':
         return 'NotImplemented in nt'
-    testee.copy_binary()
+    testee.copy_move_binary()
     os.chmod(testee.paths.installedfile, 0o666)
     pre_fn_permit = toolkit.get_file_permission_via_shell(testee.paths.installedfile, in_form='code')
     assert(pre_fn_permit == '0o666')

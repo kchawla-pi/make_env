@@ -212,6 +212,7 @@ def get_file_permission_via_shell(filepath, in_form='namedtuple'):
 
 
 def reattempt(max_attempts:(1|2|3),quit_at_last=False):
+    
     if max_attempts == 0:
         print("Too many attempts with incorrect paths."
               "Please ascertain the file paths and run install again.")
@@ -222,7 +223,7 @@ def reattempt(max_attempts:(1|2|3),quit_at_last=False):
         print("Using default.")
         max_attempts = 1
     max_attempts -= 1
-    return max_attempts
+    yield max_attempts
 
 
 def recalculate_final_permission(current_perm, new_perm, action='add'):

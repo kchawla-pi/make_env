@@ -1,7 +1,7 @@
 def install(self, max_attempts=3):
     # self.setup_paths()
     self.make_dirs()
-    self.copy_binary(max_attempts)
+    self.copy_move_binary(max_attempts)
     self.make_exec()
     with open(self.shell.file, 'a') as write_obj:
         write_obj.writelines(self.shell.command)

@@ -55,7 +55,7 @@ class SubShell(object):
         except FileNotFoundError:
             print("Not found: ", self.paths.setupfile)
             self.paths.setupfile = input("Enter the complete path including name of direnv setup binary:")
-            self.copy_binary(shell, self.paths, max_attempts)
+            self.copy_move_binary(shell, self.paths, max_attempts)
 
     @staticmethod
     def make_exec(self, shell, direnv_paths, max_attempts = 3):
@@ -74,7 +74,7 @@ class SubShell(object):
     @staticmethod
     def install(self, shell, direnv_paths, max_attempts=3):
         os.makedirs(self.paths.backupspath)
-        self.copy_binary(shell, self.paths, max_attempts)
+        self.copy_move_binary(shell, self.paths, max_attempts)
         self.make_exec(shell, self.paths)
         with open(shell.file, 'a') as write_obj:
             write_obj.writelines(shell.command)
@@ -103,4 +103,4 @@ class SubShell(object):
             return False
 
 SubShell().setup_paths()
-# direnv.copy_binary()
+# direnv.copy_move_binary()

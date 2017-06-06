@@ -36,7 +36,7 @@ backup.py
 subshell.py
     subshell.install
         subshell.install.make_dirs(setup.setup_paths) --> custom_verification_function
-        subshell.install.copy_binary(setup.setup_paths)
+        subshell.install.copy_move_binary(setup.setup_paths)
         subshell.install.set_permissions(setup.setup_paths) --> custom_verification_function
         subshell.install.change_config_files() --> custom_verification_function
 

@@ -17,6 +17,8 @@ class SubShell(object):
         self.shell = make_env.identify_shell()
         self.purpose = purpose
         self.rootname = rootname
+        self.Paths = collections.namedtuple('Paths', 'setupfile copiedfile installedfile installationpath backupspath')
+
         if purpose == 'test':
             self.suffix = '_test'
         else:
@@ -40,14 +42,29 @@ class SubShell(object):
                   )
             
         installationpath = os.path.expanduser(os.path.join('~', 'bin'+self.suffix, 'direnv'))
-        Paths = collections.namedtuple('Paths', 'setupfile copiedfile installedfile installationpath backupspath')
-        self.paths = Paths(
+        self.paths = self.Paths(
             setupfile = os.path.join(self.root_dir_path, 'requirements', 'bin', 'direnv.linux-amd64'),
             copiedfile = os.path.join(self.root_dir_path, 'requirements', 'bin', 'direnv'),
             installationpath = installationpath,
             installedfile = os.path.join(installationpath, 'direnv'),
             backupspath = os.path.join(installationpath, 'pre_direnv_backups')
             )
+        return self.paths
+    
+    def change_paths(self, setupfile=None, copiedfile=None, installationpath=None,
+                    installedfile=None, backupspath=None
+                    ):
+        
+        setupfile = self.paths.setupfile if setupfile is None else setupfile
+        copiedfile = self.paths.copiedfile if copiedfile is None else copiedfile
+        installationpath = self.paths.installationpath if installationpath is None else installationpath
+        installedfile = self.paths.installedfile if installedfile is None else installedfile
+        backupspath = self.paths.backupspath if backupspath is None else backupspath
+        
+        self.paths = self.Paths(setupfile=setupfile, copiedfile=copiedfile,
+                                installationpath=installationpath, installedfile=installedfile,
+                                backupspath=backupspath
+                                )
         return self.paths
     
     def make_dirs(self):
@@ -69,109 +86,53 @@ class SubShell(object):
         else:
             return 1
         
-    def copy_binary(self, max_attempts:[1|2|3]=3, force:[True|'ask'|False]=False):
+    def copy_move_binary(self, task:('both', 'copy', ' move')= 'both', force:(True, 'ask', False)=False):
         """
 
-        :type max_attempts: int (1|2|3)
+        :param force:
+        :type force:
+        :param task_:
+        :type task_:
         """
-        max_attempts = toolkit.reattempt(max_attempts)
-        reattempt = False
+        
+        copy2_move_fn = {'copy': {'fn': shutil.copy2, 'args': (self.paths.setupfile, self.paths.copiedfile)},
+                         'move': {'fn':  shutil.move, 'args': (self.paths.copiedfile,self.paths.installationpath)}
+                     }
         exceptions_list = []
-        try:
-            shutil.copy2(self.paths.setupfile, self.paths.copiedfile)
-        except FileNotFoundError as excep:
-            exceptions_list.append(excep)
-            print("Not found: ", self.paths.setupfile)
-            self.paths.setupfile = input("Enter correct path:")
-            reattempt = True
-        except PermissionError as excep:
-            exceptions_list.append(excep)
-            toolkit.change_permissions(self.paths.installationpath)
-            reattempt = True
-        except FileExistsError as excep:
-            exceptions_list.append(excep)
-            reattempt = False
-            if force == 'ask':
-                print(excep, "Type 'force' (without quotes) and press enter to replace, ",
-                             "or press enter to skip.",
-                             "The replaced and existing versions maybe different.", sep='\n'
-                      )
-                choice = input("Enter choice:")
-            else:
-                print(self.paths.copiedfile, "already exists.")
-                return
-            toolkit.check_remove(self.paths.copiedfile)
-            self.copy_binary(self, max_attempts, force=True)
-            reattempt = True
-        except Exception as excep:
-            exceptions_list.append(excep)
-            reattempt = False
-            raise excep
-        finally:
-            if reattempt:
-                self.copy_binary(self, max_attempts)
-            return exceptions_list
+        tasks = ['copy', ' move']
+        tasks = tasks if task not in tasks else task
+        for task_ in tasks:
+            try:
+                copy2_move_fn[task_]['fn'](*copy2_move_fn[task_]['args'])
+            except FileNotFoundError as excep:
+                exceptions_list.append(excep)
+                print("Not found: ", copy2_move_fn[task_]['args'][0])
+                copy2_move_fn[task_]['args'][0] = input("Enter correct path:")
+            except PermissionError as excep:
+                exceptions_list.append(excep)
+                toolkit.change_permissions(copy2_move_fn[task_]['args'][1])
+            except FileExistsError as excep:
+                exceptions_list.append(excep)
+                if force == 'ask':
+                    print(excep, "Type 'force' (without quotes) and press enter to replace, ",
+                                 "or press enter to skip.",
+                                 "The replaced and existing versions maybe different.", sep='\n'
+                          )
+                    choice = input("Enter choice:")
+                else:
+                    print(self.paths.copiedfile, "already exists.")
+                    return
+                toolkit.check_remove(self.paths.copiedfile)
+                copy2_move_fn[task_]['fn'](*copy2_move_fn[task_]['args'])
+            except Exception as excep:
+                exceptions_list.append(excep)
+                # reattempt = False
+                raise excep
+            finally:
+                copy2_move_fn[task_]['fn'](*copy2_move_fn[task_]['args'])
+                return exceptions_list
+            #TODO: Maybr create a function to modify paths? Or revert to dict? No not the latter.
         
-    def move_binary(self, max_attempts:(1|2|3)=3, force=False):
-        max_attempts = toolkit.reattempt(max_attempts)
-        exceptions_list = []
-        # shutil.move(self.paths.copiedfile, self.paths.installationpath)
-        
-        #
-        try:
-            shutil.move(self.paths.copiedfile,self.paths.installationpath)
-        except shutil.Error as excep:
-            print("File already exists. Move Unnecessary. Moving on...")
-        # except Exception as excep:
-        #     raise excep
-        
-        # except FileNotFoundError as excep:
-        #     exceptions_list.append(excep)
-        #     print("Not found: ", self.paths.setupfile)
-        #     self.paths.setupfile = input(
-        #         "Enter the complete path including name of direnv setup binary:")
-        #     reattempt = True
-        # except PermissionError as excep:
-        #     exceptions_list.append(excep)
-        #     toolkit.change_permissions(self.paths.installationpath)
-        #     reattempt = True
-        # except FileExistsError as excep:
-        #     exceptions_list.append(excep)
-        #     reattempt = False
-        #     if force:
-        #         os.remove(self.paths.installationpath)
-        #         self.move_binary(self, max_attempts, force=True)
-        #     elif force.lower() == 'ask':
-        #         print(excep,
-        #               "File with same name already exists at that location.",
-        #               "Existing and new file versions might be different.",
-        #               "You can replace the existing file with the new one "
-        #               "if you are certain  about the versions.",
-        #               "Press Enter key to keep existing version.",
-        #               "Type 'force' without quotes and press Enter key to replace the file.",
-        #               "Type 'abort' without quotes and press Enter key to abort process.",
-        #               sep='\n'
-        #               )
-        #         choice = input("Enter your choice: ")
-        #         if choice.lower() == 'force':
-        #             toolkit.check_remove(self.paths.installationpath)
-        #             self.copy_binary(self, max_attempts, force=True)
-        #         elif choice.lower() == 'abort':
-        #             print("Exiting...")
-        #             quit()
-        #         else:
-        #             print(excep, '\n', "Moving on...")
-        #
-        # except Exception as excep:
-        #     exceptions_list.append(excep)
-        #     reattempt = True
-        # else:
-        #     reattempt = False
-        # finally:
-        #     if reattempt:
-        #         self.move_binary(self, max_attempts)
-        #     return exceptions_list
-
     def make_exec(self, max_attempts:(1|2|3)=3):
         current_perm = toolkit.get_file_permission_via_shell(self.paths.installedfile, in_form='code')
         # add_perm = toolkit.recalculate_final_permission(current_perm=current_perm, new_perm='0o777', action='add')
@@ -198,4 +159,4 @@ class SubShell(object):
 if __name__ == '__main__':
     print(__file__)
     sub_shell = SubShell(purpose='test')
-    print(sub_shell.copy_binary())
+    print(sub_shell.copy_move_binary())

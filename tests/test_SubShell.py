@@ -128,7 +128,7 @@ class TestCopyBinary(unittest.TestCase):
             toolkit.change_permissions(self.subshell.paths.installedfile)
             os.remove(self.subshell.paths.installedfile)
             # raise excep
-        exceptions_list = self.subshell.copy_binary(max_attempts=2)
+        exceptions_list = self.subshell.copy_move_binary(max_attempts=2)
         try:
             self.assertTrue(os.path.exists(self.subshell.paths.installedfile))
         except AssertionError:
