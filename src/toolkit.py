@@ -61,14 +61,32 @@ def debug_print(*arg):
 
 
 def cleanup_tree(tree_root, handle_exceptions=True, notify_init=False, notify_outcome=False):
-    
-    fn_called('cleanup_tree', notify_init)
+    """
+    Accepts path to a directory and removes it and all its content.
+    If PermissionError, attempts to change permissions of all the lements in the tree and then remove them.
+    :param tree_root (str or path-like obj): Path to the directory to be removed including its contents.
+    :param handle_exceptions (bool) True(default): True enables catching exceptions and
+    handling them using other functions and/or diplaying front-end friendly messages.
+    :param notify_init (bool) False(default): Prints a message when the function is called.
+    :param notify_outcome (bool)  False(default): Prints a message of function success or failure
+    when the function completes.
+    """
+    fn_called('cleanup_tree', notify_init)  # Prints when the function is called.
     
     def remove_readonly(fn, problem_path, excinfo):
+        """
+        Handles next steps when rmtree encounters an error.
+        :param fn: Represents rmtree function statement
+        :param problem_path: Path of the offending file or directory.
+        :param excinfo: Exception info generated when rmtree first encountered an error.
+        """
         def core_logic():
-            if os.name == ' posix':
+            """
+            Changes the permissions of the current element (problem_path) and retries rmtree
+            """
+            if os.name == ' posix':  # Permission model for Unix
                 os.chmod(problem_path, 0o600)
-            else:
+            else:  # Permission model for Windows/NT
                 os.chmod(problem_path, stat.S_IWRITE)
             fn(problem_path)
         
@@ -80,8 +98,7 @@ def cleanup_tree(tree_root, handle_exceptions=True, notify_init=False, notify_ou
                 raise Exception
         else:
             core_logic()
-    
-    
+            
     if handle_exceptions:
         try:
             rmtree(tree_root, onerror=remove_readonly)
@@ -91,14 +108,17 @@ def cleanup_tree(tree_root, handle_exceptions=True, notify_init=False, notify_ou
             print(excep)
         except Exception as excep:
             print(excep)
-        
     else:
-        rmtree(tree_root)
-
+        rmtree(tree_root, onerror=remove_readonly)
+    # Prints whether the function succeeded or not.
     fn_worked(fn='cleanup_tree', worked=not os.path.exists(tree_root), notify=notify_outcome)
     
     
 def change_permissions(path, nix_perm, tree=False, topdown=True, initial_exception='', handle_exceptions=True, notify_init=False):
+    """
+    Changes permissions of a directory tree and its elements.
+    
+    """
     print(fn_called('change_permissions', notify_init))
     perm = stat.S_IWRITE if os.name == 'nt' else nix_perm
     if initial_exception:
@@ -109,17 +129,17 @@ def change_permissions(path, nix_perm, tree=False, topdown=True, initial_excepti
         os.chmod(path, perm)
     except Exception as exc:
         print("Skipped:", path, "because:\n", exc)
+    finally:
+        return excep_list
+    
     if tree is False:
         return
     
     for root, dirs, files in os.walk(path, topdown=topdown):
-        # print('path', path)
         paths = [os.path.join(root, dir_) for dir_ in dirs]
-        # print('paths', paths)
         paths.extend([os.path.join(root, file_) for file_ in files])
         while paths:
             popped_path = paths.pop()
-            # print('popped_path', popped_path)
             try:
                 os.chmod(popped_path, perm)
             except Exception as exc:
@@ -192,9 +212,7 @@ def get_file_permission_via_shell(filepath, in_form='namedtuple'):
         ls_call = ls_call.split('\\n')
         file_entry = [entry for entry in ls_call if file in entry][0]
         permissions_string = file_entry[0:file_entry.find(' ')]
-        ## derived_filename = file_entry[file_entry.rfind(' '):]
         permissions_key_alpha2num = {'r': 4, 'w': 2, 'x': 1, '-': 0, 'd':0}
-        ## permissions_string = '-rw--w--wx'
         permission_nums = ([permissions_key_alpha2num[p] for p in permissions_string])
         user_categs = ('user', 'group', 'other')
         permits_dict = {gp: (str(sum(permission_nums[start:stop])), *(permissions_string[start:stop].replace('-', '')))

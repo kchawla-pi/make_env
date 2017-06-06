@@ -61,14 +61,14 @@ def test_make_dirs(testee):
 def test_copy_binary(testee):
     toolkit.check_remove(testee.paths.installedfile)
     toolkit.check_make(testee.paths.installationpath)
-    testee.copy_move_binary(task='both')
+    testee.copy_move_binary(task='copy')
     assert(os.path.isfile(testee.paths.copiedfile) is True)
     return 'Passed.'
 
 
 def test_move_binary(testee):
     toolkit.check_remove(testee.paths.installedfile)
-    testee.move_binary(max_attempts=3)
+    testee.copy_move_binary(task='move')
     assert(os.path.isfile(testee.paths.installedfile) is True)
     return 'Passed.'
     
