@@ -11,43 +11,20 @@ shell = make_env.identify_shell()
 
 
 def backup_shell_config(shell, sub_shell, handle_excep=True):
-    # if handle_excep:
-    #     msg = "{} backup unsuccessful. Consider making a manual backup.".format(shell['file'])
-    # else:
-    #     msg = ''
-    BackupError = collections.namedtuple('BackupError', 'shell_config')
-    # print(sub_shell.paths.backupspath)  # debug
-    # print(os.path.split(shell['file'])[1])  # debug
-    # print(shell['file'])  # debug
-    
-    try:
-        shutil.copy2(shell['file'], sub_shell.paths.backupspath)
-    except PermissionError as excep:
-        exceptions_list = []
-        exceptions_list.append(excep)
-        toolkit.change_permissions(sub_shell.paths.installationpath, '0o666')
-        shutil.copy2(shell['file'], sub_shell.paths.backupspath)
-    else:
-        return BackupError(shell_config=0)
-    
-    ## possible exceptions: See /logs/Errors - backup.txt
-    
-    ## will add handling later, incl toolkit.errorhandlefunction
-    # try:
-    # except FileNotFoundError as excep:
-    #     print(excep)
-    #     reattempt_src = "The file {} was not found. Enter the complete filepath here. :".format(shell['file'])
-    #     try:
-    #         shutil.copy2(reattempt_src, sub_shell.paths.backupspath)
-    #     except Exception as excep:
-    #         print(excep, '/n', )
-    #
-    
-            #     shutil.copy2(shell['file'], backup_dst)
-    #     return BackupError(shell_config=0)
-    # except:
-    #     if msg: print("{} backup unsuccessful. Consider making a manual backup.".format(shell['file']))
-    #     return BackupError(shell_config=1)
+    BackupError = collections.namedtuple('BackupError', 'shell_config exception file')
+    err_log = []
+    for file_ in shell['files']:
+        
+        try:
+            shutil.copy2(file_, sub_shell.paths.backupspath)
+        except PermissionError as excep:
+            exceptions_list = [excep]
+            toolkit.change_permissions(sub_shell.paths.installationpath, '0o666')
+            shutil.copy2(file_, sub_shell.paths.backupspath)
+            err_log.append(BackupError(shell_config=1, exception=excep, file=file_))
+        else:
+            err_log.append(BackupError(shell_config=0, exception=None, file=file_))
+    return err_log
 
 
 def backup_path_var(sub_shell, msg=True):
@@ -58,8 +35,7 @@ def backup_path_var(sub_shell, msg=True):
         with open(backup_dst, 'w') as write_obj:
             write_obj.write(curr_path_info)
     except PermissionError as excep:
-        exceptions_list = []
-        exceptions_list.append(excep)
+        exceptions_list = [excep]
         toolkit.check_make(sub_shell.paths.backupspath)
         toolkit.change_permissions(sub_shell.paths.backupspath, nix_perm='0o666')
         shutil.copy2(shell['file'], sub_shell.paths.backupspath)
@@ -75,8 +51,8 @@ def backup_path_var(sub_shell, msg=True):
 
 
 def backup(shell, sub_shell):
-    backup_shell_config(shell, sub_shell, handle_excep=True)
-    backup_path_var(sub_shell, msg=True)
+    shell_log = backup_shell_config(shell, sub_shell, handle_excep=True)
+    path_log = backup_path_var(sub_shell, msg=True)
 
     
 def restore_shell_config(shell, sub_shell):
@@ -91,3 +67,5 @@ def restore(shell, sub_shell):
     restore_path_var(shell, sub_shell)
     restore_shell_config(shell, sub_shell)
     
+if __name__ == '__main__':
+    backup(shell=shell, sub_shell=sub_shell)

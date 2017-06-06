@@ -29,7 +29,7 @@ class SubShell(object):
         self.Paths = collections.namedtuple('Paths', 'installationpath backupspath setupfile copiedfile installedfile')
 
         self.suffix = '_test' if purpose == 'test' else ''
-        self.shell['file'] = ''.join([self.shell['file'], self.suffix])
+        self.shell['files'] = tuple(''.join([file_, self.suffix]) for file_ in self.shell['files'])
         self.paths = self.setup_paths()
         
     def setup_paths(self):

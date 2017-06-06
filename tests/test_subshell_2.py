@@ -34,15 +34,15 @@ def setup_tests():
     # setting up path for benchmarks .
     suffix = '_test'
     installationpath = os.path.expanduser(os.path.join('~', 'bin' + suffix, 'direnv'))
-    Paths = collections.namedtuple('Paths', 'setupfile copiedfile installedfile installationpath backupspath')
+    Paths = collections.namedtuple('Paths', 'installationpath backupspath setupfile copiedfile installedfile')
     benchmark_paths = Paths(
+                installationpath=installationpath,
+                backupspath=os.path.join(installationpath, 'pre_direnv_backups'),
                 setupfile=os.path.join(project_root, 'requirements', 'bin', 'direnv.linux-amd64'),
                 copiedfile=os.path.join(project_root, 'requirements', 'bin', 'direnv'),
-                installationpath=installationpath,
-                installedfile=os.path.join(installationpath, 'direnv'),
-                backupspath=os.path.join(installationpath, 'pre_direnv_backups')
+                installedfile=os.path.join(installationpath, 'direnv')
                 )
-    assert([False, False, True, True, True] == ['test' in path for path in benchmark_paths])
+    assert([True, True, False, False, True] == ['test' in path for path in benchmark_paths])
     return benchmark_paths
 
     
