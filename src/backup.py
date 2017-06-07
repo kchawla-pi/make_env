@@ -7,7 +7,6 @@ import toolkit
 
 sub_shell = SubShell('test')
 shell = make_env.identify_shell()
-# print(shell)  # debug
 
 
 def backup_shell_config(shell, sub_shell, handle_excep=True):

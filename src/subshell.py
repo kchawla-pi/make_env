@@ -15,7 +15,7 @@ class SubShell(object):
     """
     Class with data and methods to install the direnv binary which can create subshells.
     """
-    def __init__(self, purpose='check', rootname='make_env'):
+    def __init__(self, purpose='check', rootname='make_env', force_shell=False):
         """
         Creates namedtuple Paths and calls setup_paths()
         :param purpose: (str) 'check'(default), 'test': calls specific methods for specific actions.
@@ -23,7 +23,7 @@ class SubShell(object):
         :param rootname: (str) 'make_env'(default): The directory name of the project containing
         files necessary to install subshell project and make new ones.
         """
-        self.shell = make_env.identify_shell()
+        self.shell = make_env.identify_shell(force=force_shell)
         self.purpose = purpose
         self.rootname = rootname
         self.Paths = collections.namedtuple('Paths', 'installationpath backupspath setupfile copiedfile installedfile')
@@ -163,14 +163,28 @@ class SubShell(object):
             self.paths.installedfile = input("Enter the complete path including name of direnv installed binary:")
             self.make_exec(max_attempts)
             
+    def read_path_file(self):
+        if os.name == 'posix':
+            print(self.shell['files'])
+            with open(self.shell['files'][0]) as read_obj:
+                config_contents = read_obj.readlines()
+            # config_contents.f
+            print(config_contents)
+        
     def add_to_path(self):
         if os.name == 'posix':
-            print(os.environ["PATH"])
-            os.environ["PATH"] += os.pathsep + self.paths.installedfile
-            print(os.environ["PATH"])
+            print(self.shell['files'])
+            with open(self.shell['files'][0], 'a') as write_obj:
+                write_obj.writelines([self.paths.installationpath])
+            
+            # print(os.environ["PATH"])
+            # os.environ["PATH"] += os.pathsep + self.paths.installedfile
+            # print(os.environ["PATH"])
             
     
+    
+            
 if __name__ == '__main__':
     print(__file__)
     sub_shell = SubShell(purpose='test')
-    print(sub_shell.copy_move_binary())
+    sub_shell.read_path_file()
