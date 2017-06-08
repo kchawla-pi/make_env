@@ -17,10 +17,12 @@ def backup_shell_config(shell, sub_shell, handle_excep=True):
         try:
             shutil.copy2(file_, sub_shell.paths.backupspath)
         except PermissionError as excep:
-            exceptions_list = [excep]
             toolkit.change_permissions(sub_shell.paths.installationpath, '0o666')
             shutil.copy2(file_, sub_shell.paths.backupspath)
             err_log.append(BackupError(shell_config=1, exception=excep, file=file_))
+        except FileNotFoundError as excep:
+            err_log.append(BackupError(shell_config=1, exception=excep, file=file_))
+            print(excep, "\n\nFile {} does not exist. Moving on...".format(file_))
         else:
             err_log.append(BackupError(shell_config=0, exception=None, file=file_))
     return err_log
@@ -40,14 +42,7 @@ def backup_path_var(sub_shell, msg=True):
         shutil.copy2(shell['file'], sub_shell.paths.backupspath)
     else:
         return BackupError(path_var=0)
-        # try:
-    #     with open(backup_dst, 'w') as write_obj:
-    #         write_obj.write(curr_path_info)
-    #         return BackupError(path_var=0)
-    # except:
-    #     if msg: print("Current $PATH backup unsuccessful. Consider making a manual backup.")
-    #     return BackupError(path_var=1)
-
+        
 
 def backup(shell, sub_shell):
     shell_log = backup_shell_config(shell, sub_shell, handle_excep=True)
@@ -68,3 +63,5 @@ def restore(shell, sub_shell):
     
 if __name__ == '__main__':
     backup(shell=shell, sub_shell=sub_shell)
+    
+#TODO: create verify_copy() uing is os.issamefile()
