@@ -6,7 +6,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/data/path_var_data.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements/src/direnv" afterPath="$PROJECT_DIR$/requirements/src/direnv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/backup.py" afterPath="$PROJECT_DIR$/src/backup.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.py" afterPath="$PROJECT_DIR$/src/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scratch_pad.py" afterPath="$PROJECT_DIR$/src/scratch_pad.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_subshell_2.py" afterPath="$PROJECT_DIR$/tests/test_subshell_2.py" />
@@ -124,8 +123,8 @@
           <file leaf-file-name="subshell.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/subshell.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-640">
-                  <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+                <state relative-caret-position="1344">
+                  <caret line="84" column="41" lean-forward="false" selection-start-line="84" selection-start-column="41" selection-end-line="84" selection-end-column="41" />
                   <folding />
                 </state>
               </provider>
@@ -771,13 +770,6 @@
       <option name="presentableId" value="Default" />
       <updated>1493909282621</updated>
     </task>
-    <task id="LOCAL-00016" summary="Added function to backup  shell config file before adding direnv extensions">
-      <created>1494621584583</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1494621584583</updated>
-    </task>
     <task id="LOCAL-00017" summary="Ddirenv() now handles all direnv tasks, renamed module to make_env.py">
       <created>1494621717528</created>
       <option name="number" value="00017" />
@@ -1114,7 +1106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496893920659</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Added FileNotFound Exception handling to /src/backup.backup_shell_config()">
+      <created>1496893998771</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1496893998772</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1239,7 +1238,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/src/direnv" />
     </ignored-roots>
-    <MESSAGE value="Added log file in /logs/ to gather console output from test_copy_dir()" />
     <MESSAGE value="New unit tests for subshell.py without the unittests framework&#10;&#10; - It was adding to the confusion" />
     <MESSAGE value="Amended: Added toolkit.py, mistakenly left out in the original commit&#10;&#10; - Original Commit msg:&#10;    Added change_permissions(), fn_init(), fn_outcome(), improved cleanup_tree()&#10;&#10;    - change_permissions() function&#10;    - Somewhat improved and more reliable cleanup_tree()&#10;    - Optional parameters to enable error-handling &amp; messages&#10;    - fn_init(), fn_outcome() to indicate function calls &amp; outcomes" />
     <MESSAGE value="Amended: Added toolkit.py, mistakenly left out in the original commit&#10;&#10; - Minor changes to make_env.py&#10; - Original Commit msg:&#10;    Added change_permissions(), fn_init(), fn_outcome(), improved cleanup_tree()&#10;&#10;    - change_permissions() function&#10;    - Somewhat improved and more reliable cleanup_tree()&#10;    - Optional parameters to enable error-handling &amp; messages&#10;    - fn_init(), fn_outcome() to indicate function calls &amp; outcomes" />
@@ -1264,7 +1262,8 @@
     <MESSAGE value="Fixed: shell['files'] in /src/make_env.identify_shell() is empty" />
     <MESSAGE value="Added 'force' parameter to identify shell call in /src/subshell.SubShell&#10;&#10; - Modified force parameter in make_env.identify_shell(force) \&#10; to True/False from 'force', 'no'&#10; - Done to allow forcing a shell in NT for shell config files paths." />
     <MESSAGE value="Added multiple shell config files to shell['files']" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added multiple shell config files to shell['files']" />
+    <MESSAGE value="Added FileNotFound Exception handling to /src/backup.backup_shell_config()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added FileNotFound Exception handling to /src/backup.backup_shell_config()" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1580,14 +1579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/subshell.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-640">
-          <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/make_env.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -1608,6 +1599,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/subshell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1344">
+          <caret line="84" column="41" lean-forward="false" selection-start-line="84" selection-start-column="41" selection-end-line="84" selection-end-column="41" />
           <folding />
         </state>
       </provider>

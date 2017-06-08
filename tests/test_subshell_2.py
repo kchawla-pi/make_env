@@ -71,8 +71,8 @@ def test_move_binary(testee):
     testee.copy_move_binary(task='move')
     assert(os.path.isfile(testee.paths.installedfile) is True)
     return 'Passed.'
-    
-    
+
+
 def test_make_exec(testee):
     if os.name == 'nt':
         return 'NotImplemented in nt'
@@ -84,9 +84,9 @@ def test_make_exec(testee):
     post_fn_permit = toolkit.get_file_permission_via_shell(testee.paths.installedfile, in_form='code')
     assert(post_fn_permit == '0o111')
     return 'Passed.'
-    
-   
-if __name__ == '__main__':
+
+
+def run_tests():
     incr = toolkit.increment(start=1, step=1)
     testee = subshell.SubShell(purpose='test')  # Instance of SubShell, which will be tested
     benchmark_paths = setup_tests()
@@ -96,4 +96,6 @@ if __name__ == '__main__':
     print(next(incr), test_make_exec(testee))
     print(next(incr), test_move_binary(testee))
 
-    
+
+if __name__ == '__main__':
+    run_tests()
