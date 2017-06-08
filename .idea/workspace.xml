@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/data/.profile_test" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/data/path_var_data.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements/src/direnv" afterPath="$PROJECT_DIR$/requirements/src/direnv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/backup.py" afterPath="$PROJECT_DIR$/src/backup.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.py" afterPath="$PROJECT_DIR$/src/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/make_env.py" afterPath="$PROJECT_DIR$/src/make_env.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scratch_pad.py" afterPath="$PROJECT_DIR$/src/scratch_pad.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/subshell.py" afterPath="$PROJECT_DIR$/src/subshell.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_subshell_2.py" afterPath="$PROJECT_DIR$/tests/test_subshell_2.py" />
     </list>
     <ignored path="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\.idea\shelf/" />
@@ -24,14 +25,14 @@
     <favorites_list name="make_env" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5014104">
+    <splitter split-orientation="horizontal" split-proportion="0.4583921">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="make_env.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="make_env.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/make_env.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="256">
-                  <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+                <state relative-caret-position="432">
+                  <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
                   <folding />
                 </state>
               </provider>
@@ -40,18 +41,18 @@
           <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="208">
-                  <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+                <state relative-caret-position="320">
+                  <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="backup.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="backup.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/backup.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="528">
-                  <caret line="42" column="8" lean-forward="false" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+                <state relative-caret-position="304">
+                  <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -71,7 +72,7 @@
             <entry file="file://$PROJECT_DIR$/src/toolkit.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="141">
-                  <caret line="198" column="28" lean-forward="true" selection-start-line="198" selection-start-column="28" selection-end-line="198" selection-end-column="28" />
+                  <caret line="198" column="28" lean-forward="false" selection-start-line="198" selection-start-column="28" selection-end-line="198" selection-end-column="28" />
                   <folding />
                 </state>
               </provider>
@@ -85,7 +86,7 @@
             <entry file="file://$PROJECT_DIR$/tests/test_subshell_2.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="123">
-                  <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+                  <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -94,8 +95,28 @@
           <file leaf-file-name="scratch_pad.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/scratch_pad.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-105">
-                  <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+                <state relative-caret-position="848">
+                  <caret line="53" column="26" lean-forward="true" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".profile_test" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/data/.profile_test">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="320">
+                  <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="path_var_data.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/data/path_var_data.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="384">
+                  <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -104,8 +125,8 @@
           <file leaf-file-name="subshell.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/subshell.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="309">
-                  <caret line="25" column="51" lean-forward="false" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+                <state relative-caret-position="-640">
+                  <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
                   <folding />
                 </state>
               </provider>
@@ -125,7 +146,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>if</find>
       <find>subshell</find>
       <find>src</find>
       <find>suffix</find>
@@ -155,6 +175,7 @@
       <find>make</find>
       <find>shell[</find>
       <find>shell</find>
+      <find>print</find>
     </findStrings>
     <replaceStrings>
       <replace>resolve_path(</replace>
@@ -232,12 +253,13 @@
         <option value="$PROJECT_DIR$/src/error_handling.py" />
         <option value="$PROJECT_DIR$/src/error_handling_2.py" />
         <option value="$PROJECT_DIR$/src/toolkit.py" />
-        <option value="$PROJECT_DIR$/src/main.py" />
         <option value="$PROJECT_DIR$/tests/test_subshell_2.py" />
+        <option value="$PROJECT_DIR$/src/subshell.py" />
+        <option value="$PROJECT_DIR$/src/make_env.py" />
+        <option value="$PROJECT_DIR$/tests/data/path_var_data.txt" />
+        <option value="$PROJECT_DIR$/src/main.py" />
         <option value="$PROJECT_DIR$/src/backup.py" />
         <option value="$PROJECT_DIR$/src/scratch_pad.py" />
-        <option value="$PROJECT_DIR$/src/make_env.py" />
-        <option value="$PROJECT_DIR$/src/subshell.py" />
       </list>
     </option>
   </component>
@@ -307,6 +329,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -343,6 +397,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -363,19 +431,19 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\archived_code" />
-      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\logs" />
-      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\docs" />
-      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\src" />
-      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\~archieved_code" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\backups" />
       <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\archived_code" />
       <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\tests\data" />
       <recent name="C:\Users\kshit\Dropbox\workspace\tic\kchawla-pi" />
       <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\setup" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\tests\data" />
+      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\archived_code" />
+      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\logs" />
+      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\docs" />
+      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -703,13 +771,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493909282621</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Added functions to install &amp; check direnv">
-      <created>1494621278450</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1494621278450</updated>
     </task>
     <task id="LOCAL-00015" summary="Added uninstall_direnv(), renamed main() to direnv_handler()&#10;&#10; - Renamed check_direnv_inst() to check_direnv()">
       <created>1494621425671</created>
@@ -1047,7 +1108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496779297240</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Added 'force' parameter to identify shell call in /src/subshell.SubShell&#10;&#10; - Modified force parameter in make_env.identify_shell(force) \&#10; to True/False from 'force', 'no'&#10; - Done to allow forcing a shell in NT for shell config files paths.">
+      <created>1496844981571</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1496844981571</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1098,12 +1166,13 @@
       <window_info id="Project" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="FLOATING" visible="false" show_stripe_button="true" weight="0.22548318" sideWeight="0.5010737" order="11" side_tool="true" content_ui="combo" x="944" y="46" width="463" height="706" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.50536865" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33674964" sideWeight="0.496063" order="2" side_tool="false" content_ui="tabs" x="848" y="82" width="559" height="388" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33674964" sideWeight="0.496063" order="2" side_tool="false" content_ui="tabs" x="35" y="97" width="578" height="388" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.49463135" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22547585" sideWeight="0.49892628" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="FLOATING" visible="false" show_stripe_button="true" weight="0.24767359" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" x="1096" y="48" width="261" height="699" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26647145" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43045387" sideWeight="0.49783784" order="3" side_tool="false" content_ui="tabs" x="0" y="242" width="1418" height="313" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43045387" sideWeight="0.49783784" order="3" side_tool="false" content_ui="tabs" x="0" y="242" width="1418" height="313" />
       <window_info id="Favorites" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.25622255" sideWeight="0.5041617" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="false" weight="0.3287483" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1113,7 +1182,6 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="92" y="92" width="1096" height="536" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1172,7 +1240,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/src/direnv" />
     </ignored-roots>
-    <MESSAGE value="Added: test_copy_binary, exception handling. Refactored: MyTestCase =&gt; 3 classes&#10; &#10;  - MyTestCase class was refactored into 3 classes to ascertain if that \&#10;  would add predictability to order of testing. (It didn't)&#10;  - Removed teardown() as it added to more confusion than help&#10;  - Changed some utilities to enable optional params for debug messages \&#10;  &amp; error handling" />
     <MESSAGE value="Added change_permissions(), fn_init(), fn_outcome() improved cleanup_tree()&#10;&#10; - change_permissions() function&#10; - Somewhat improved and more reliable cleanup_tree()&#10; - Optional parameters to enable error-handling &amp; messages&#10; - fn_init(), fn_outcome() to indicate function calls &amp; outcomes" />
     <MESSAGE value="Added log file in /logs/ to gather console output from test_copy_dir()" />
     <MESSAGE value="New unit tests for subshell.py without the unittests framework&#10;&#10; - It was adding to the confusion" />
@@ -1197,7 +1264,8 @@
     <MESSAGE value="Added docstrings to /src/toolkit.py, /src/subshell.py" />
     <MESSAGE value="Expanded profile config files list &amp; modified (subshell, backup).py accordingly" />
     <MESSAGE value="Fixed: shell['files'] in /src/make_env.identify_shell() is empty" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed: shell['files'] in /src/make_env.identify_shell() is empty" />
+    <MESSAGE value="Added 'force' parameter to identify shell call in /src/subshell.SubShell&#10;&#10; - Modified force parameter in make_env.identify_shell(force) \&#10; to True/False from 'force', 'no'&#10; - Done to allow forcing a shell in NT for shell config files paths." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added 'force' parameter to identify shell call in /src/subshell.SubShell&#10;&#10; - Modified force parameter in make_env.identify_shell(force) \&#10; to True/False from 'force', 'no'&#10; - Done to allow forcing a shell in NT for shell config files paths." />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1225,13 +1293,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="93" />
+      <option name="time" value="98" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/setup/src/direnv/man/direnv-stdlib.1.md" />
-    <entry file="file://$PROJECT_DIR$/setup/src/direnv/docs/ruby.md" />
     <entry file="file://$PROJECT_DIR$/setup/src/direnv/docs/screencasts.md" />
     <entry file="file://$PROJECT_DIR$/setup/src/direnv/docs/sidebar.md" />
     <entry file="file://$PROJECT_DIR$/setup/src/direnv/man/direnv.1.md" />
@@ -1470,15 +1536,15 @@
     <entry file="file://$PROJECT_DIR$/src/toolkit.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
-          <caret line="198" column="28" lean-forward="true" selection-start-line="198" selection-start-column="28" selection-end-line="198" selection-end-column="28" />
+          <caret line="198" column="28" lean-forward="false" selection-start-line="198" selection-start-column="28" selection-end-line="198" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+        <state relative-caret-position="272">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1486,47 +1552,63 @@
     <entry file="file://$PROJECT_DIR$/tests/test_subshell_2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
-          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/backup.py">
+    <entry file="file://$PROJECT_DIR$/tests/data/path_var_data.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="42" column="8" lean-forward="false" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+        <state relative-caret-position="384">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+    <entry file="file://$PROJECT_DIR$/tests/data/.profile_test">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="320">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scratch_pad.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/make_env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+        <state relative-caret-position="848">
+          <caret line="53" column="26" lean-forward="true" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/subshell.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="25" column="51" lean-forward="false" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+        <state relative-caret-position="-640">
+          <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/make_env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/backup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>

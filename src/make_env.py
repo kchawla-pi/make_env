@@ -21,10 +21,11 @@ def identify_shell(param_shell='bash', force=False):  # default parameter added 
 
     if force == 'force' or True:
         shell_name = param_shell
-        shell_config_file = os.path.realpath(os.path.expanduser(shell_hooks[shell_name].files)) + '1'  # +1 prevents overwriting shell config file during dev
+        possible_shell_files = tuple(os.path.realpath(os.path.expanduser(file_))
+                                     for file_ in shell_hooks[shell_name].files)
         shell = {'name': shell_name,
                  'command': shell_hooks[shell_name].command,
-                 'file': shell_config_file}
+                 'files': possible_shell_files}
         return shell
 
     shell_name = os.environ.get('SHELL', 'bash').split(os.sep)[-1]
@@ -32,7 +33,6 @@ def identify_shell(param_shell='bash', force=False):  # default parameter added 
                                for file_ in shell_hooks[shell_name].files)
     found_shell_files = tuple(file_ for file_ in possible_shell_files if os.path.exists(file_))
     
-    # shell_config_files = os.path.realpath(os.path.expanduser(shell_hooks[shell_name].files)) + '1'  # +1 prevents overwriting shell config file during dev
     shell = {'name': shell_name,
              'command': shell_hooks[shell_name].command,
              'files': found_shell_files
