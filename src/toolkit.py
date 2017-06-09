@@ -8,6 +8,16 @@ FunctionCalled = collections.namedtuple('FunctionCalled', 'fn')
 no_print = '\b'
 debug_mode = True
 
+
+def print_exceptions(error='', frontend='', switch: (True, False, None)=False, errors=[]):
+    actions = {True: lambda error: (print, error),
+               False: lambda frontend: (print, frontend),
+               None: lambda error: (errors.append, error)
+               }
+    actions[switch]
+    return errors
+               
+
 def fn_worked(fn, worked, notify=False):
     """
     Accepts function name and success status of the nesting function and
@@ -34,30 +44,30 @@ def fn_called(fn, notify=False):
     print(FunctionCalled(fn=fn)) if notify else None
 
 
-def debug_print(*arg):
-    # return
-    if arg[-1] != '00' or True or 'db' or 'debug':
-        print(*arg)
-        return
-    print()
-    if isinstance(arg[0], str) and arg[0].find('--',0, 2):
-        print(arg[0])
-        start_idx = 1
-    else:
-        start_idx = 0
-    on = 1
-    if on and True:
-        for arg_elem in arg[start_idx:]:
-            if arg_elem == 'xxx':
-                return
-            try:
-                len(arg_elem)
-            except TypeError:
-                print(arg[1:], sep='\n')
-            else:
-                for elem in arg_elem:
-                    print(elem)
-    print()
+# def debug_print(*arg):
+#     # return
+#     if arg[-1] != '00' or True or 'db' or 'debug':
+#         print(*arg)
+#         return
+#     print()
+#     if isinstance(arg[0], str) and arg[0].find('--',0, 2):
+#         print(arg[0])
+#         start_idx = 1
+#     else:
+#         start_idx = 0
+#     on = 1
+#     if on and True:
+#         for arg_elem in arg[start_idx:]:
+#             if arg_elem == 'xxx':
+#                 return
+#             try:
+#                 len(arg_elem)
+#             except TypeError:
+#                 print(arg[1:], sep='\n')
+#             else:
+#                 for elem in arg_elem:
+#                     print(elem)
+#     print()
 
 
 def cleanup_tree(tree_root, handle_exceptions=True, notify_init=False, notify_outcome=False):
@@ -153,7 +163,7 @@ def check_remove(path, notify=False):
         try:
             assert(os.path.isfile(path))
         except:
-            cleanup_tree(path)
+            cleanup_tree(path, notify_init=notify, notify_outcome=notify)
             assert (os.path.exists(path) is False)
         else:
             os.remove(path)

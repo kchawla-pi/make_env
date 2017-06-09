@@ -1,17 +1,22 @@
 import os
 import collections
 import shutil
-from subshell import SubShell
+
 import make_env
 import toolkit
 
+from pprint import pprint
+from subshell import SubShell
+
 sub_shell = SubShell('test')
 shell = make_env.identify_shell()
+switch = False
 
 
 def backup_shell_config(shell, sub_shell, handle_excep=True):
     BackupError = collections.namedtuple('BackupError', 'shell_config exception file')
     err_log = []
+    not_found_files = []
     for file_ in shell['files']:
         
         try:
@@ -22,9 +27,14 @@ def backup_shell_config(shell, sub_shell, handle_excep=True):
             err_log.append(BackupError(shell_config=1, exception=excep, file=file_))
         except FileNotFoundError as excep:
             err_log.append(BackupError(shell_config=1, exception=excep, file=file_))
-            print(excep, "\n\nFile {} does not exist. Moving on...".format(file_))
+            not_found_files.append(file_)
+            toolkit.print_exceptions(error=excep, switch=switch)
         else:
             err_log.append(BackupError(shell_config=0, exception=None, file=file_))
+            
+    if not_found_files:
+        print("These files were not found at the specified location and were not backed up:")
+        pprint(not_found_files)
     return err_log
 
 

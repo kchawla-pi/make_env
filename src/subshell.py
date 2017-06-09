@@ -9,7 +9,7 @@ except ImportError:
     os.sys.path.append(os.path.split(__file__)[0])
     import toolkit
 
-# shell = make_env.identify_shell()
+switch = True
 
 class SubShell(object):
     """
@@ -88,14 +88,17 @@ class SubShell(object):
         try:
             os.makedirs(self.paths.backupspath)
         except FileNotFoundError as excep:
-            print('FileNotFoundError: {}\t{}'.format(excep, self.paths.backupspath))
+            toolkit.print_exceptions(error=excep, switch=switch)
+            # print('FileNotFoundError: {}\t{}'.format(excep, self.paths.backupspath))
         except PermissionError as excep:
-            print('PermissionError: {}\t{}'.format(excep, self.paths.backupspath))
+            toolkit.print_exceptions(error=excep, switch=switch)
             toolkit.change_permissions(self.paths.backupspath, topdown=False, initial_exception=excep)
-        except FileExistsError:
-            print("Existing directory {} used.".format(self.paths.backupspath))
+        except FileExistsError as excep:
+            frontend_msg = "Existing directory {} used.".format(self.paths.backupspath)
+            toolkit.print_exceptions(error=excep, frontend=frontend_msg, switch=switch)
         except Exception as excep:
-            print('UnforeseenError: {}\t{}'.format(excep, self.paths.backupspath))
+            frontend_msg = 'UnforeseenError: {}\t{}'.format(excep, self.paths.backupspath)
+            toolkit.print_exceptions(error=excep, frontend=frontend_msg, switch=switch)
             raise excep
         
         if os.path.exists(self.paths.backupspath):
@@ -111,7 +114,7 @@ class SubShell(object):
         :param task: (str) args: 'both'(default), 'copy', 'move' : Specifies the functions action
         """
         
-        copy2_move_fn = {'copy': {'fn': shutil.copy2, 'args': (self.paths.setupfile, self.paths.copiedfile)},
+        copy_move_fn = {'copy': {'fn': shutil.copy2, 'args': (self.paths.setupfile, self.paths.copiedfile)},
                          'move': {'fn':  shutil.move, 'args': (self.paths.copiedfile,self.paths.installationpath)}
                      }
         exceptions_list = []
@@ -119,14 +122,14 @@ class SubShell(object):
         tasks = tasks if task not in tasks else [task]
         for task_ in tasks:
             try:
-                copy2_move_fn[task_]['fn'](*copy2_move_fn[task_]['args'])
+                copy_move_fn[task_]['fn'](*copy_move_fn[task_]['args'])
             except FileNotFoundError as excep:
                 exceptions_list.append(excep)
-                print("Not found: ", copy2_move_fn[task_]['args'][0])
-                copy2_move_fn[task_]['args'][0] = input("Enter correct path:")
+                print("Not found: ", copy_move_fn[task_]['args'][0])
+                copy_move_fn[task_]['args'][0] = input("Enter correct path:")
             except PermissionError as excep:
                 exceptions_list.append(excep)
-                toolkit.change_permissions(copy2_move_fn[task_]['args'][1])
+                toolkit.change_permissions(copy_move_fn[task_]['args'][1])
             except FileExistsError as excep:
                 exceptions_list.append(excep)
                 if force == 'ask':
@@ -138,30 +141,74 @@ class SubShell(object):
                     print(self.paths.copiedfile, "already exists.")
                     return
                 toolkit.check_remove(self.paths.copiedfile)
-                copy2_move_fn[task_]['fn'](*copy2_move_fn[task_]['args'])
+                copy_move_fn[task_]['fn'](*copy_move_fn[task_]['args'])
             except Exception as excep:
                 exceptions_list.append(excep)
                 raise excep
             finally:
                 try:
-                    copy2_move_fn[task_]['fn'](*copy2_move_fn[task_]['args'])
+                    copy_move_fn[task_]['fn'](*copy_move_fn[task_]['args'])
                 except shutil.Error as excep:
                     print(excep)
                 return exceptions_list
-            #TODO: Maybr create a function to modify paths? Or revert to dict? No not the latter.
-        
+            #TODO: Maybe create a function to modify paths? Or revert to dict? No not the latter.
+    
+    def move_binary(self, force:(True, 'ask', False)=False):
+        exceptions_list = []
+        try:
+            shutil.move(self.paths.copiedfile, self.paths.installationpath)
+        except FileNotFoundError as excep:
+            errors = []
+            frontend_msg = "Not found: {}".format(self.paths.copiedfile)
+            toolkit.print_exceptions(error=excep, frontend=frontend_msg, switch=switch, errors=errors)
+            self.change_paths(copiedfile=input("Enter correct path:"))
+        except PermissionError as excep:
+            errors = []
+            toolkit.print_exceptions(error=excep, switch=switch, errors=errors)
+            toolkit.change_permissions(self.paths.installationpath)
+        except (FileExistsError, shutil.Error) as excep:
+            errors = []
+            file, loc = os.path.split(self.paths.copiedfile)
+            frontend_msg = "{} already exists at {}".format(file, loc)
+            toolkit.print_exceptions(error=excep, frontend=frontend_msg, switch=switch, errors=errors)
+            if force == 'ask':
+                print("Note: The replacing and existing versions maybe different.")
+                replace = input("Replace? (y/n)")
+                replace = True if replace.lower == 'y' or 'yes' or 'true' else False
+                if not replace:
+                    return
+            elif force:
+                pass
+            else:
+                return
+        # except as excep:
+        #     exceptions_list.append(excep)
+        #     print(excep)
+        #     raise shutil.Error
+        except Exception as excep:
+            exceptions_list.append(excep)
+            print("Unforeseen Error.", '\n', excep)
+            raise excep
+        finally:
+            os.chmod(self.paths.copiedfile, 0o777)
+            os.remove(self.paths.copiedfile)
+            try:
+                shutil.move(self.paths.copiedfile, self.paths.installationpath)
+            except Exception as excep:
+                frontend_msg = ("Move failed: {}. \n Please ensure the location {} "
+                      "has the file {}".format(excep, *os.path.split(self.paths.installedfile)))
+                toolkit.print_exceptions(error=excep, frontend=frontend_msg, switch=switch)
+
     def make_exec(self, max_attempts:(1|2|3)=3):
-        max_attempts = toolkit.reattempt(max_attempts)
-        if max_attempts == 0:
-            print("Too many attempts with incorrect paths. Please ascertain the file paths and run install again.")
-            quit()
         try:
             os.chmod(self.paths.installedfile, 0o777)  # sets the direnv binary's permission to executable, as instructed in direnv README.
-        except FileNotFoundError:
-            print("Not found:", self.paths.installedfile)
-            print("Copy the direnv binary file to a location of your choice and enter the path here:")
-            self.paths.installedfile = input("Enter the complete path including name of direnv installed binary:")
-            self.make_exec(max_attempts)
+        except FileNotFoundError as excep:
+            frontend_msg = ("Not found: {}\nEnter the complete path "
+                            "to direnv installed binary:", self.paths.installedfile)
+            toolkit.print_exceptions(error=excep, frontend=frontend_msg, switch=switch)
+            new_path = os.path.join(input(), 'direnv')
+            self.change_paths(installationpath=new_path)
+            self.make_exec()
             
     def read_path_file(self):
         if os.name == 'posix':
