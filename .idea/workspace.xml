@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="">
+    <list default="true" id="ec8d759e-576b-4710-a269-74cca591fce0" name="Default" comment="Added toolkit.print_exceptions() to switch printing exceptions or user friendly messages&#10;&#10; - Modified other files to use print_exceptions()&#10; - Fixed: Exception handling in subshell.move_binary()">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/error_handling.py" afterPath="$PROJECT_DIR$/archived_code/error_handling.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/error_handling_2.py" afterPath="$PROJECT_DIR$/archived_code/error_handling_2.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/subshell_static.py" afterPath="$PROJECT_DIR$/archived_code/subshell_static.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements/src/direnv" afterPath="$PROJECT_DIR$/requirements/src/direnv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/backup.py" afterPath="$PROJECT_DIR$/src/backup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.py" afterPath="$PROJECT_DIR$/src/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scratch_pad.py" afterPath="$PROJECT_DIR$/src/scratch_pad.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/subshell.py" afterPath="$PROJECT_DIR$/src/subshell.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/toolkit.py" afterPath="$PROJECT_DIR$/src/toolkit.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/.profile_test" afterPath="$PROJECT_DIR$/tests/data/.profile_test" />
     </list>
     <ignored path="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,7 +48,7 @@
           <file leaf-file-name="backup.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/backup.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="109">
+                <state relative-caret-position="-82">
                   <caret line="50" column="74" lean-forward="false" selection-start-line="50" selection-start-column="74" selection-end-line="50" selection-end-column="74" />
                   <folding />
                 </state>
@@ -94,8 +92,8 @@
           <file leaf-file-name="scratch_pad.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/scratch_pad.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="288">
-                  <caret line="64" column="24" lean-forward="false" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+                <state relative-caret-position="144">
+                  <caret line="55" column="20" lean-forward="false" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
                   <folding />
                 </state>
               </provider>
@@ -432,6 +430,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="make_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="archived_code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -440,7 +452,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.documentation.PythonDocumentationConfigurable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backups" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/archived_code" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="Python" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/tests/setup_tests.py&#10;true" />
   </component>
@@ -454,19 +466,19 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\backups" />
-      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\archived_code" />
-      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\tests\data" />
-      <recent name="C:\Users\kshit\Dropbox\workspace\tic\kchawla-pi" />
-      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\setup" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\tests\data" />
       <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\archived_code" />
       <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\logs" />
       <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\docs" />
       <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\archived_code" />
+      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\backups" />
+      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\tests\data" />
+      <recent name="C:\Users\kshit\Dropbox\workspace\tic\kchawla-pi" />
+      <recent name="C:\Users\kshit\Dropbox\workspace\make_env\kchawla-pi\make_env\setup" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -794,13 +806,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493909282621</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Simplified setup_paths(), handled FileNotFound exception in install_direnv()&#10;&#10; - setup_paths() returns direnv_bin (str) not abs_paths (dict)">
-      <created>1494712958904</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1494712958904</updated>
     </task>
     <task id="LOCAL-00019" summary="Renamed 'shell_info' to 'shell', added messages to direnv_handler()">
       <created>1494714256442</created>
@@ -1138,7 +1143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496894133129</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Added toolkit.print_exceptions() to switch printing exceptions or user friendly messages&#10;&#10; - Modified other files to use print_exceptions()&#10; - Fixed: Exception handling in subshell.move_binary()">
+      <created>1497037873211</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1497037873212</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1263,7 +1275,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/src/direnv" />
     </ignored-roots>
-    <MESSAGE value="Amended: Added toolkit.py, mistakenly left out in the original commit&#10;&#10; - Original Commit msg:&#10;    Added change_permissions(), fn_init(), fn_outcome(), improved cleanup_tree()&#10;&#10;    - change_permissions() function&#10;    - Somewhat improved and more reliable cleanup_tree()&#10;    - Optional parameters to enable error-handling &amp; messages&#10;    - fn_init(), fn_outcome() to indicate function calls &amp; outcomes" />
     <MESSAGE value="Amended: Added toolkit.py, mistakenly left out in the original commit&#10;&#10; - Minor changes to make_env.py&#10; - Original Commit msg:&#10;    Added change_permissions(), fn_init(), fn_outcome(), improved cleanup_tree()&#10;&#10;    - change_permissions() function&#10;    - Somewhat improved and more reliable cleanup_tree()&#10;    - Optional parameters to enable error-handling &amp; messages&#10;    - fn_init(), fn_outcome() to indicate function calls &amp; outcomes" />
     <MESSAGE value="Added tests for subshell.SubShell methods, unittest framework scrapped&#10; &#10; - Imported and used toolkit.py functions &#10; - setup_tests()&#10; - test_setup_tests()&#10; - test_make_dirs()&#10; - test_copy_binary()&#10; - test_make_exec()" />
     <MESSAGE value="Refactored methods from src/subshell.py into subshell_refactored.py&#10;&#10; - Moved methods not planned for cls SubShell into subshell_refactored.py&#10; - Removed extraneous comented out test from tests/test_subshell_2.py" />
@@ -1288,7 +1299,8 @@
     <MESSAGE value="Added multiple shell config files to shell['files']" />
     <MESSAGE value="Added FileNotFound Exception handling to /src/backup.backup_shell_config()" />
     <MESSAGE value="Created some txt files with path and .profile copy for testing and dev" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created some txt files with path and .profile copy for testing and dev" />
+    <MESSAGE value="Added toolkit.print_exceptions() to switch printing exceptions or user friendly messages&#10;&#10; - Modified other files to use print_exceptions()&#10; - Fixed: Exception handling in subshell.move_binary()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added toolkit.print_exceptions() to switch printing exceptions or user friendly messages&#10;&#10; - Modified other files to use print_exceptions()&#10; - Fixed: Exception handling in subshell.move_binary()" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1423,7 +1435,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/subshell_static.py">
+    <entry file="file://$PROJECT_DIR$/archived_code/subshell_static.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
           <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
@@ -1521,6 +1533,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3136">
           <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1531,14 +1544,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/error_handling_2.py">
+    <entry file="file://$PROJECT_DIR$/archived_code/error_handling_2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/error_handling.py">
+    <entry file="file://$PROJECT_DIR$/archived_code/error_handling.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="592">
           <caret line="52" column="23" lean-forward="false" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
@@ -1666,7 +1679,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/backup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
+        <state relative-caret-position="-82">
           <caret line="50" column="74" lean-forward="false" selection-start-line="50" selection-start-column="74" selection-end-line="50" selection-end-column="74" />
           <folding />
         </state>
@@ -1674,8 +1687,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scratch_pad.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="64" column="24" lean-forward="false" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+        <state relative-caret-position="144">
+          <caret line="55" column="20" lean-forward="false" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
           <folding />
         </state>
       </provider>
